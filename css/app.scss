@@ -1,0 +1,344 @@
+$siteWidth: 1110px;
+$mobileWidth: 768px;
+
+@import "reset.scss";
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+a{
+
+}
+
+body > nav{
+  @media (min-width: $mobileWidth) {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+    height: 40px;
+  }
+  & > div.inner{
+    @media (min-width: $siteWidth) {
+      width: $siteWidth;
+      margin: 0 auto;
+    }
+    @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
+      padding: 0 20px;
+    }
+    @media (max-width: $mobileWidth - 1){
+      padding: 20px 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    @include clearfix;
+    h2{
+      float: left;
+      margin: 0 0 0 20px;
+      a{
+        display: block;
+        width: 155px;
+        height: 40px;
+        text-indent: -3000px;
+        overflow: hidden;
+        background: url(../imgs/logo.svg) no-repeat;
+      }
+    }
+    font-size: 14px;
+    line-height: 40px;
+    .menu-link{
+      @media (min-width: $mobileWidth){
+        display: none;
+      }
+      @media (max-width: $mobileWidth - 1){
+        float: right;
+      }
+      margin: 0 20px 0 0;
+      border: 1px solid #F1F8FA;
+      border-radius: 4px;
+      width: 40px;
+      height: 40px;
+      display: block;
+
+      background: url(../imgs/icons/menu.svg) no-repeat 50% 50%;
+      &.active{
+        background: url(../imgs/icons/menu-active.svg) no-repeat 50% 50%;
+        & + ul.nav{
+          display: block;
+        }
+      }
+      text-indent: -3000px;
+      overflow: hidden;
+    }
+    & > ul.nav{
+      @media (min-width: $mobileWidth){
+        float: right;
+      }
+      @media (max-width: $mobileWidth - 1){
+        display: none;
+        clear: both;
+        padding: 20px 0 0 0;
+        //box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      }
+      list-style: none;
+      @media (min-width: $mobileWidth) {
+        #languages {
+          margin-left: 100px;
+        }
+      }
+      @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
+        #languages {
+          margin-left: 20px;
+        }
+      }
+      & > li{
+        @media (min-width: $mobileWidth) {
+          display: inline;
+          padding: 0 23px 0 22px;
+        }
+        @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
+          padding: 0 10px;
+        }
+        @media (max-width: $mobileWidth - 1){
+          display: block;
+          text-align: center;
+        }
+        a{
+          color: #848484;
+          text-decoration: none;
+          transition: color 0.3s, background-color 0.3s;
+          @media (max-width: $mobileWidth - 1){
+            line-height: 65px;
+            font-size: 16px;
+            display: block;
+          }
+          &:hover{
+            color: #26C4F7;
+            @media (max-width: $mobileWidth - 1){
+              background: #E1F7FE;
+            }
+          }
+          &:active{
+            color: #0E84BC;
+          }
+        }
+      }
+    }
+    div.language{
+      @extend .noselect;
+      @media (min-width: $mobileWidth) {
+        float: right;
+        position: relative;
+      }
+      @media (max-width: $mobileWidth - 1){
+        //display: inline-block;
+      }
+
+      cursor: pointer;
+      strong{
+        padding: 0 20px 0 0;
+        background: url(../imgs/icons/more.svg) no-repeat right 50%;
+        font-weight: 600;
+        color: #596062;
+        @media (min-width: $mobileWidth) {
+          display: block;
+        }
+      }
+      &.active strong{
+        background: url(../imgs/icons/less.svg) no-repeat right 50%;
+      }
+
+      &.active ul{
+        display: block;
+      }
+      ul{
+        display: none;
+        list-style: none;
+        @media (min-width: $mobileWidth) {
+          position: absolute;
+          line-height: 30px;
+          left: -8px;
+          right: 0;
+          padding: 8px 0;
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        background: #fff;
+        border-radius: 4px;
+        li{
+          display: block;
+          text-align: left;
+          @media (max-width: $mobileWidth - 1){
+            text-align: center;
+          }
+          text-transform: uppercase;
+          a{
+            text-decoration: none;
+            color: #596062;
+            display: block;
+            @media (min-width: $mobileWidth) {
+              font-weight: 600;
+              padding: 0 0 0 8px;
+            }
+            &.current{
+              @media (min-width: $mobileWidth) {
+                background: #d8f7ff;
+              }
+            }
+            transition: background 0.3s;
+            &:hover{
+              @media (min-width: $mobileWidth) {
+                background: #d8f7ff;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body > div.inner  {
+  @media (min-width: $siteWidth) {
+    width: $siteWidth;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    h1{
+
+    }
+    h2{
+      font-weight: 500;
+      letter-spacing: 2px;
+      font-size: 30px;
+      line-height: 45px;
+      margin: 0 0 30px 0;
+    }
+    h3{
+      letter-spacing: 1px;
+    }
+    p{
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+  }
+  @media (max-width: $siteWidth - 1){
+    padding: 30px 20px;
+  }
+}
+
+body > footer{
+  background: #181819;
+  & > div.inner{
+    @media (min-width: $siteWidth) {
+      width: $siteWidth;
+      margin: 0 auto;
+    }
+    @media (max-width: $siteWidth - 1){
+      margin: 0 20px;
+    }
+
+  }
+  nav{
+    font-size: 14px;
+    line-height: 19px;
+    padding: 30px 0 36px 0;
+    @include clearfix;
+    h3{
+      margin: 0 0 9px 0;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+      font-weight: 700;
+    }
+    ul {
+      list-style: none;
+      float: left;
+      @media (min-width: $mobileWidth) {
+        width: 20%;
+      }
+      @media (max-width: $mobileWidth - 1){
+
+        width: 33.33%;
+        margin: 0 0 30px 0;
+        &:nth-child(4){
+          width: 50%;
+          clear: both;
+          margin: 0;
+        }
+        &:nth-child(5){
+          width: 50%;
+          margin: 0;
+        }
+      }
+
+      li {
+        margin: 0 0 9px 0;
+        a {
+          color: #F1F8FA;
+          transition: color 0.3s;
+          &:hover{
+            color: #7DE2FF;
+          }
+          &:active{
+            color: #848484;
+          }
+        }
+      }
+      &.social,
+      &.community {
+        li {
+          a {
+            padding: 0 0 0 27px;
+            transition: background 0.3s;
+          }
+
+          $classes: git,ln,fb,tw,sl,tel,st,em;
+          @each $class in $classes{
+            &.#{$class} {
+              a {
+                background: url(../imgs/icons/#{$class}.svg) no-repeat 0 0;
+                &:hover{
+                  background: url(../imgs/icons/#{$class}-hover.svg) no-repeat 0 0;
+                }
+                &:active{
+                  background: url(../imgs/icons/#{$class}-active.svg) no-repeat 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #absfooter{
+    clear: both;
+    border-top: 1px solid #596062;
+    padding: 20px 0;
+    @include clearfix;
+    font-size: 12px;
+    line-height: 16px;
+    #copyright{
+      float: left;
+      color: #596062;
+    }
+    ul{
+      float: right;
+      list-style: none;
+      li{
+        display: inline;
+        padding: 0 0 0 43px;
+        a{
+          color: #596062;
+          transition: color 0.3s;
+          &:hover{
+            color: #F1F8FA;
+          }
+          &:active{
+            color: #848484;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "pages.scss";
