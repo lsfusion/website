@@ -172,7 +172,11 @@ body > nav{
             text-align: center;
           }
           text-transform: uppercase;
-          a{
+          span{
+            cursor: default;
+            font-weight: 800!important;
+          }
+          a, span{
             text-decoration: none;
             color: #596062;
             display: block;
@@ -190,7 +194,6 @@ body > nav{
               @media (min-width: $mobileWidth) {
                 background: #d8f7ff;
               }
-
             }
           }
         }

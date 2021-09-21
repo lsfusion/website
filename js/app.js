@@ -10,5 +10,5 @@ $(document).ready(function() {
             $("div.language").removeClass("active");
         }
     })
-    $(".menu-link").click(function(){$(this).toggleClass("active")})
+    $(".menu-link").click(function(e){$(this).toggleClass("active");e.preventDefault()})
 })
