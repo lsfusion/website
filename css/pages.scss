@@ -58,7 +58,7 @@ em.sp{
   }
   @media (max-width: $mobileWidth - 1){
     background: #0062BD url(../imgs/home/header_mainbg_m.svg) no-repeat left bottom;
-    background-size: 100%;
+    background-size: cover;
 
   }
   @media (min-width: $mobileWidth) {
