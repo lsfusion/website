@@ -1,0 +1,9 @@
+DirectoryIndex index.html index.php
+
+ErrorDocument 404 /404.html
+
+#AddType text/html .html
+#AddHandler server-parsed .html
+Options Indexes FollowSymLinks Includes
+AddHandler server-parsed .html .htm
+
