@@ -201,12 +201,12 @@ ul.home-links1{
     @media (min-width: 480px) {
       &:nth-child(1) {
         div.inner {
-          background: #E1F7FE url(../imgs/home/blog_bg1.svg) no-repeat right top;
+          background: #E1F7FE url(../imgs/home/blog_bg1.svg) no-repeat right bottom;
         }
       }
       &:nth-child(2) {
         div.inner {
-          background: #E1F7FE url(../imgs/home/blog_bg2.svg) no-repeat right top;
+          background: #E1F7FE url(../imgs/home/blog_bg2.svg) no-repeat right bottom;
         }
       }
     }
