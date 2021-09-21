@@ -81,11 +81,15 @@ body > nav{
       @media (min-width: $mobileWidth) {
         #languages {
           margin-left: 100px;
+          position: relative;
+          z-index: 1;
         }
       }
       @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
         #languages {
           margin-left: 20px;
+          position: relative;
+          z-index: 1;
         }
       }
       & > li{
@@ -198,26 +202,28 @@ body > div.inner  {
   @media (min-width: $siteWidth) {
     width: $siteWidth;
     margin: 0 auto;
-    padding: 30px 0;
-
-    h1{
-
-    }
-    h2{
-      font-weight: 500;
-      letter-spacing: 2px;
-      font-size: 30px;
-      line-height: 45px;
-      margin: 0 0 30px 0;
-    }
-    h3{
-      letter-spacing: 1px;
-    }
-    p{
-      font-size: 14px;
-      line-height: 19px;
-    }
-
+    padding: 30px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  h1, h2, h3, h4{
+    font-family: Poppins;
+  }
+  h2{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    margin: 0 0 21px 0;
+  }
+  h3{
+  }
+  p{
+    font-size: 14px;
+    line-height: 19px;
+  }
+  a{
+    color: #0E84BC;
   }
   @media (max-width: $siteWidth - 1){
     padding: 30px 20px;
