@@ -213,6 +213,22 @@ body > div.inner  {
   h1, h2, h3, h4{
     font-family: Poppins;
   }
+  h1{
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    em{
+      font-style: normal;
+      color: #26C4F7;
+    }
+    a{
+      @media (min-width: $mobileWidth) {
+        float: right;
+      }
+      @extend .btn;
+    }
+  }
   h2{
     font-weight: 500;
     font-size: 30px;
@@ -227,6 +243,13 @@ body > div.inner  {
   }
   a{
     color: #0E84BC;
+    transition: color 0.3s, background 0.3s;
+    &:hover{
+      color: #26C4F7;
+    }
+    &:active{
+      color: #0E84BC;
+    }
   }
   @media (max-width: $siteWidth - 1){
     padding: 30px 20px;

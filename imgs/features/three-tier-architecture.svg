@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="6.75" y="12.75" width="5.5" height="5.5" rx="1.25" stroke="#26C4F7" stroke-width="1.5"/>
+<rect x="19.75" y="12.75" width="5.5" height="5.5" rx="1.25" stroke="#26C4F7" stroke-width="1.5"/>
+<rect x="12.75" y="25.75" width="5.5" height="5.5" rx="1.25" stroke="#26C4F7" stroke-width="1.5"/>
+<rect x="0.75" y="25.75" width="5.5" height="5.5" rx="1.25" stroke="#26C4F7" stroke-width="1.5"/>
+<rect x="25.75" y="25.75" width="5.5" height="5.5" rx="1.25" stroke="#26C4F7" stroke-width="1.5"/>
+<rect x="12.75" y="0.75" width="5.5" height="5.5" rx="1.25" fill="#26C4F7" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M12.5 4H11C9.89543 4 9 4.89543 9 6V13" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M6.5 16H5C3.89543 16 3 16.8954 3 18V25" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M19 4H20.5C21.6046 4 22.5 4.89543 22.5 6V13" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M25 16H26.5C27.6046 16 28.5 16.8954 28.5 18V25" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M19.5 15.5H12.5" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M12 29H6" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M25 29H19" stroke="#26C4F7" stroke-width="1.5"/>
+<path d="M16 16V25.5" stroke="#26C4F7" stroke-width="1.5"/>
+</svg>
