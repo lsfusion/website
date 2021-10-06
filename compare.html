@@ -45,16 +45,16 @@
 <div class="inner">
     <h1><em>Why</em> not ... ?</h1>
     <nav class="filters">
-        <div>
+        <div class="filter">
             <span>Code templating and autogeneration</span>
         </div>
-        <div>
+        <div class="filter">
             <span>Lorem ipsum dolor sit</span>
         </div>
-        <div>
+        <div class="filter">
             <span>Facilisi porttitor scelerisque a?</span>
         </div>
-        <div>
+        <div class="filter">
             <span>Ultricies diam porttitor orci cursus</span>
         </div>
     </nav>
@@ -66,34 +66,212 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>ERP</th>
-                <th>RDBMS + UI</th>
+                <th colspan="3">ERP</th>
+                <th colspan="2">RDBMS + UI</th>
                 <th>ORM + UI</th>
                 <th>RAD</th>
                 <th>Electronic tal</th>
                 <th>lsFusion</th>
             </tr>
-        </thead>
-        <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Subtype</td>
+                <td>Subtype</td>
+                <td>ORM-style</td>
+                <td>Doc-style</td>
+                <td>Commercial</td>
+                <td>Free</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
+            <tr>
+                <td>Examples</td>
+                <td>
+                    SAP
+                    <span class="info"></span>
+                </td>
+                <td>
+                    Axapta, SAP
+                    <span class="info"></span>
+                </td>
+                <td>1C 8.2 or later</td>
+                <td>Oracle + (Oracle Forms / ADF), MS SQL + (Wrms)</td>
+                <td>Postgres, MySQL, Firebird</td>
+                <td>Java Spring, J2EE, .NET</td>
+                <td>MS Access, Foxpro, Delphi, 1C 8.1 or earlier</td>
+                <td>Excel, Google Docs</td>
+                <td>lsFusion</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Single language for data
+                    <span class="info"></span>
+                </td>
+                <td><span class="minusplus">-+</span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span></td>
+                <td><span class="plusminus">+=</span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Single paradigm for UI
+                    <span class="info"></span>
+                </td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Server-to-client access
+                    <span class="info"></span>
+                </td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minus">-</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+-</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    No ORM, Yes SQL
+                    <span class="info"></span>
+                </td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plus">+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Data change events
+                    <span class="info"></span>
+                </td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Dynamic physical model
+                    <span class="info"></span>
+                </td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Constraints on any data
+                    <span class="info"></span>
+                </td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Absolute reactivity
+                    <span class="info"></span>
+                </td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Cross-platform server
+                    <span class="info"></span>
+                </td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    Open database structure
+                    <span class="info"></span>
+                </td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="minusplus">-+</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+                <td><span class="plusminus">+=</span><span class="info"></span></td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td>- lorem ipsum dolor</td>
-                <td>- lorem ipsum dolor</td>
-                <td>- lorem ipsum dolor</td>
-                <td>- lorem ipsum dolor</td>
+                <td colspan="10">
+                    <div>
+                        <span class="plus">+</span> - lorem ipsum dolor
+                    </div>
+                    <div>
+                        <span class="minus">-</span> - lorem ipsum dolor
+                    </div>
+                    <div>
+                        <span class="plusminus">+</span> - lorem ipsum dolor
+                    </div>
+                    <div>
+                        <span class="minusplus">+</span> - lorem ipsum dolor
+                    </div>
+                </td>
             </tr>
         </tfoot>
     </table>

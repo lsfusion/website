@@ -50,6 +50,14 @@ em.sp{
     color: #26C4F7;
   }
 }
+.info{
+  display: inline-block;
+  text-indent: -30000px;
+  background: url(../imgs/info.svg) no-repeat 0 0;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
 
 @import "home.scss";
 @import "features.scss";
