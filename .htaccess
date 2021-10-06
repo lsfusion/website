@@ -4,6 +4,11 @@ ErrorDocument 404 /404.html
 
 
 Redirect 302 /features /features.html
+Redirect 302 /compare /compare.html
+Redirect 302 /solutions /solutions.html
+Redirect 302 /try /try.html
+Redirect 302 /report /report.html
+Redirect 302 /sitemap /sitemap.html
 
 #AddType text/html .html
 #AddHandler server-parsed .html

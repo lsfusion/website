@@ -1,0 +1,18 @@
+#compare-banner{
+  background: url(../imgs/compare-bg.svg) repeat-x 50% 0;
+  background-size: 100%;
+  min-height: 420px;
+  p{
+    background: url(../imgs/compare-bg-inner.svg) no-repeat 0 0;
+    width: $siteWidth;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    min-height: 420px;
+    padding: 200px 0 0 700px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

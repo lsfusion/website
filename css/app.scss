@@ -3,6 +3,28 @@ $mobileWidth: 768px;
 
 @import "reset.scss";
 
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: $mobileWidth) {
+  //setting up 100% height
+  body.flex {
+    display: flex;
+    flex-direction: column;
+    & > header {
+
+    }
+    & > .inner {
+      flex: auto;
+    }
+    & > footer {
+
+    }
+  }
+}
+
 body{
   font-family: 'Open Sans', sans-serif;
 }
@@ -201,7 +223,7 @@ body > nav{
     }
   }
 }
-body > div.inner  {
+body > .inner  {
   @media (min-width: $siteWidth) {
     width: $siteWidth;
     margin: 0 auto;
