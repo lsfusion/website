@@ -233,6 +233,52 @@ ul.home-links2{
   }
 }
 ul.home-links3{
+
+  &.developers,
+  &.administrators,
+  &.business{
+    li{
+      .inner {
+        strong {
+          color: #b7c0c4;
+        }
+        & > span {
+          color: #b7c0c4;
+        }
+        em {
+          color: #b7c0c4;
+        }
+      }
+    }
+  }
+  &.developers{
+    li{
+      .inner{
+        & > span span.developers{
+          color: #596062;
+        }
+      }
+    }
+  }
+  &.administrators{
+    li{
+      .inner{
+        & > span span.administrators{
+          color: #596062;
+        }
+      }
+    }
+  }
+  &.business{
+    li{
+      .inner{
+        & > span span.business{
+          color: #596062;
+        }
+      }
+    }
+  }
+
   @extend .home-links;
   li{
     flex: 0 0 50%;
@@ -262,6 +308,9 @@ ul.home-links3{
         background-position: right 10px top 20px !important;
 
       }
+      strong, span, em{
+        transition: color .3s, background 0.3s;
+      }
       strong{
         display: block;
         font-size: 16px;
@@ -270,7 +319,7 @@ ul.home-links3{
         color: #2C2A28;
         font-weight: 700;
       }
-      span{
+      & > span{
         display: block;
         font-size: 14px;
         line-height: 19px;

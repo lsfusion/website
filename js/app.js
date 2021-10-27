@@ -11,4 +11,22 @@ $(document).ready(function() {
         }
     })
     $(".menu-link").click(function(e){$(this).toggleClass("active");e.preventDefault()})
+
+    $("body").on("click", ".dropdown", function(e){
+        $(this).toggleClass("active");
+        e.stopPropagation();
+    })
+    $(document).click(function(){
+        $(".dropdown").removeClass("active");
+    });
+    $(".dropdown ul li").click(function(){
+        $(this).closest(".dropdown").find("li.active").removeClass("active")
+        $(this).addClass("active");
+        let text = $(this).text();
+        $(this).closest(".dropdown").find("em").text( text )
+
+        let _id = $(this).closest(".dropdown").attr("data-apply-to")
+        $("#" + _id).attr("class", _id + " " + text)
+    })
+
 })
