@@ -236,6 +236,7 @@ ul.home-links3{
 
   &.developers,
   &.administrators,
+  &.users,
   &.business{
     li{
       .inner {
@@ -269,6 +270,16 @@ ul.home-links3{
       }
     }
   }
+  &.users {
+    li {
+      .inner {
+        & > span span.users {
+          color: #596062;
+        }
+      }
+    }
+  }
+
   &.business{
     li{
       .inner{
