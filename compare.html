@@ -59,10 +59,22 @@
         </div>
     </nav>
     <h1>
-        <em>Compare</em> by features
+        <em>Compare</em> by
+
+        <span class="dropdown" data-apply-to="compare">
+            <em>features</em>
+            <ul>
+                <li class="active">features</li>
+                <li>non-functional requirements</li>
+                <li>role</li>
+            </ul>
+        </span>
+
         <a href="/features">See all Features</a>
     </h1>
-    <table id="comparetbl">
+    <div id="compare" class="features">
+        <div id="features">
+            <table id="comparetbl">
         <thead>
             <tr>
                 <th>Name</th>
@@ -314,6 +326,15 @@
             </tr>
         </tfoot>
     </table>
+        </div>
+        <div id="non-functionalrequirements">
+            another table
+        </div>
+        <div id="role">
+            3rd table
+        </div>
+
+    </div>
 </div>
 
 <footer>

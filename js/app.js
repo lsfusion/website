@@ -26,7 +26,7 @@ $(document).ready(function() {
         $(this).closest(".dropdown").find("em").text( text )
 
         let _id = $(this).closest(".dropdown").attr("data-apply-to")
-        $("#" + _id).attr("class", _id + " " + text)
+        $("#" + _id).attr("class", _id + " " + text.replace(/ /, ""))
     })
 
 })

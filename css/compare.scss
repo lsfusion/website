@@ -1,3 +1,24 @@
+#compare{
+  & > div{
+    display: none;
+  }
+  &.features{
+    #features{
+      display: block;
+    }
+  }
+  &.non-functionalrequirements{
+    #non-functionalrequirements{
+      display: block;
+    }
+  }
+  &.role{
+    #role{
+      display: block;
+    }
+  }
+}
+
 #compare-banner{
   @media (min-width: $siteWidth) {
     background: url(../imgs/compare-bg.svg) repeat-x 50% 0;
