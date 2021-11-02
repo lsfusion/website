@@ -28,5 +28,21 @@ $(document).ready(function() {
         let _id = $(this).closest(".dropdown").attr("data-apply-to")
         $("#" + _id).attr("class", _id + " " + text.replace(/ /, ""))
     })
+//try page
+    $("body").on("click", ".dd", function(e){
+        $(this).toggleClass("active");
+        e.stopPropagation();
+    })
+    $(document).click(function(){
+        $(".dd").removeClass("active");
+    });
+    $(".dd ul li").click(function(){
+        $(this).closest(".dd").find("li.active").removeClass("active")
+        $(this).addClass("active");
+        let text = $(this).text();
+        $(this).closest(".dd").find("em").text( text )
 
+        let _id = $(this).closest(".dd").attr("data-apply-to")
+        $("#" + _id).attr("class", _id + " " + text.replace(/ /, ""))
+    })
 })
