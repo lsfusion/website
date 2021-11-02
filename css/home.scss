@@ -246,7 +246,8 @@ ul.home-links3{
         & > span {
           color: #b7c0c4;
         }
-        em {
+        em,
+        & > a{
           color: #b7c0c4;
         }
       }
@@ -336,8 +337,10 @@ ul.home-links3{
         line-height: 19px;
         margin: 0 0 3px 0;
         color: #596062;
+        font-weight: 400;
       }
-      em{
+      em,
+      & > a{
         background: url(../imgs/icons/more-link.svg) no-repeat right 6px;
         padding-right: 20px;
         font-style: normal;
