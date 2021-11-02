@@ -1,0 +1,12 @@
+#try{
+  &.database{
+    .platform{
+      display: none;
+    }
+  }
+  &.platform{
+    .database{
+      display: none;
+    }
+  }
+}

@@ -40,9 +40,29 @@
 
 <div class="inner">
     <h1>
-        <em>Try</em> in database mode
+        <em>Try</em> in
+        <span class="dropdown" data-apply-to="try">
+            <em>database</em>
+            <ul>
+                <li class="active">database</li>
+                <li>platform</li>
+            </ul>
+        </span>
+        mode
     </h1>
-    <p>In database mode the code you enter is executed on the MM demo server via an HTTP request. The result of this request is displayed in the bottom window. In this mode you cannot execute instructions that change the global system logic. You also cannot create events or any elements that use them (constraints, classes and aggregations), or elements of the physical model (such as tables, indexes and materializations). All data properties in this mode are considered local. Interactive views are also not supported in this mode.</p>
+
+    <div id="try" class="database">
+        <div class="database">
+            <p>In database mode the code you enter is executed on the MM demo server via an HTTP request. The result of this request is displayed in the bottom window. In this mode you cannot execute instructions that change the global system logic. You also cannot create events or any elements that use them (constraints, classes and aggregations), or elements of the physical model (such as tables, indexes and materializations). All data properties in this mode are considered local. Interactive views are also not supported in this mode.</p>
+        </div>
+        <div class="platform">
+            <p>In platform mode the code you enter is considered the only application module of the server you start. The application server starts using the first free port within the certain range. Standard output log (stdout) of this server is output to the window underneath. After the first server launch a new tab in browser opens with UI of this server. Each restart is treated as a change of the previously launched logic. Compared to the database mode this one has no limitations, but it requires additional time to start the server. To minimize this time the server is started ina light mode.</p>
+        </div>
+    </div>
+
+
+
+
 
 </div>
 
