@@ -234,9 +234,9 @@ ul.home-links2{
 }
 ul.home-links3{
 
-  &.developers,
-  &.administrators,
-  &.users,
+  &.developer,
+  &.administrator,
+  &.user,
   &.business{
     li{
       .inner {
@@ -253,34 +253,33 @@ ul.home-links3{
       }
     }
   }
-  &.developers{
+  &.developer{
     li{
       .inner{
-        & > span span.developers{
+        & > span span.developer{
           color: #596062;
         }
       }
     }
   }
-  &.administrators{
+  &.administrator{
     li{
       .inner{
-        & > span span.administrators{
+        & > span span.administrator{
           color: #596062;
         }
       }
     }
   }
-  &.users {
+  &.user {
     li {
       .inner {
-        & > span span.users {
+        & > span span.user {
           color: #596062;
         }
       }
     }
   }
-
   &.business{
     li{
       .inner{

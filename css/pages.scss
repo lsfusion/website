@@ -52,11 +52,30 @@ em.sp{
 }
 .info{
   display: inline-block;
-  text-indent: -30000px;
   background: url(../imgs/info.svg) no-repeat 0 0;
   width: 10px;
   height: 10px;
   cursor: pointer;
+  position: relative;
+  span{
+    position: absolute;
+    padding: 9px 20px;
+    background: #F7FBFC;
+    border-radius: 4px;
+    width: 300px;
+    margin-left: -150px;
+    bottom: 15px;
+    display: none;
+    white-space: normal;
+    transition: opacity 0.3s;
+    box-shadow: 0 2px 15px #eee;
+    cursor: default;
+  }
+  &:hover{
+    span{
+      display: block;
+    }
+  }
 }
 
 @import "home.scss";
