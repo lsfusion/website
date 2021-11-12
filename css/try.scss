@@ -36,6 +36,7 @@
       }
       display: block;
       position: relative;
+      z-index: 3;
       &.active{
         ul{
           display: block;
@@ -99,7 +100,12 @@
         flex-direction: row;
         justify-content: space-between;
       }
-      span{
+      span, a{
+        &.disabled{
+          color: #848484 !important;;
+          cursor: default;
+          border-color: #848484 !important;
+        }
         color: #fff;
         float: left;
         width: 120px;
@@ -125,6 +131,7 @@
         box-sizing: border-box;
         padding: 0 0 0 50px;
         cursor: pointer;
+        text-decoration: none;
         &.open,
         &.stop{
           border: 1px solid #FFFFFF;
@@ -135,14 +142,24 @@
         }
         &.open{
           background-image: url(../imgs/open.svg);
+          &.disabled{
+            background-image: url(../imgs/open-disabled.svg);
+          }
         }
         &.stop{
           background-image: url(../imgs/stop.svg);
+          &.disabled{
+            background-image: url(../imgs/stop-disabled.svg);
+          }
         }
         &.start{
           background-color: #26C4F7;
           border: 1px solid #26C4F7;
           background-image: url(../imgs/play.svg);
+          &.disabled{
+            background-color: grayscale(#efefef) !important;
+            background-image: url(../imgs/play-disabled.svg);
+          }
           transition: background-color 0.3s;
           &:hover{
             background-color: darken(#26C4F7, 10);
@@ -154,17 +171,27 @@
   .code{
     background: #F7FBFC;
     min-height: 340px;
+    border: 0;
+    outline: none;
+    resize: none;
+
     @media (min-width: $mobileWidth) {
       width: 48.5%;
       float: left;
     }
     @media (max-width: $mobileWidth - 1){
       margin: 0 0 30px 0;
+      width: 100%;
     }
     padding: 30px 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    &.loading{
+      background: #F7FBFC url(../imgs/spinner.gif) no-repeat 50% 50%;
+      background-size: 50px 50px;
+    }
+    //TODO: need to add scrolling
   }
   .results{
     background: #F7FBFC;

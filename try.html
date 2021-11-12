@@ -12,6 +12,8 @@
 
     <link href="/css/app.css" rel="stylesheet" type="text/css" />
 
+    <link href="/3rdparty/codemirror/codemirror.css" rel="stylesheet" type="text/css" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon/favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon/favicon_16x16.png">
@@ -65,29 +67,19 @@
                 <nav>
 
                     <span class="dd">
-                        <em>Set operations</em>
+                        <em>Loading...</em>
                         <ul>
-                            <li class="active">Set operations</li>
-                            <li>Value 1</li>
-                            <li>Value 2</li>
-                            <li>Value 3</li>
-                            <li>Value 4</li>
+                            <!--li class="active">Set operations</li-->
                         </ul>
                     </span>
 
                     <div class="buttons">
-                        <span class="open">Open</span>
-                        <span class="stop">Stop</span>
-                        <span class="start">Start</span>
+                        <span class="start disabled">Start</span>
                     </div>
 
                 </nav>
-                <div class="code">
-
-                </div>
-                <div class="results loading">
-
-                </div>
+                <textarea class="code loading"></textarea>
+                <div class="results loading"></div>
             </div>
 
         </div>
@@ -95,6 +87,27 @@
             <p>
                 In platform mode the code you enter is considered the only application <a href="https://documentation.lsfusion.org/display/LSFUS/Modules" target="_blank">module</a> of the server you start. The application server starts using the first free <a href="https://documentation.lsfusion.org/display/LSFUS/Launch+parameters" target="_blank">port</a> within the certain range. Standard output log (<a href="https://documentation.lsfusion.org/display/LSFUS/Journals+and+logs#Journalsandlogs-stdout" target="_blank">stdout</a>) of this server is output to the window underneath. After the first server launch a new tab in browser opens with UI of this server. Each restart is treated as a change of the previously launched logic. Compared to the database mode this one has no limitations, but it requires additional time to start the server. To minimize this time the server is started in<a href="https://documentation.lsfusion.org/display/LSFUS/Launch+parameters#Launchparameters-lightstart" target="_blank">a light</a> mode.
             </p>
+
+            <div class="tryfeature">
+                <nav>
+
+                    <span class="dd">
+                        <em>Loading...</em>
+                        <ul>
+                            <!--li class="active">Set operations</li-->
+                        </ul>
+                    </span>
+
+                    <div class="buttons">
+                        <a href="https://tryonline.lsfusion.org/?port=###" target="_blank" class="open disabled">Open</a>
+                        <span class="stop disabled">Stop</span>
+                        <span class="start">Start</span>
+                    </div>
+
+                </nav>
+                <textarea class="code loading"></textarea>
+                <div class="results loading"></div>
+            </div>
         </div>
     </div>
 
@@ -160,5 +173,6 @@
         crossorigin="anonymous"></script>
 <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 <script src="/js/app.js"></script>
+
 </body>
 </html>
