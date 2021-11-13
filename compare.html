@@ -332,12 +332,237 @@
     </table>
         </div>
         <div id="non-functionalrequirements">
-            another table
+            <table id="requirementstbld">
+                <thead>
+                <tr>
+                    <th>NFR</th>
+                    <th>ERP</th>
+                    <th>RDBMS + UI</th>
+                    <th>ORM + UI</th>
+                    <th>RAD</th>
+                    <th>Electronic tables</th>
+                    <th>lsFusion</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Examples</td>
+                    <td>SAP, Axapta, 1C 8.2 or later</td>
+                    <td>Oracle, MS SQL, Postgres + UI (Java, .Net, Delphi)</td>
+                    <td>Java Spring, .NET</td>
+                    <td>MS Access, Foxpro, Delphi, 1C 8.1 or earlier</td>
+                    <td>Excel, Google Docs</td>
+                    <td>lsFusion</td>
+                </tr>
+                <tr>
+                    <td>Common types of systems</td>
+                    <td>Multi-functional low-load systems with structured data</td>
+                    <td>Multi-functional high-load systems with structured data</td>
+                    <td>Specialized ultra-high-load systems</td>
+                    <td>Specialized low-load systems with structured data</td>
+                    <td>Specialized low-load systems with unstructured data</td>
+                    <td>Any system with structured data (except ultra-high-load systems)</td>
+                </tr>
+                <tr>
+                    <td>Common industries</td>
+                    <td>Business applications (manufacturing, wholesale)</td>
+                    <td>Business applications (banking, retail)</td>
+                    <td>Web applications (websites, online services, portals)</td>
+                    <td>Business applications</td>
+                    <td>Any industry</td>
+                    <td>Any industry</td>
+                </tr>
+                <tr data-row-type="busi develop all">
+                    <td>Development speed</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="minus">2</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="busi develop all">
+                    <td>Development simplicity</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="minus">2</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="develop user all">
+                    <td>Modularity</td>
+                    <td class="minus">3</td>
+                    <td class="minus">3</td>
+                    <td class="middle">5</td>
+                    <td class="minus">3</td>
+                    <td class="minus">1</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="develop all">
+                    <td>Flexibility</td>
+                    <td class="minus">4</td>
+                    <td class="middle">7</td>
+                    <td class="plus">10</td>
+                    <td class="middle">5</td>
+                    <td class="minus">3</td>
+                    <td class="middle">7</td>
+                </tr>
+                <tr data-row-type="admin busi all">
+                    <td>Portability</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="plus">9</td>
+                    <td class="minus">3</td>
+                    <td class="minus">3</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="admin all">
+                    <td>Supportability</td>
+                    <td class="plus">8</td>
+                    <td class="middle">6</td>
+                    <td class="middle">6</td>
+                    <td class="minus">3</td>
+                    <td class="minus">2</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="develop all">
+                    <td>Openness</td>
+                    <td class="minus">4</td>
+                    <td class="middle">7</td>
+                    <td class="plus">10</td>
+                    <td class="minus">4</td>
+                    <td class="minus">4</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="user all">
+                    <td>Usability</td>
+                    <td class="middle">6</td>
+                    <td class="middle">5</td>
+                    <td class="minus">3</td>
+                    <td class="middle">5</td>
+                    <td class="middle">7</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="user busi all">
+                    <td>Performance</td>
+                    <td class="minus">3</td>
+                    <td class="plus">9</td>
+                    <td class="minus">3</td>
+                    <td class="minus">3</td>
+                    <td class="minus">3</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="admin develop user all">
+                    <td>Integrity</td>
+                    <td class="minus">4</td>
+                    <td class="middle">7</td>
+                    <td class="minus">4</td>
+                    <td class="minus">4</td>
+                    <td class="minus">2</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="admin user busi all">
+                    <td>Scalability</td>
+                    <td class="minus">4</td>
+                    <td class="middle">6</td>
+                    <td class="plus">10</td>
+                    <td class="minus">3</td>
+                    <td class="minus">2</td>
+                    <td class="plus">8</td>
+                </tr>
+                <tr data-row-type="busi all">
+                    <td>Security</td>
+                    <td class="plus">8</td>
+                    <td class="plus">8</td>
+                    <td class="middle">6</td>
+                    <td class="minus">3</td>
+                    <td class="minus">2</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="busi all">
+                    <td>Internationalization</td>
+                    <td class="plus">10</td>
+                    <td class="middle">6</td>
+                    <td class="plus">10</td>
+                    <td class="minus">4</td>
+                    <td class="minus">4</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr data-row-type="busi all">
+                    <td>Cost</td>
+                    <td class="minus">4</td>
+                    <td class="middle">6</td>
+                    <td class="plus">10</td>
+                    <td class="plus">8</td>
+                    <td class="plus">8</td>
+                    <td class="plus">10</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
         <div id="role">
-            3rd table
+            <table id="roletbl">
+                <thead>
+                <tr>
+                    <th>NFR</th>
+                    <th>ERP</th>
+                    <th>RDBMS + UI</th>
+                    <th>ORM + UI</th>
+                    <th>RAD</th>
+                    <th>Electronic tables</th>
+                    <th>lsFusion</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Examples</td>
+                    <td>SAP, Axapta, 1C 8.2 or later</td>
+                    <td>Oracle, MS SQL, Postgres + UI (Java, .Net, Delphi)</td>
+                    <td>Java Spring, .NET</td>
+                    <td>MS Access, Foxpro, Delphi, 1C 8.1 or earlier</td>
+                    <td>Excel, Google docs</td>
+                    <td>lsFusion</td>
+                </tr>
+                <tr>
+                    <td>For developers</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="minus">2</td>
+                    <td class="minus">4</td>
+                    <td class="minus">2</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr>
+                    <td>For administrators</td>
+                    <td class="middle">5</td>
+                    <td class="minus">4</td>
+                    <td class="minus">4</td>
+                    <td class="minus">4</td>
+                    <td class="minus">2</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr>
+                    <td>For users</td>
+                    <td class="middle">5</td>
+                    <td class="minus">3</td>
+                    <td class="minus">3</td>
+                    <td class="minus">3</td>
+                    <td class="middle">5</td>
+                    <td class="plus">10</td>
+                </tr>
+                <tr>
+                    <td>For businesses</td>
+                    <td class="minus">4</td>
+                    <td class="minus">3</td>
+                    <td class="middle">5</td>
+                    <td class="minus">4</td>
+                    <td class="middle">5</td>
+                    <td class="plus">10</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-
     </div>
 </div>
 
