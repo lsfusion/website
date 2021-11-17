@@ -38,8 +38,25 @@ let featuresFilters = [
 
     }
 //end setting filter for the features;
+//scrolling and highlighting at compare page (if id detected)
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    let id = getParameterByName('id');
+    if(id){
+        $("#comparetbl tr[data-id='" + id + "']").addClass("active");
 
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#comparetbl tr[data-id='" + id + "']").eq(0).offset().top - 350
+        }, 100);
 
+        setTimeout(function(){
+            $("#comparetbl tr[data-id='" + id + "']").removeClass("active");
+        }, 5000)
+    }
+//end compare page
 
     $(document).click(function(e){
 

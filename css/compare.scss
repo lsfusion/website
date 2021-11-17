@@ -115,6 +115,11 @@ nav.external-links{
   }
   tbody{
     tr{
+      &.active{
+        td{
+          background: #fdff48 !important;
+        }
+      }
       td{
         transition: background-color 0.3s;
         border-bottom: 1px solid #f1f8fa;
