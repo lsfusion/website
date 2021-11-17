@@ -14,6 +14,30 @@ $(document).ready(function() {
         })
     }
 //end home page text switcher
+//setting filter for the features
+let featuresFilters = [
+    "develop_rapidly",
+    "develop_simply",
+    "any_complexity",
+    "any_amount_of_data",
+    "any_number_of_users",
+    "any_infrastructure",
+    "trust_the_system",
+    "manage_the_system",
+    "communicate_with_the_system",
+    "own_the_system",
+    "extebd_the_system",
+    "scale_the_system",
+]
+    if( featuresFilters.indexOf(document.location.hash.substring(1)) !== -1 ){
+        $("ul.features").addClass("filterApplied").addClass( document.location.hash.substring(1) )
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("ul.features li." + document.location.hash.substring(1)).eq(0).offset().top - 80
+        }, 100);
+
+    }
+//end setting filter for the features;
 
 
 

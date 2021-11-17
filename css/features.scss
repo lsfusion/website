@@ -3,6 +3,44 @@ ul.features{
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+
+  &.filterApplied{
+    li{
+      div.inner {
+        &:hover{
+        }
+      }
+    }
+
+    $filters:
+            develop_rapidly,
+            develop_simply,
+            any_complexity,
+            any_amount_of_data,
+            any_number_of_users,
+            any_infrastructure,
+            trust_the_system,
+            manage_the_system,
+            communicate_with_the_system,
+            own_the_system,
+            extebd_the_system,
+            scale_the_system;
+
+    @each $filter in $filters {
+      &.#{$filter} {
+        .#{$filter} {
+          div.inner {
+            background: #7DE2FF;
+            &:hover {
+              background: #7DE2FF;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
   li{
     flex: 0 0 100%;
     padding: 0 0 20px;
@@ -68,8 +106,6 @@ ul.features{
         }
       }
     }
-
-
 
     $features:
             single-language,
