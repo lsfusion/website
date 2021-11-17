@@ -76,6 +76,9 @@ nav.filters{
   line-height: 19px;
   width: 100%;
   thead{
+    position: sticky;
+    top: 80px;
+    z-index: 1;
     tr{
       th{
         background: #7DE2FF;
@@ -113,10 +116,6 @@ nav.filters{
   }
 }
 #comparetbl{
-  @media (max-width: $mobileWidth - 1){
-
-  }
-
   .plus, .plusminus,
   .minus, .minusplus{
     border-radius: 4px;
