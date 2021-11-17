@@ -1,4 +1,21 @@
 $(document).ready(function() {
+//home page text switcher
+    setInterval(textSwitcher, 5000);
+    function textSwitcher() {
+        $("*[data-textswitcher]").each(function(){
+
+            let elem = $(this);
+            elem.fadeOut(function () {
+                let oldHTML = elem.html();
+                elem.html( elem.attr("data-textswitcher") );
+                elem.attr("data-textswitcher", oldHTML)
+                elem.fadeIn();
+            });
+        })
+    }
+//end home page text switcher
+
+
 
     $(document).click(function(e){
 
