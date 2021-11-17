@@ -141,7 +141,7 @@ let featuresFilters = [
         }
     }
     $(".start").click(function(){
-        if( $(this).closest(".database").size() > 0 ){
+        if( $(this).closest(".try-database").length > 0 ){
             $(this).closest(".tryfeature").find(".results").text("").addClass("loading")
 
             $(this).closest(".tryfeature").find(".code").val()
@@ -152,8 +152,7 @@ let featuresFilters = [
                     method: "POST",
 
                     success: function (response) {
-
-                        $(".database .results").text( response ).removeClass("loading")
+                        $(".try-database .results").text( response ).removeClass("loading")
                     }
                 }
             );
@@ -172,7 +171,17 @@ let featuresFilters = [
         stopServer();
     })
 
-
+    function sendRequest(url, request, responseType) {
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Content-Type", "text/plain; charset=UTF-8");
+        if (responseType != null) {
+            xhr.responseType = responseType;
+        }
+        xhr.send(request);
+        return xhr;
+    }
 
     function sendEscapedRequest(url, request) {
         return sendRequest(url, btoa(unescape(encodeURIComponent(JSON.stringify(request)))));

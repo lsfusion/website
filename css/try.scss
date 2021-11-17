@@ -1,11 +1,11 @@
 #try{
   &.database{
-    .platform{
+    .try-platform{
       display: none;
     }
   }
   &.platform{
-    .database{
+    .try-database{
       display: none;
     }
   }
@@ -16,7 +16,7 @@
 .tryfeature{
 
   @include clearfix;
-  background: #F1F8FA url(../imgs/try-horisontal.svg) no-repeat 50% 57.5%;
+  background: #F1F8FA url(../imgs/try-horisontal.svg) no-repeat 60% 57.5%;
   @media (max-width: $mobileWidth - 1){
     background: #F1F8FA url(../imgs/try-vertical.svg) no-repeat 50% 58%;
   }
@@ -169,14 +169,18 @@
     }
   }
   .code{
-    background: #F7FBFC;
+    max-height: 340px;
+    overflow-y: scroll;
+
+
+    background: darken(#F7FBFC, 20) ;
     min-height: 340px;
     border: 0;
     outline: none;
     resize: none;
 
     @media (min-width: $mobileWidth) {
-      width: 48.5%;
+      width: 58.5%;
       float: left;
     }
     @media (max-width: $mobileWidth - 1){
@@ -194,10 +198,12 @@
     //TODO: need to add scrolling
   }
   .results{
+    max-height: 340px;
+    overflow-y: scroll;
     background: #F7FBFC;
     min-height: 340px;
     @media (min-width: $mobileWidth) {
-      width: 48.5%;
+      width: 38.5%;
       float: right;
     }
     padding: 30px 20px;
