@@ -51,10 +51,10 @@
   }
 }
 
-nav.filters{
+nav.external-links{
   @include clearfix;
   margin: 0 0 40px 0;
-  & > div.filter{
+  & > a{
     @media (min-width: $mobileWidth) {
       float: left;
     }
@@ -67,6 +67,14 @@ nav.filters{
     border-radius: 4px;
     padding: 10px 30px 10px 10px;
     background: url(../imgs/icons/more-link.svg) no-repeat right 10px top 50%;
+
+    text-decoration: none;
+    color: #848484;
+    transition: color 0.3s, border-color 0.3s;
+    &:hover{
+      color: #0E84BC;
+      border-color:#0E84BC;
+    }
   }
 }
 #comparetbl,
