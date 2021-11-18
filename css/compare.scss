@@ -1,6 +1,10 @@
 #compare{
   & > div{
     display: none;
+    @media (max-width: $mobileWidth - 1){
+      max-width: 100%;
+      overflow-x: scroll;
+    }
   }
   &.features{
     #features{

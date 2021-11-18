@@ -13,14 +13,8 @@ html, body {
   body.flex {
     display: flex;
     flex-direction: column;
-    & > header {
-
-    }
     & > .inner {
       flex: auto;
-    }
-    & > footer {
-
     }
   }
 }
@@ -29,12 +23,10 @@ body{
   font-family: 'Open Sans', sans-serif;
   min-width: 320px;
 }
-a{
-
-}
 
 .dropdown{
   position: relative;
+  z-index: 11;
   display: inline-block;
   em{//current value
     //color: #26C4F7;
@@ -107,7 +99,7 @@ body > nav{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 12;
   background: #fff;
   opacity: 0.95;
 
