@@ -89,11 +89,9 @@ nav.external-links{
   width: 100%;
   thead{
     @media (min-width: $mobileWidth) {
-      tr:first-child {
-        position: sticky;
-        top: 80px;
-        z-index: 1;
-      }
+      position: sticky;
+      top: 80px;
+      z-index: 1;
     }
     tr{
       th{
