@@ -302,7 +302,8 @@ ul.home-links3{
           background: #F7FBFC url(../imgs/home/bicon#{$i}.svg) no-repeat right 0px top 0px;
         }
         &:hover .inner{
-          background: #7DE2FF url(../imgs/home/bicon#{$i}-hover.svg) no-repeat right 0px top 0px;
+          //background: #7DE2FF url(../imgs/home/bicon#{$i}-hover.svg) no-repeat right 0px top 0px;
+          background-color: #E1F7FE;
         }
       }
     }

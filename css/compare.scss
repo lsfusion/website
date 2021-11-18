@@ -88,13 +88,6 @@ nav.external-links{
   line-height: 19px;
   width: 100%;
   thead{
-    @media (min-width: $mobileWidth) {
-      tr:first-child(3) {
-        position: sticky;
-        top: 80px;
-        z-index: 1;
-      }
-    }
     tr{
       th{
         background: #7DE2FF;
@@ -137,6 +130,15 @@ nav.external-links{
   }
 }
 #comparetbl{
+  thead{
+    @media (min-width: $mobileWidth) {
+      tr:first-child(3) {
+        position: sticky;
+        top: 80px;
+        z-index: 1;
+      }
+    }
+  }
   .plus, .plusminus,
   .minus, .minusplus{
     border-radius: 4px;
