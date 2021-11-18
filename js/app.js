@@ -1,17 +1,34 @@
 $(document).ready(function() {
 //home page text switcher
+    let variants = [
+        [0, 0, 0],
+        [1, 0, 0],
+        [1, 1, 0],
+        [0, 1, 0],
+        [0, 1, 1],
+        [0, 0, 1],
+    ];
+    let currentInterval = 0;
     setInterval(textSwitcher, 5000);
     function textSwitcher() {
-        $("*[data-textswitcher]").each(function(){
 
-            let elem = $(this);
-            elem.fadeOut(function () {
-                let oldHTML = elem.html();
-                elem.html( elem.attr("data-textswitcher") );
-                elem.attr("data-textswitcher", oldHTML)
-                elem.fadeIn();
-            });
+        $("*[data-textswitcher]").each(function(index){
+            let currentStatus = variants[currentInterval][index];
+            let nextStatus = variants[ (currentInterval + 1) % variants.length][index];
+            if(currentStatus != nextStatus) {
+                let elem = $(this);
+                elem.fadeOut(function () {
+                    let oldHTML = elem.html();
+                    elem.html(elem.attr("data-textswitcher"));
+                    elem.attr("data-textswitcher", oldHTML)
+                    elem.fadeIn();
+                });
+            }
         })
+
+        currentInterval++;
+        currentInterval %= variants.length;
+
     }
 //end home page text switcher
 //setting filter for the features
