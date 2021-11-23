@@ -57,6 +57,7 @@ em.sp{
   height: 10px;
   cursor: pointer;
   position: relative;
+  z-index: 20;
   span{
     position: absolute;
     padding: 9px 20px;
