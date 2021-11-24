@@ -4,6 +4,7 @@
     @media (max-width: $mobileWidth - 1){
       max-width: 100%;
       overflow-x: scroll;
+      position: relative;
     }
   }
   &.features{
@@ -129,13 +130,46 @@ nav.external-links{
     }
   }
 }
+@media (max-width: $mobileWidth - 1) {
+  #features{
+    max-height: 600px;
+
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    &::-webkit-scrollbar-track {
+      border-radius:4px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar {
+      width:8px;
+      height:8px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius:4px;
+      background-color:#d6d6d6;
+    }
+    &::-webkit-scrollbar-corner {
+      visibility:hidden;
+    }
+
+
+  }
+}
 #comparetbl{
   thead{
     @media (min-width: $mobileWidth) {
       tr:nth-child(3) {
         position: sticky;
         top: 80px;
-        z-index: 21;
+        z-index: 22;
+      }
+    }
+    @media (max-width: $mobileWidth - 1) {
+      tr:nth-child(3) {
+        position: sticky;
+        top: 0px;
+        z-index: 22;
       }
     }
   }
@@ -249,6 +283,16 @@ nav.external-links{
             width: 125px;
           }
         }
+
+        @media (max-width: $mobileWidth - 1){
+          &:nth-child(1) {
+            position: sticky;
+            left: 0;
+            z-index: 21;
+            background: #fff;
+          }
+        }
+
         &.minus{
           span {
             background: #fff8f8;
@@ -285,6 +329,16 @@ nav.external-links{
   tbody{
     tr{
       td{
+        @media (max-width: $mobileWidth - 1){
+          &:nth-child(1) {
+            position: sticky;
+            left: 0;
+            z-index: 21;
+            background: #fff;
+          }
+        }
+
+
         text-align: center;
         span{
           border-radius: 4px;
