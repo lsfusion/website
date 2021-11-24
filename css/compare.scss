@@ -225,6 +225,16 @@ nav.external-links{
   tbody{
     tr{
       td{
+
+        text-align: center;
+        span{
+          border-radius: 4px;
+          padding: 3px 0;
+          display: block;
+          width: 41px;
+          margin: 0 auto;
+        }
+
         @media (min-width: $siteWidth) {//don't wrap words for big screens
           &:nth-child(1) {
             width: 125px;
@@ -234,13 +244,22 @@ nav.external-links{
           }
         }
         &.minus{
-          background: #fff8f8;
+          span {
+            background: #fff8f8;
+            color: #F62C1B;
+          }
         }
         &.middle{
-          background: #fffbec;
+          span {
+            background: #fffbec;
+            color: darken(#fffbec, 50);
+          }
         }
         &.plus{
-          background: #f4fff3;
+          span {
+            background: #f4fff3;
+            color: #4FAD32;
+          }
         }
       }
     }
@@ -260,14 +279,32 @@ nav.external-links{
   tbody{
     tr{
       td{
+        text-align: center;
+        span{
+          border-radius: 4px;
+          padding: 3px 0;
+          display: block;
+          width: 41px;
+          margin: 0 auto;
+        }
+
         &.minus{
-          background: #fff8f8;
+          span {
+            background: #fff8f8;
+            color: #F62C1B;
+          }
         }
         &.middle{
-          background: #fffbec;
+          span {
+            background: #fffbec;
+            color: darken(#fffbec, 50);
+          }
         }
         &.plus{
-          background: #f4fff3;
+          span {
+            background: #f4fff3;
+            color: #4FAD32;
+          }
         }
       }
     }
