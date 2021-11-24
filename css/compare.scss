@@ -175,6 +175,12 @@ nav.external-links{
     td{
       &:first-child{
         width: 250px;
+        @media (max-width: $mobileWidth - 1){
+          position: sticky;
+          left: 0;
+          z-index: 21;
+          background: #fff;
+        }
       }
       &:nth-child(n + 2){
         text-align: center;

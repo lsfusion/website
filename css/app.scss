@@ -3,7 +3,6 @@ $mobileWidth: 768px;
 
 @import "reset.scss";
 
-
 html, body {
   height: 100%;
   width: 100%;
@@ -101,7 +100,7 @@ body > nav{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 12;
+  z-index: 22;
   background: #fff;
   opacity: 0.95;
 
