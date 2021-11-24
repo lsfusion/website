@@ -57,6 +57,7 @@
       @media (min-width: $mobileWidth) {
         //float: left;
         //width: 47%;
+        width: 50%;
       }
       @media (max-width: $mobileWidth - 1){
         margin: 0 0 20px 0;
@@ -97,6 +98,9 @@
         position: absolute;
         left: 0;
         right: 0;
+        @media (min-width: $mobileWidth) {
+          right: auto;
+        }
         top: 40px;
         list-style: none;
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
