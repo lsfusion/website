@@ -145,9 +145,20 @@
         }
         color: #fff;
         float: left;
-        width: 120px;
-        background-repeat: no-repeat;
-        background-position: 25px 50%;
+        @media (max-width: $mobileWidth - 1) {
+          width: 120px;
+          padding: 0 0 0 50px;
+          background-repeat: no-repeat;
+          background-position: 25px 50%;
+        }
+        @media (min-width: $mobileWidth){
+          width: 40px;
+          text-indent: -3000px;
+          overflow: hidden;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+        }
         @media (max-width: $siteWidth){
           width: 110px;
           padding: 0 0 0 45px;
@@ -166,7 +177,7 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        padding: 0 0 0 50px;
+
         cursor: pointer;
         text-decoration: none;
         &.open,
@@ -190,27 +201,42 @@
           }
         }
         &.start{
-          background-color: #26C4F7;
-          border: 1px solid #26C4F7;
-          background-image: url(../imgs/play.svg);
-          &.disabled{
-            background-color: grayscale(#efefef) !important;
-            background-image: url(../imgs/play-disabled.svg);
+          @media (min-width: $mobileWidth){
+            background-color: #26C4F7;
+            background-image: url(../imgs/play-big.svg);
+            background-position: 16px 50%;
+            &.disabled {
+              background-color: grayscale(#efefef) !important;
+              background-image: url(../imgs/play-big-disabled.svg);
+            }
+            &:hover {
+              background-color: darken(#26C4F7, 10);
+            }
           }
-          transition: background-color 0.3s;
-          &:hover{
-            background-color: darken(#26C4F7, 10);
+          @media (max-width: $mobileWidth - 1) {
+            background-color: #26C4F7;
+            border: 1px solid #26C4F7;
+            background-image: url(../imgs/play.svg);
+            &.disabled {
+              background-color: grayscale(#efefef) !important;
+              background-image: url(../imgs/play-disabled.svg);
+            }
+            transition: background-color 0.3s;
+            &:hover {
+              background-color: darken(#26C4F7, 10);
+            }
           }
         }
       }
     }
   }
   .code{
-    overflow-y: scroll;
+    overflow: scroll;
     height: 340px;
     border: 0;
     outline: none;
     resize: none;
+    white-space: pre;
 
     @media (min-width: $mobileWidth) {
       height: auto;
@@ -222,9 +248,9 @@
       left: 0;
       top: 72px;
 
-      overflow-y: hidden;
+      overflow: hidden;
       &:hover{
-        overflow-y: scroll;
+        overflow: scroll;
       }
 
     }
@@ -241,11 +267,30 @@
       background: #F7FBFC url(../imgs/spinner.gif) no-repeat 50% 50%;
       background-size: 50px 50px;
     }
-    //TODO: need to add scrolling
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    &::-webkit-scrollbar-track {
+      border-radius:4px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar {
+      width:8px;
+      height:8px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius:4px;
+      background-color:#d6d6d6;
+    }
+    &::-webkit-scrollbar-corner {
+      visibility:hidden;
+    }
+
+
   }
   .results{
     overflow-y: scroll;
-    background: #F7FBFC;
+    background: #EFF5F7;
     height: 340px;
     @media (min-width: $mobileWidth) {
       width: 38.5%;
@@ -262,8 +307,29 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     &.loading{
-      background: #F7FBFC url(../imgs/spinner.gif) no-repeat 50% 50%;
+      background: #EFF5F7 url(../imgs/spinner.gif) no-repeat 50% 50%;
       background-size: 50px 50px;
+    }
+
+
+    white-space:pre;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    &::-webkit-scrollbar-track {
+      border-radius:4px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar {
+      width:8px;
+      height:8px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius:4px;
+      background-color:#d6d6d6;
+    }
+    &::-webkit-scrollbar-corner {
+      visibility:hidden;
     }
   }
 }
