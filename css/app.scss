@@ -420,6 +420,11 @@ body > footer{
             padding: 0 0 0 27px;
             transition: background 0.3s;
           }
+          &.blog{
+            a{
+              background: url(../imgs/icons/blog.png) no-repeat 0 0;
+            }
+          }
 
           $classes: git,ln,fb,tw,sl,tel,st,em;
           @each $class in $classes{
