@@ -249,7 +249,7 @@ nav.external-links{
 #requirementstbld{
   thead {
     @media (min-width: $mobileWidth) {
-      tr:nth-child(3) {
+      tr:nth-child(1) {
         position: sticky;
         top: 80px;
         z-index: 21;
