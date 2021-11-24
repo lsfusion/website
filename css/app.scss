@@ -7,6 +7,9 @@ $mobileWidth: 768px;
 html, body {
   height: 100%;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media (min-width: $mobileWidth) {
   //setting up 100% height
