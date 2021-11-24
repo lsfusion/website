@@ -46,83 +46,84 @@ let featuresFilters = {
     "extend_the_system":            "Extend the system",
     "scale_the_system":             "Scale the system",
 }
-
-    $("#features-nav .close").click(function(){
-        $("#features-nav").hide();
-        $("ul.features").removeClass("filterApplied").removeClass( document.location.hash.substring(1) )
-    })
-    $("#features-nav .prev").click(function(){
-        currentFeature = Math.max(currentFeature - 1, 0);
-        if(currentFeature == 0){
-            $(this).addClass("disabled")
-        }
-        if(currentFeature < numberOfActiveFeatures){
-            $("#features-nav .next").removeClass("disabled")
-        }
-        scrollToFeature( currentFeature );
-    })
-    $("#features-nav .next").click(function(){
-        currentFeature = Math.min(currentFeature + 1, numberOfActiveFeatures - 1);
-        if(currentFeature + 1 == numberOfActiveFeatures){
-            $(this).addClass("disabled")
-        }
-        if(currentFeature > 0){
-            $("#features-nav .prev").removeClass("disabled")
-        }
-        scrollToFeature( currentFeature );
-    })
-    function scrollToFeature(index){
-        if($("ul.features li." + featureClass).eq( index )) {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("ul.features li." + featureClass).eq(index).offset().top - 140
-            }, 300);
-            //updating nav
-            $("#features-nav em").html("<span>" + (index + 1) + "</span>/" + numberOfActiveFeatures)
-        }else{
-            $("#features-nav em").html("<span>" + (numberOfActiveFeatures   ) + "</span>/" + numberOfActiveFeatures)
-        }
-    }
     let featureClass = document.location.hash.substring(1);
-    let currentFeature = 0;
-    let numberOfActiveFeatures = $("ul.features li." + featureClass).length;
-
-    $(window).on("scroll resize", function(){
-        if(numberOfActiveFeatures == 0){
-            return;
-        }
-        let moveToIndex = numberOfActiveFeatures - 1;
-        let scrollTop = $(document).scrollTop();
-        for(let i = numberOfActiveFeatures - 1; i >=0; i--){
-            if($("ul.features li." + featureClass).eq( i ).offset().top - scrollTop > 140){
-                moveToIndex = i;
+    if(featureClass) {
+        $("#features-nav .close").click(function(){
+            $("#features-nav").hide();
+            $("ul.features").removeClass("filterApplied").removeClass( document.location.hash.substring(1) )
+        })
+        $("#features-nav .prev").click(function(){
+            currentFeature = Math.max(currentFeature - 1, 0);
+            if(currentFeature == 0){
+                $(this).addClass("disabled")
+            }
+            if(currentFeature < numberOfActiveFeatures - 1){
+                $("#features-nav .next").removeClass("disabled")
+            }
+            scrollToFeature( currentFeature );
+        })
+        $("#features-nav .next").click(function(){
+            currentFeature = Math.min(currentFeature + 1, numberOfActiveFeatures - 1);
+            if(currentFeature + 1 == numberOfActiveFeatures){
+                $(this).addClass("disabled")
+            }
+            if(currentFeature > 0){
+                $("#features-nav .prev").removeClass("disabled")
+            }
+            scrollToFeature( currentFeature );
+        })
+        function scrollToFeature(index){
+            if($("ul.features li." + featureClass).eq( index )) {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("ul.features li." + featureClass).eq(index).offset().top - 140
+                }, 300);
+                //updating nav
+                $("#features-nav em").html("<span>" + (index + 1) + "</span>/" + numberOfActiveFeatures)
+            }else{
+                $("#features-nav em").html("<span>" + (numberOfActiveFeatures   ) + "</span>/" + numberOfActiveFeatures)
             }
         }
-        currentFeature = moveToIndex;
 
-        if(currentFeature + 1 == numberOfActiveFeatures){
-            $("#features-nav .next").addClass("disabled")
-        }else{
-            $("#features-nav .next").removeClass("disabled")
+        let currentFeature = 0;
+        let numberOfActiveFeatures = $("ul.features li." + featureClass).length;
+
+        $(window).on("scroll resize", function () {
+            if (numberOfActiveFeatures == 0) {
+                return;
+            }
+            let moveToIndex = numberOfActiveFeatures - 1;
+            let scrollTop = $(document).scrollTop();
+            for (let i = numberOfActiveFeatures - 1; i >= 0; i--) {
+                if ($("ul.features li." + featureClass).eq(i).offset().top - scrollTop > 140) {
+                    moveToIndex = i;
+                }
+            }
+            currentFeature = moveToIndex;
+
+            if (currentFeature + 1 == numberOfActiveFeatures) {
+                $("#features-nav .next").addClass("disabled")
+            } else {
+                $("#features-nav .next").removeClass("disabled")
+            }
+            if (currentFeature == 0) {
+                $("#features-nav .prev").addClass("disabled")
+            } else {
+                $("#features-nav .prev").removeClass("disabled")
+            }
+
+            $("#features-nav em").html("<span>" + (moveToIndex + 1) + "</span>/" + numberOfActiveFeatures)
+        })
+
+        if (featuresFilters[featureClass]) {
+            //enabling navigation through items
+            $("#features-nav strong").text(featuresFilters[featureClass])
+            $("#features-nav em").html("<span>1</span>/" + numberOfActiveFeatures)
+            $("#features-nav").show();
+
+            $("ul.features").addClass("filterApplied").addClass(featureClass)
+
+            scrollToFeature(0);
         }
-        if(currentFeature == 0){
-            $("#features-nav .prev").addClass("disabled")
-        }else{
-            $("#features-nav .prev").removeClass("disabled")
-        }
-
-        $("#features-nav em").html("<span>" + (moveToIndex + 1) + "</span>/" + numberOfActiveFeatures)
-    })
-
-
-    if( featuresFilters[featureClass] ){
-        //enabling navigation through items
-        $("#features-nav strong").text( featuresFilters[featureClass] )
-        $("#features-nav em").html( "<span>1</span>/" + numberOfActiveFeatures)
-        $("#features-nav").show();
-
-        $("ul.features").addClass("filterApplied").addClass( featureClass )
-
-        scrollToFeature(0);
     }
 //end setting filter for the features;
 //scrolling and highlighting at compare page (if id detected)
