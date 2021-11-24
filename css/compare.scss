@@ -214,7 +214,7 @@ nav.external-links{
 #roletbl{
   thead {
     @media (min-width: $mobileWidth) {
-      tr:nth-child(1) {
+      tr:nth-child(2) {
         position: sticky;
         top: 80px;
         z-index: 21;
@@ -268,7 +268,7 @@ nav.external-links{
 #requirementstbld{
   thead {
     @media (min-width: $mobileWidth) {
-      tr:nth-child(1) {
+      tr:nth-child(2) {
         position: sticky;
         top: 80px;
         z-index: 21;
