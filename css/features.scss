@@ -23,7 +23,7 @@ ul.features{
             manage_the_system,
             communicate_with_the_system,
             own_the_system,
-            extebd_the_system,
+            extend_the_system,
             scale_the_system;
 
     @each $filter in $filters {
@@ -150,4 +150,76 @@ ul.features{
       }
     }
   }
+}
+nav#features-nav{
+  position: fixed;
+  top: 116px;
+
+  @media (min-width: $mobileWidth){
+    left: 50%;
+    transform: translateX(-50%);
+    br{
+      display: none;
+    }
+  }
+  @media (max-width: $mobileWidth - 1){
+    text-align: center;
+    left: 20px;
+    right: 20px;
+  }
+
+
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 12px 20px 10px;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.95;
+  color: #848484;
+  strong{
+    font-weight: 400;
+  }
+  & > span,
+  & > a{
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-indent: -3000px;
+    overflow: hidden;
+    vertical-align: bottom;
+    &.disabled{
+      cursor: default;
+    }
+  }
+  span.close{
+    background: url(../imgs/icons/close.svg) no-repeat 50% 50%;
+    margin: 0 14px 0 5px;
+  }
+  a.back{
+    background: url(../imgs/icons/back.svg) no-repeat 50% 50%;
+    margin: 0 11px 0 0;
+  }
+  span.prev{
+    background: url(../imgs/icons/prev.svg) no-repeat 50% 50%;
+    &.disabled{
+      background: url(../imgs/icons/prev-disabled.svg) no-repeat 50% 50%;
+    }
+    margin: 0 13px 0 0;
+  }
+  span.next{
+    background: url(../imgs/icons/next.svg) no-repeat 50% 50%;
+    &.disabled{
+      background: url(../imgs/icons/next-disabled.svg) no-repeat 50% 50%;
+    }
+    margin: 0 0 0 13px;
+  }
+  em{
+    font-style: normal;
+    span {
+      color: #0D0D0D;
+    }
+  }
+
 }

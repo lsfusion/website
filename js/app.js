@@ -32,25 +32,42 @@ $(document).ready(function() {
     }
 //end home page text switcher
 //setting filter for the features
-let featuresFilters = [
-    "develop_rapidly",
-    "develop_simply",
-    "any_complexity",
-    "any_amount_of_data",
-    "any_number_of_users",
-    "any_infrastructure",
-    "trust_the_system",
-    "manage_the_system",
-    "communicate_with_the_system",
-    "own_the_system",
-    "extebd_the_system",
-    "scale_the_system",
-]
-    if( featuresFilters.indexOf(document.location.hash.substring(1)) !== -1 ){
+let featuresFilters = {
+    "develop_rapidly":              "Develop rapidly",
+    "develop_simply":               "Develop simply",
+    "any_complexity":               "Any complexity",
+    "any_amount_of_data":           "Any amount of data",
+    "any_number_of_users":          "Any number of users",
+    "any_infrastructure":           "Any infrastructure",
+    "trust_the_system":             "Trust the system",
+    "manage_the_system":            "Manage the system",
+    "communicate_with_the_system":  "Communicate with the system",
+    "own_the_system":               "Own the system",
+    "extend_the_system":            "Extend the system",
+    "scale_the_system":             "Scale the system",
+}
+
+    $("#features-nav .close").click(function(){
+        $("#features-nav").hide();
+        $("ul.features").removeClass("filterApplied").removeClass( document.location.hash.substring(1) )
+    })
+    $("#features-nav .prev").click(function(){
+
+    })
+    $("#features-nav .next").click(function(){
+
+    })
+
+    if( featuresFilters[document.location.hash.substring(1)] ){
+        //enabling navigation through items
+        $("#features-nav strong").text( featuresFilters[document.location.hash.substring(1)] )
+        $("#features-nav em").html( "<span>1</span>/" + $("ul.features li." + document.location.hash.substring(1)).length)
+        $("#features-nav").show();
+
         $("ul.features").addClass("filterApplied").addClass( document.location.hash.substring(1) )
 
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("ul.features li." + document.location.hash.substring(1)).eq(0).offset().top - 80
+            scrollTop: $("ul.features li." + document.location.hash.substring(1)).eq(0).offset().top - 140
         }, 100);
 
     }
