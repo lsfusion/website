@@ -234,12 +234,38 @@ let featuresFilters = {
 
             $(this).closest(".tryfeature").find(".code").val()
 
-            $.ajax("https://demo.lsfusion.org/mm/eval", {
+            let request = $.ajax("https://demo.lsfusion.org/mm/eval", {
                     data: $(this).closest(".tryfeature").find(".code").val(),
                     contentType: "text/plain",
                     method: "POST",
 
                     success: function (response) {
+
+                        let contentType = request.getResponseHeader('Content-Type');
+
+                        if (contentType.startsWith('application/json')) {
+
+                            $(".try-database .results").text( JSON.stringify(JSON.parse(new TextDecoder('utf-8').decode(response)), null, 2) ).removeClass("loading")
+
+                            //getResultArea().value = JSON.stringify(JSON.parse(new TextDecoder('utf-8').decode(this.response)), null, 2);
+                        } else if (contentType.startsWith('application/') && !contentType.startsWith('application/xml')) {
+                            var blob = new Blob([this.response], { type: contentType });
+                            var link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = 'response';
+
+                            document.body.appendChild(link);
+
+                            getResultArea().value = '';
+                            link.click();
+
+                            document.body.removeChild(link);
+                        } else {
+                            getResultArea().value = new TextDecoder('utf-8').decode(this.response);
+                        }
+
+
+
                         $(".try-database .results").text( response ).removeClass("loading")
                     }
                 }
