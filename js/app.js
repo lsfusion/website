@@ -82,10 +82,37 @@ let featuresFilters = {
             $("#features-nav em").html("<span>" + (numberOfActiveFeatures   ) + "</span>/" + numberOfActiveFeatures)
         }
     }
-
     let featureClass = document.location.hash.substring(1);
     let currentFeature = 0;
     let numberOfActiveFeatures = $("ul.features li." + featureClass).length;
+
+    $(window).on("scroll resize", function(){
+        if(numberOfActiveFeatures == 0){
+            return;
+        }
+        let moveToIndex = numberOfActiveFeatures - 1;
+        let scrollTop = $(document).scrollTop();
+        for(let i = numberOfActiveFeatures - 1; i >=0; i--){
+            if($("ul.features li." + featureClass).eq( i ).offset().top - scrollTop > 140){
+                moveToIndex = i;
+            }
+        }
+        currentFeature = moveToIndex;
+
+        if(currentFeature + 1 == numberOfActiveFeatures){
+            $("#features-nav .next").addClass("disabled")
+        }else{
+            $("#features-nav .next").removeClass("disabled")
+        }
+        if(currentFeature == 0){
+            $("#features-nav .prev").addClass("disabled")
+        }else{
+            $("#features-nav .prev").removeClass("disabled")
+        }
+
+        $("#features-nav em").html("<span>" + (moveToIndex + 1) + "</span>/" + numberOfActiveFeatures)
+    })
+
 
     if( featuresFilters[featureClass] ){
         //enabling navigation through items
