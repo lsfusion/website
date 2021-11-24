@@ -73,6 +73,7 @@ em.sp{
     cursor: default;
   }
   &:hover{
+    z-index: 50;
     span{
       display: block;
     }

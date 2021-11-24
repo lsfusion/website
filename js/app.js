@@ -261,14 +261,15 @@ let featuresFilters = {
 
                             document.body.removeChild(link);
                         } else {
-                            getResultArea().value = new TextDecoder('utf-8').decode(this.response);
+                            $(".try-database .results").text( new TextDecoder('utf-8').decode(response) ).removeClass("loading")
                         }
 
 
 
-                        $(".try-database .results").text( response ).removeClass("loading")
+
                     }
-                }
+                },
+                "arraybuffer",
             );
 
             return;

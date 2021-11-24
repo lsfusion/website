@@ -132,10 +132,10 @@ nav.external-links{
 #comparetbl{
   thead{
     @media (min-width: $mobileWidth) {
-      tr:first-child(3) {
+      tr:nth-child(3) {
         position: sticky;
         top: 80px;
-        z-index: 1;
+        z-index: 21;
       }
     }
   }
@@ -212,6 +212,16 @@ nav.external-links{
   }
 }
 #roletbl{
+  thead {
+    @media (min-width: $mobileWidth) {
+      tr:nth-child(1) {
+        position: sticky;
+        top: 80px;
+        z-index: 21;
+      }
+    }
+  }
+
   tbody{
     tr{
       td{
@@ -237,6 +247,16 @@ nav.external-links{
   }
 }
 #requirementstbld{
+  thead {
+    @media (min-width: $mobileWidth) {
+      tr:nth-child(3) {
+        position: sticky;
+        top: 80px;
+        z-index: 21;
+      }
+    }
+  }
+
   tbody{
     tr{
       td{
