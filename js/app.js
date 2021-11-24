@@ -52,24 +52,50 @@ let featuresFilters = {
         $("ul.features").removeClass("filterApplied").removeClass( document.location.hash.substring(1) )
     })
     $("#features-nav .prev").click(function(){
-
+        currentFeature = Math.max(currentFeature - 1, 0);
+        if(currentFeature == 0){
+            $(this).addClass("disabled")
+        }
+        if(currentFeature < numberOfActiveFeatures){
+            $("#features-nav .next").removeClass("disabled")
+        }
+        scrollToFeature( currentFeature );
     })
     $("#features-nav .next").click(function(){
-
+        currentFeature = Math.min(currentFeature + 1, numberOfActiveFeatures - 1);
+        if(currentFeature + 1 == numberOfActiveFeatures){
+            $(this).addClass("disabled")
+        }
+        if(currentFeature > 0){
+            $("#features-nav .prev").removeClass("disabled")
+        }
+        scrollToFeature( currentFeature );
     })
+    function scrollToFeature(index){
+        if($("ul.features li." + featureClass).eq( index )) {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("ul.features li." + featureClass).eq(index).offset().top - 140
+            }, 300);
+            //updating nav
+            $("#features-nav em").html("<span>" + (index + 1) + "</span>/" + numberOfActiveFeatures)
+        }else{
+            $("#features-nav em").html("<span>" + (numberOfActiveFeatures   ) + "</span>/" + numberOfActiveFeatures)
+        }
+    }
 
-    if( featuresFilters[document.location.hash.substring(1)] ){
+    let featureClass = document.location.hash.substring(1);
+    let currentFeature = 0;
+    let numberOfActiveFeatures = $("ul.features li." + featureClass).length;
+
+    if( featuresFilters[featureClass] ){
         //enabling navigation through items
-        $("#features-nav strong").text( featuresFilters[document.location.hash.substring(1)] )
-        $("#features-nav em").html( "<span>1</span>/" + $("ul.features li." + document.location.hash.substring(1)).length)
+        $("#features-nav strong").text( featuresFilters[featureClass] )
+        $("#features-nav em").html( "<span>1</span>/" + numberOfActiveFeatures)
         $("#features-nav").show();
 
-        $("ul.features").addClass("filterApplied").addClass( document.location.hash.substring(1) )
+        $("ul.features").addClass("filterApplied").addClass( featureClass )
 
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("ul.features li." + document.location.hash.substring(1)).eq(0).offset().top - 140
-        }, 100);
-
+        scrollToFeature(0);
     }
 //end setting filter for the features;
 //scrolling and highlighting at compare page (if id detected)

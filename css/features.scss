@@ -154,6 +154,7 @@ ul.features{
 nav#features-nav{
   position: fixed;
   top: 116px;
+  @extend .noselect;
 
   @media (min-width: $mobileWidth){
     left: 50%;
