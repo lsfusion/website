@@ -94,7 +94,7 @@ let featuresFilters = {
             let moveToIndex = numberOfActiveFeatures - 1;
             let scrollTop = $(document).scrollTop();
             for (let i = numberOfActiveFeatures - 1; i >= 0; i--) {
-                if ($("ul.features li." + featureClass).eq(i).offset().top - scrollTop > 140) {
+                if ($("ul.features li." + featureClass).eq(i).offset().top - scrollTop >= 140) {
                     moveToIndex = i;
                 }
             }
