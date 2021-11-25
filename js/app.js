@@ -194,6 +194,18 @@ let featuresFilters = {
         $(this).closest(".dd").find("em").text( text )
 
         $(this).closest(".tryfeature").find(".code").val( $(this).attr("data-value") )
+
+        if($(this).closest(".try-database").length > 0) {
+            if(window.code1Editor) {
+                code1Editor.setValue($(this).attr("data-value"))
+                code1Editor.clearSelection()
+            }
+        }else{
+            if(window.code2Editor) {
+                code2Editor.setValue($(this).attr("data-value"))
+                code2Editor.clearSelection()
+            }
+        }
     })
 
     $("textarea.code").focus(function(){
@@ -214,11 +226,27 @@ let featuresFilters = {
 
                         for (i in response) {
                             let listItem = $("<li></li>").attr("tab", i).attr("data-value", response[i].text).text( response[i].caption );
-                            list.append(listItem)
+                            list.append( listItem )
+                            if(i == 0){
+                                listItem.addClass("active")
+                            }
 
                             if (i == 0) {//TODO:
                                 currentTab.find(".dd em").text( listItem.text() );
                                 currentTab.find(".code").removeClass("loading").val( listItem.attr("data-value") )
+
+                                if( t == 0) {
+                                    if(window.code1Editor) {
+                                        code1Editor.setValue(listItem.attr("data-value"))
+                                        code1Editor.clearSelection()
+                                    }
+                                }else{
+                                    if(window.code2Editor) {
+                                        code2Editor.setValue(listItem.attr("data-value"))
+                                        code2Editor.clearSelection()
+                                    }
+                                }
+
                                 currentTab.find(".results").removeClass("loading");
                                 currentTab.find(".start").removeClass("disabled")
                             }
@@ -229,15 +257,13 @@ let featuresFilters = {
         }
     }
 
-
-
     $(".start").click(function(){
         if( $(this).closest(".try-database").length > 0 ){
             $(this).closest(".tryfeature").find(".results").text("").addClass("loading")
 
             $(this).closest(".tryfeature").find(".code").val()
 
-            let xhr = sendRequest("https://demo.lsfusion.org/mm/eval" + "/eval", $(this).closest(".tryfeature").find(".code").val(), 'arraybuffer');
+            let xhr = sendRequest("https://demo.lsfusion.org/mm/eval" + "/eval", window.code1Editor.getValue(), 'arraybuffer');
 
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {

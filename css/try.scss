@@ -64,7 +64,7 @@
       }
       display: block;
       position: relative;
-      z-index: 3;
+      z-index: 5;
       &.active{
         ul{
           display: block;
@@ -240,6 +240,24 @@
       }
     }
   }
+
+  .ace_editor{
+    height: 340px;
+    @media (min-width: $mobileWidth) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 72px;
+      width: 58.5%;
+      background: #EFF5F7;
+    }
+    @media (max-width: $mobileWidth - 1){
+      background: darken(#F7FBFC, 20) ;
+      margin: 0 0 30px 0;
+      width: 100%;
+    }
+  }
+
   .code{
     overflow: scroll;
     height: 340px;
