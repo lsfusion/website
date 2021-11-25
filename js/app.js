@@ -196,6 +196,7 @@ let featuresFilters = {
         $(this).closest(".tryfeature").find(".code").val( $(this).attr("data-value") )
 
         if($(this).closest(".try-database").length > 0) {
+
             if(window.code1Editor) {
                 code1Editor.setValue($(this).attr("data-value"))
                 code1Editor.clearSelection()
@@ -213,7 +214,7 @@ let featuresFilters = {
         $(this).closest(".tryfeature").find(".start").removeClass("disabled");
     })
     let server = 'https://tryonline.lsfusion.org';
-    if( $("textarea.code").size() > 0) {
+    if( $("textarea.code,.ace_text-input").size() > 0) {
         for (let t = 0; t < 2; t++) {
             let currentTab = $(".tryfeature").eq( t );
             $.ajax(server + "/exec?action=Main.getExamples", {
