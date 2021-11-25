@@ -234,14 +234,25 @@ let featuresFilters = {
 
             $(this).closest(".tryfeature").find(".code").val()
 
+
+            var xhrOverride = new XMLHttpRequest();
+            xhrOverride.responseType = 'arraybuffer';
+
             let request = $.ajax("https://demo.lsfusion.org/mm/eval", {
                     data: $(this).closest(".tryfeature").find(".code").val(),
                     contentType: "text/plain",
                     method: "POST",
-
+                    xhr: function() {
+                        return xhrOverride;
+                    },
+                error: function(response){
+                  console.log(response)
+                },
                     success: function (response) {
 
                         let contentType = request.getResponseHeader('Content-Type');
+
+                        console.log("done" + contentType)
 
                         if (contentType.startsWith('application/json')) {
 

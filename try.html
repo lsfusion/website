@@ -12,8 +12,6 @@
 
     <link href="/css/app.css" rel="stylesheet" type="text/css" />
 
-    <link href="/3rdparty/codemirror/codemirror.css" rel="stylesheet" type="text/css" />
-
     <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon/favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon/favicon_16x16.png">
@@ -170,12 +168,17 @@
 <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 <script src="/js/app.js"></script>
 
+<script src="/3rdparty/ace/src/ace.js"></script>
+<script src="/3rdparty/ace/src/mode-lsf.js"></script>
+<script src="/3rdparty/ace/src/worker-lsf.js"></script>
+<script src="/3rdparty/ace/src/ext-language_tools.js"></script>
 
-<script src="/3rdparty/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    //var editor = ace.edit("code1");
-    //editor.setTheme("ace/theme/monokai");
-    //editor.session.setMode("ace/mode/javascript");
+    ace.edit("code1", {
+        mode: 'ace/mode/lsf',
+        enableLiveAutocompletion: true,
+        showPrintMargin: false
+    });
 </script>
 
 </body>
