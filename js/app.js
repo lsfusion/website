@@ -228,6 +228,9 @@ let featuresFilters = {
             );
         }
     }
+
+
+
     $(".start").click(function(){
         if( $(this).closest(".try-database").length > 0 ){
             $(this).closest(".tryfeature").find(".results").text("").addClass("loading")
@@ -235,19 +238,39 @@ let featuresFilters = {
             $(this).closest(".tryfeature").find(".code").val()
 
 
-            var xhrOverride = new XMLHttpRequest();
-            xhrOverride.responseType = 'arraybuffer';
+            let xhr = sendRequest("https://demo.lsfusion.org/mm/eval" + "/eval", $(this).closest(".tryfeature").find(".code").val(), 'arraybuffer');
 
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    var contentType = this.getResponseHeader('Content-Type');
+
+                    if (contentType.startsWith('application/json')) {
+                        $(".try-database .results").text( JSON.stringify(JSON.parse(new TextDecoder('utf-8').decode(this.response)), null, 2) ).removeClass("loading")
+                    } else if (contentType.startsWith('application/') && !contentType.startsWith('application/xml')) {
+                        var blob = new Blob([this.response], { type: contentType });
+                        var link = document.createElement('a');
+                        link.href = window.URL.createObjectURL(blob);
+                        link.download = 'response';
+
+                        document.body.appendChild(link);
+
+                        $(".try-database .results").text( '' ).removeClass("loading");
+                        link.click();
+
+                        document.body.removeChild(link);
+                    } else {
+                        $(".try-database .results").text( new TextDecoder('utf-8').decode(this.response) ).removeClass("loading")
+                    }
+                }
+            });
+
+
+
+/*
             let request = $.ajax("https://demo.lsfusion.org/mm/eval", {
                     data: $(this).closest(".tryfeature").find(".code").val(),
                     contentType: "text/plain",
                     method: "POST",
-                    xhr: function() {
-                        return xhrOverride;
-                    },
-                error: function(response){
-                  console.log(response)
-                },
                     success: function (response) {
 
                         let contentType = request.getResponseHeader('Content-Type');
@@ -274,15 +297,9 @@ let featuresFilters = {
                         } else {
                             $(".try-database .results").text( new TextDecoder('utf-8').decode(response) ).removeClass("loading")
                         }
-
-
-
-
                     }
-                },
-                "arraybuffer",
-            );
-
+                });
+*/
             return;
         }
         //it is platform
