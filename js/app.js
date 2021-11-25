@@ -237,7 +237,6 @@ let featuresFilters = {
 
             $(this).closest(".tryfeature").find(".code").val()
 
-
             let xhr = sendRequest("https://demo.lsfusion.org/mm/eval" + "/eval", $(this).closest(".tryfeature").find(".code").val(), 'arraybuffer');
 
             xhr.addEventListener("readystatechange", function () {
@@ -263,43 +262,6 @@ let featuresFilters = {
                     }
                 }
             });
-
-
-
-/*
-            let request = $.ajax("https://demo.lsfusion.org/mm/eval", {
-                    data: $(this).closest(".tryfeature").find(".code").val(),
-                    contentType: "text/plain",
-                    method: "POST",
-                    success: function (response) {
-
-                        let contentType = request.getResponseHeader('Content-Type');
-
-                        console.log("done" + contentType)
-
-                        if (contentType.startsWith('application/json')) {
-
-                            $(".try-database .results").text( JSON.stringify(JSON.parse(new TextDecoder('utf-8').decode(response)), null, 2) ).removeClass("loading")
-
-                            //getResultArea().value = JSON.stringify(JSON.parse(new TextDecoder('utf-8').decode(this.response)), null, 2);
-                        } else if (contentType.startsWith('application/') && !contentType.startsWith('application/xml')) {
-                            var blob = new Blob([this.response], { type: contentType });
-                            var link = document.createElement('a');
-                            link.href = window.URL.createObjectURL(blob);
-                            link.download = 'response';
-
-                            document.body.appendChild(link);
-
-                            getResultArea().value = '';
-                            link.click();
-
-                            document.body.removeChild(link);
-                        } else {
-                            $(".try-database .results").text( new TextDecoder('utf-8').decode(response) ).removeClass("loading")
-                        }
-                    }
-                });
-*/
             return;
         }
         //it is platform
@@ -310,8 +272,11 @@ let featuresFilters = {
 
     })
     $(".stop").click(function(){
-        $(this).addClass("disabled")
+        $(this).closest(".buttons").find(".stop").addClass("disabled");
+        $(this).closest(".buttons").find(".open").hide();
         stopServer();
+        $(".try-platform .results").val( "" );
+
     })
 
     function sendRequest(url, request, responseType) {
@@ -348,7 +313,7 @@ let featuresFilters = {
     function startServer(){
         window.lastServerReturn = 0;
 
-        let xhr = sendEscapedRequest(server + "/exec?action=Main.startServer", {'code': $(".platform .code").val()});
+        let xhr = sendEscapedRequest(server + "/exec?action=Main.startServer", {'code': $(".try-platform .code").val()});
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
@@ -356,7 +321,7 @@ let featuresFilters = {
                 rmiPort = response.port;
                 window.serverStartReturn = response.server;
 
-                $(".open").removeClass("disabled").attr("href", "https://tryonline.lsfusion.org/?port=" + response.port)
+                //$(".open").removeClass("disabled").attr("href", "https://tryonline.lsfusion.org/?port=" + response.port)
 
                 startLogServerScheduler();
                 return this.responseText;
@@ -375,25 +340,28 @@ let featuresFilters = {
         }
     }
 
-    function getServerLog() {
-        window.isRunning = true;
+    let rmiStarted = false;
+    function showOpenTabButton() {
+        document.getElementById("open").style.display="block";
+        document.getElementById("open").href = server + "/?port=" + rmiPort;
+        document.getElementById("open").target="_blank";
+    }
 
+    function getServerLog() {
+        let resultArea = document.querySelector(".try-platform .results");
+        window.isRunning = true;
         let xhr = sendEscapedRequest(server + "/exec?action=Main.getServerLog", {'server': window.serverStartReturn, 'lastAnswer': window.lastServerReturn});
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                let oldTextareaValue = $(".platform .results").text();
-                let response = JSON.parse(this.responseText);
+                let oldTextareaValue = resultArea.value;
+                let response = JSON.parse( this.responseText );
 
                 if(response != null && response.text != null) {
-                    $(".platform .results").append(response.text)
-                    return;
-
-
                     resultArea.value = oldTextareaValue + response.text;
 
                     if(!rmiStarted) {
-                        let match = /.*Exporting\sRMI\sLogics\sobject\s\(port:\s(\d+)\).*/g.exec(resultArea.value);
+                        let match = /.*Exporting\sRMI\sLogics\sobject\s\(port:\s(\d+)\).*/g.exec( resultArea.value );
                         if (match) {
                             window.open(server + '/?port=' + rmiPort, '_blank');
                             showOpenTabButton();

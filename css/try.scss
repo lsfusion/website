@@ -143,9 +143,7 @@
       }
       span, a{
         &.disabled{
-          color: #848484 !important;;
-          cursor: default;
-          border-color: #848484 !important;
+          display: none;
         }
         color: #fff;
         float: left;
@@ -193,15 +191,23 @@
           }
         }
         &.open{
+          background-color: #26C4F7;
           background-image: url(../imgs/open.svg);
           &.disabled{
             background-image: url(../imgs/open-disabled.svg);
           }
+          &:hover {
+            background-color: darken(#26C4F7, 10);
+          }
         }
         &.stop{
+          background-color: #26C4F7;
           background-image: url(../imgs/stop.svg);
           &.disabled{
             background-image: url(../imgs/stop-disabled.svg);
+          }
+          &:hover {
+            background-color: darken(#26C4F7, 10);
           }
         }
         &.start{
@@ -296,14 +302,17 @@
     overflow-y: scroll;
     background: #EFF5F7;
     height: 340px;
+    border: 0;
+    resize: none;
+    outline: none;
     @media (min-width: $mobileWidth) {
       width: 38.5%;
       float: right;
       clear: right;
       height: 200px;
-      overflow-y: hidden;
+      overflow: hidden;
       &:hover{
-        overflow-y: scroll;
+        overflow: scroll;
       }
     }
     padding: 30px 20px;
