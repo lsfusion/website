@@ -313,9 +313,27 @@
     &::-webkit-scrollbar-corner {
       visibility:hidden;
     }
-
-
   }
+  .ace_editor > div{
+
+    &::-webkit-scrollbar-track {
+      border-radius:4px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar {
+      width:8px;
+      height:8px;
+      background: #EFF5F7;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius:4px;
+      background-color:#d6d6d6;
+    }
+    &::-webkit-scrollbar-corner {
+      visibility:hidden;
+    }
+  }
+
   .results{
     overflow-y: scroll;
     background: #EFF5F7;
@@ -323,6 +341,7 @@
     border: 0;
     resize: none;
     outline: none;
+    width: 100%;
     @media (min-width: $mobileWidth) {
       width: 38.5%;
       float: right;
