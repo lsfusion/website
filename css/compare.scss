@@ -265,8 +265,9 @@ nav.external-links{
   tbody{
     tr{
       td{
-
-        text-align: center;
+        &:nth-child(n + 2){
+          text-align: center;
+        }
         span{
           border-radius: 4px;
           padding: 3px 0;
@@ -337,9 +338,9 @@ nav.external-links{
             background: #fff;
           }
         }
-
-
-        text-align: center;
+        &:nth-child(n + 2){
+          text-align: center;
+        }
         span{
           border-radius: 4px;
           padding: 3px 0;
