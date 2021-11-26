@@ -193,10 +193,7 @@ let featuresFilters = {
         let text = $(this).text();
         $(this).closest(".dd").find("em").text( text )
 
-        $(this).closest(".tryfeature").find(".code").val( $(this).attr("data-value") )
-
         if($(this).closest(".try-database").length > 0) {
-
             if(window.code1Editor) {
                 code1Editor.setValue($(this).attr("data-value"))
                 code1Editor.clearSelection()
@@ -209,12 +206,8 @@ let featuresFilters = {
         }
     })
 
-    $("textarea.code").focus(function(){
-        $(this).removeClass("loading");
-        $(this).closest(".tryfeature").find(".start").removeClass("disabled");
-    })
     let server = 'https://tryonline.lsfusion.org';
-    if( $("textarea.code,.ace_text-input").size() > 0) {
+    if( $(".ace_text-input").size() > 0) {
         for (let t = 0; t < 2; t++) {
             let currentTab = $(".tryfeature").eq( t );
             $.ajax(server + "/exec?action=Main.getExamples", {
@@ -232,9 +225,8 @@ let featuresFilters = {
                                 listItem.addClass("active")
                             }
 
-                            if (i == 0) {//TODO:
+                            if (i == 0) {
                                 currentTab.find(".dd em").text( listItem.text() );
-                                currentTab.find(".code").removeClass("loading").val( listItem.attr("data-value") )
 
                                 if( t == 0) {
                                     if(window.code1Editor) {
@@ -261,8 +253,6 @@ let featuresFilters = {
     $(".start").click(function(){
         if( $(this).closest(".try-database").length > 0 ){
             $(this).closest(".tryfeature").find(".results").text("").addClass("loading")
-
-            $(this).closest(".tryfeature").find(".code").val()
 
             let xhr = sendRequest("https://demo.lsfusion.org/mm/eval" + "/eval", window.code1Editor.getValue(), 'arraybuffer');
 
@@ -340,7 +330,7 @@ let featuresFilters = {
     function startServer(){
         window.lastServerReturn = 0;
 
-        let xhr = sendEscapedRequest(server + "/exec?action=Main.startServer", {'code': $(".try-platform .code").val()});
+        let xhr = sendEscapedRequest(server + "/exec?action=Main.startServer", {'code': code2Editor.getValue()});
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
