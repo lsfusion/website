@@ -173,6 +173,8 @@ let featuresFilters = {
 
         let _id = $(this).closest(".dropdown").attr("data-apply-to")
         $("#" + _id).attr("class", _id + " " + text.replace(/ /, ""))
+
+        fixTryHeight();
     })
 //try page
     $("body").on("click", ".dd", function(e){
@@ -402,8 +404,6 @@ let featuresFilters = {
         window.getServerLogScheduler = null;
     }
 
-
-
     let start_server = false;
     window.onbeforeunload = function() {
         if (window.start_server) {
@@ -416,4 +416,27 @@ let featuresFilters = {
         }
     };
 
+    //fixing height for try
+
+    $(window).on("resize", fixTryHeight)
+    function fixTryHeight(){
+        let minHeight = 200;
+        let maxHeight = 500;
+        if( $(".try-database:visible").length > 0 ){
+            let h = $("body > div.inner").height() - $(".try-database > p").height() - $("body > div.inner > h1").height() - 90;
+            h = Math.min(h, maxHeight);
+            h = Math.max(h, minHeight);
+
+            $("#results1").css("height", h + "px")
+        }
+        if( $(".try-platform:visible").length > 0 ){
+            let h = $("body > div.inner").height() - $(".try-platform > p").height() - $("body > div.inner > h1").height() - 90;
+            h = Math.min(h, maxHeight);
+            h = Math.max(h, minHeight);
+
+            $("#results2").css("height", h + "px")
+        }
+    }
+    window.setTimeout(fixTryHeight, 0)
+    //fixTryHeight();
 })
