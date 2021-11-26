@@ -23,6 +23,9 @@
     }
   }
 }
+h1#start{
+  scroll-margin-top: 100px;
+}
 
 #compare-banner{
   @media (min-width: $siteWidth) {
