@@ -298,6 +298,9 @@
         overflow: scroll;
       }
     }
+    @media (max-width: $mobileWidth - 1){
+      height:  340px !important;
+    }
     padding: 30px 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
