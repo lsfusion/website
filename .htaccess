@@ -9,6 +9,7 @@ Redirect 302 /solutions /solutions.html
 Redirect 302 /try /try.html
 Redirect 302 /report /report.html
 Redirect 302 /sitemap /sitemap.html
+Redirect 302 /support /support.html
 
 #AddType text/html .html
 #AddHandler server-parsed .html
