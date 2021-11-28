@@ -1,22 +1,13 @@
 ul.support{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  & > li{
-    flex: 0 0 100%;
-    padding: 0 0 20px;
-    @media (min-width: $mobileWidth) {
+  @extend .home-links;
+  li{
+    flex: 0 0 33.33333%;
+    @media (max-width: $siteWidth - 1) and (min-width: $mobileWidth){
       flex: 0 0 50%;
-      padding: 0 10px 20px;
     }
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    @media (max-width: $mobileWidth - 1){
+      flex: 0 0 100%;
+    }
 
     $supports: chat,qa, task, blog, news, code, system, email;
 
@@ -28,20 +19,10 @@ ul.support{
       }
     }
 
-    div.inner {
-      background: #F7FBFC;
-      transition: background-color 0.3s;
-      border-radius: 6px;
-      padding: 20px;
-      flex: 0 0 100%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      &:hover{
-        background-color: #E1F7FE;
-      }
+    div.inner{
+      border: 1px solid #F2F2F2;
+      border-radius: 4px;
+      padding: 29px 20px 11px;
       h2{
         font-size: 16px;
         font-weight: 700;
