@@ -284,7 +284,7 @@ let featuresFilters = {
             return;
         }
         //it is platform
-        start_server = true;
+        window.start_server = true;
         $(this).closest(".buttons").find(".stop").removeClass("disabled");
 
         startServer()
@@ -355,7 +355,7 @@ let featuresFilters = {
                 if(!window.isRunning) {
                     getServerLog();
                 }
-            }, 1000);
+            }, 500);
         }
     }
 
@@ -376,7 +376,7 @@ let featuresFilters = {
                 let oldTextareaValue = resultArea.value;
                 let response = JSON.parse( this.responseText );
 
-                if(response != null && response.text != null) {
+                if(response != null && response.text != null && response.text != undefined) {
                     resultArea.value = oldTextareaValue + response.text;
 
                     if(!rmiStarted) {
@@ -417,7 +417,6 @@ let featuresFilters = {
     };
 
     //fixing height for try
-
     $(window).on("resize", fixTryHeight)
     function fixTryHeight(){
         let minHeight = 200;
