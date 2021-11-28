@@ -1,0 +1,58 @@
+ul.support{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  & > li{
+    flex: 0 0 100%;
+    padding: 0 0 20px;
+    @media (min-width: $mobileWidth) {
+      flex: 0 0 50%;
+      padding: 0 10px 20px;
+    }
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    $supports: chat,qa, task, blog, news, code, system, email;
+
+    @each $support in $supports {
+      &.support-#{$support}{
+        div.inner h2{
+          background-image: url(../imgs/support/#{$support}.svg);
+        }
+      }
+    }
+
+    div.inner {
+      background: #F7FBFC;
+      transition: background-color 0.3s;
+      border-radius: 6px;
+      padding: 20px;
+      flex: 0 0 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      &:hover{
+        background-color: #E1F7FE;
+      }
+      h2{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 32px;
+        margin: 0 0 20px 0;
+        padding: 0 0 0 42px;
+        background-repeat: no-repeat;
+      }
+      p{
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
