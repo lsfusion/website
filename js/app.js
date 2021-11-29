@@ -292,7 +292,7 @@ let featuresFilters = {
 
     })
     $(".stop").click(function(){
-        $(this).closest(".buttons").find(".start").removeClass("disabled").attr("title", "Start");
+        $(this).closest(".buttons").find(".start").removeClass("restart").attr("title", "Start");
         $(this).closest(".buttons").find(".stop").addClass("disabled");
         $(this).closest(".buttons").find(".open").hide();
         stopServer();
@@ -332,7 +332,6 @@ let featuresFilters = {
         });
     }
     function startServer(){
-        
         window.lastServerReturn = 0;
 
         let xhr = sendEscapedRequest(server + "/exec?action=Main.startServer", {'code': code2Editor.getValue()});
