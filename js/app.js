@@ -292,7 +292,7 @@ let featuresFilters = {
 
     })
     $(".stop").click(function(){
-        $(this).closest(".buttons").find(".start").removeClass("restart").attr("title", "Start");
+        $(this).closest(".buttons").find(".start").removeClass("restart").attr("title", "Start").text("Start");
         $(this).closest(".buttons").find(".stop").addClass("disabled");
         $(this).closest(".buttons").find(".open").hide();
         stopServer();
