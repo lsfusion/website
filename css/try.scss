@@ -223,6 +223,9 @@
         &.stop{
           background-color: #26C4F7;
           background-image: url(../imgs/stop.svg);
+          @media (min-width: $mobileWidth) {
+            background-size: 12px;
+          }
           &.disabled{
             background-image: url(../imgs/stop-disabled.svg);
           }
