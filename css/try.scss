@@ -303,7 +303,8 @@
     @media (max-width: $mobileWidth - 1){
       height:  340px !important;
     }
-    padding: 30px 20px;
+    //padding: 30px 20px;
+    padding: 0.875rem 0 0 0.875rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
