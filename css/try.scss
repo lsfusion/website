@@ -257,6 +257,13 @@
             }
           }
         }
+        &.restart{
+          @media (min-width: $mobileWidth) {
+            background-position: 12px 50%;
+          }
+          background-image: url(../imgs/restart.svg);
+          background-size: 16px 16px;
+        }
       }
     }
   }
