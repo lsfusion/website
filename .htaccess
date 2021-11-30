@@ -1,7 +1,6 @@
-DirectoryIndex index.html index.php
+DirectoryIndex index.html
 
 ErrorDocument 404 /404.html
-
 
 Redirect 302 /features /features.html
 Redirect 302 /compare /compare.html
