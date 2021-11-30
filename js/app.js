@@ -323,7 +323,7 @@ let featuresFilters = {
         //getResultArea().value = '';
 
         start_server = false;
-        //rmiStarted = false;
+        rmiStarted = false;
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
