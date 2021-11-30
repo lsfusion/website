@@ -284,11 +284,27 @@ let featuresFilters = {
             return;
         }
         //it is platform
-        window.start_server = true;
-        $(this).closest(".buttons").find(".stop").removeClass("disabled");
-        $(this).addClass("restart").text("Restart").attr("title", "Restart")
 
-        startServer()
+        if (window.start_server) {//restarting
+            let code = code2Editor.getValue();
+            if (window.lastServerReturn > 0) {
+                let xhr = sendEscapedRequest(server + "/exec?action=Main.restartServer", {'server': window.serverStartReturn, 'code': code});
+
+                xhr.addEventListener("readystatechange", function () {
+                    if (this.readyState === 4) {
+                        $("#results2").val( "" )
+                        window.lastServerReturn = 0;
+                        return this.responseText;
+                    }
+                });
+            }
+        }else {
+            window.start_server = true;
+            $(this).closest(".buttons").find(".stop").removeClass("disabled");
+            $(this).addClass("restart").text("Restart").attr("title", "Restart")
+
+            startServer()
+        }
 
     })
     $(".stop").click(function(){
