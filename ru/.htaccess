@@ -1,15 +1,14 @@
 DirectoryIndex index.html index.php
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /ru/  404.html
 
-
-Redirect 302 /features /features.html
-Redirect 302 /compare /compare.html
-Redirect 302 /solutions /solutions.html
-Redirect 302 /try /try.html
-Redirect 302 /report /report.html
-Redirect 302 /sitemap /sitemap.html
-Redirect 302 /support /support.html
+Redirect 302 /ru/features /ru/features.html
+Redirect 302 /ru/compare /ru/compare.html
+Redirect 302 /ru/solutions /ru/solutions.html
+Redirect 302 /ru/try /ru/try.html
+Redirect 302 /ru/report /ru/report.html
+Redirect 302 /ru/sitemap /ru/sitemap.html
+Redirect 302 /ru/support /ru/support.html
 
 #AddType text/html .html
 #AddHandler server-parsed .html
