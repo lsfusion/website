@@ -314,11 +314,11 @@
                 <td>Transparent integration
                     <span class="info"><span>The platform supports access to the system through the most common general-purpose application protocol (HTTP), while the access interface can execute not only certain actions  (with automatic parsing of arguments), but also lsFusion code (as when accessing SQL servers). In addition, the platform supports access to any external systems at the language level via HTTP, as well as SQL servers, other lsFusion systems, etc. And, since the server itself is implemented as a Spring bean, you can manage its life cycle using a standard Spring IoC container. All these features allow you to use lsFusion not only as a full-fledged development platform, but also as a database or even a Java library.</span></span>
                 </td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>No code execution (as in SQL servers). All communications are performed either through HTTP without parsing any arguments or through WSDL (XML) with parsing arguments. Cannot be loaded as a library.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>No code execution (as in SQL servers). All communications are performed either through HTTP without parsing any arguments or through WSDL (XML) with parsing arguments. Cannot be loaded as a library.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>No code execution (as in SQL servers). All communications are performed either through HTTP without parsing any arguments or through WSDL (XML) with parsing arguments. Cannot be loaded as a library.</td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>Cannot be loaded as a library.</td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>Cannot be loaded as a library.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>No code execution (as in SQL servers). All communications are performed either through HTTP without parsing any arguments or through WSDL (XML) with parsing arguments. Cannot be loaded as a library.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>No code execution (as in SQL servers). All communications are performed either through HTTP without parsing any arguments or through WSDL (XML) with parsing arguments. Cannot be loaded as a library.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>No code execution (as in SQL servers). All communications are performed either through HTTP without parsing any arguments or through WSDL (XML) with parsing arguments. Cannot be loaded as a library.</span></span></td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>Cannot be loaded as a library.</span></span></td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>Cannot be loaded as a library.</span></span></td>
                 <td><span class="plusminus">+/-</span><span class="info"><span>Code execution (as in SQL servers) is not supported.</span></span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
@@ -356,10 +356,10 @@
                 <td>Everything as code
                     <span class="info"><span>All elements of the system, from events to form design, are written in the lsFusion language and stored in ordinary text files (without any shared repositories with an unknown structure). This allows you to use popular version control systems (Git, Subversion) and project-building tools (Maven in IDEs) when working with projects. In addition, this approach simplifies the support and deployment of the system you develop - you can use  an ordinary text editor to view and quickly modify the logic when necessary and also easily identify any element in the system by file name and line number in this file.</span></span>
                 </td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Forms and other metadata (tables, ledgers, etc.) are usually created interactively and stored in binary form in a shared repository or file (data export is possible, but not in formats that allow convenient editing/viewing such as XML).</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Forms and other metadata (tables, ledgers, etc.) are usually created interactively and stored in binary form in a shared repository or file (data export is possible, but not in formats that allow convenient editing/viewing such as XML).</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Forms and other metadata (tables, ledgers, etc.) are usually created interactively and stored in binary form in a shared repository or file (data export is possible, but not in formats that allow convenient editing/viewing such as XML).</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Basically, the database theoretically allows you to work with the database's structure as with code - you can create scripts marked "CREATE OR REPLACE" and/or with versions and ADD/DELETE commands, then remember the previous version of the database to deploy or roll back changes between these versions, but by default this is not part of the database itself and should be organized directly by developers.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Forms and other metadata (tables, ledgers, etc.) are usually created interactively and stored in binary form in a shared repository or file (data export is possible, but not in formats that allow convenient editing/viewing such as XML).</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Forms and other metadata (tables, ledgers, etc.) are usually created interactively and stored in binary form in a shared repository or file (data export is possible, but not in formats that allow convenient editing/viewing such as XML).</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Forms and other metadata (tables, ledgers, etc.) are usually created interactively and stored in binary form in a shared repository or file (data export is possible, but not in formats that allow convenient editing/viewing such as XML).</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Basically, the database theoretically allows you to work with the database's structure as with code - you can create scripts marked "CREATE OR REPLACE" and/or with versions and ADD/DELETE commands, then remember the previous version of the database to deploy or roll back changes between these versions, but by default this is not part of the database itself and should be organized directly by developers.</span></span></td>
                 <td><span class="minusplus">-/+</span><span class="info"><span>Basically, the database theoretically allows you to work with the database's structure as with code - you can create scripts marked "CREATE OR REPLACE" and/or with versions and ADD/DELETE commands, then remember the previous version of the database to deploy or roll back changes between these versions, but by default this is not part of the database itself and should be organized directly by developers.</span></span></td>
                 <td><span class="plus">+</span></td>
                 <td><span class="plus">+</span></td>
@@ -373,8 +373,8 @@
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>The databases support namespaces, but do not support explicit typing (because they work with tables rather than functions, i.e. they do not support any parameters at all).</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>The databases support namespaces, but do not support explicit typing (because they work with tables rather than functions, i.e. they do not support any parameters at all).</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>The databases support namespaces, but do not support explicit typing (because they work with tables rather than functions, i.e. they do not support any parameters at all).</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>The databases support namespaces, but do not support explicit typing (because they work with tables rather than functions, i.e. they do not support any parameters at all).</span></span></td>
                 <td><span class="plus">+</span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
@@ -387,8 +387,8 @@
                 <td><span class="minusplus">-/+</span></td>
                 <td><span class="minusplus">-/+</span></td>
                 <td><span class="minusplus">-/+</span></td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>In general, two different specialized IDEs are used (one for the client and one for the database server), so no calls between the server and client are supported at all (i.e. they are not visible in uses, renaming, etc.).</td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>In general, two different specialized IDEs are used (one for the client and one for the database server), so no calls between the server and client are supported at all (i.e. they are not visible in uses, renaming, etc.).</td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>In general, two different specialized IDEs are used (one for the client and one for the database server), so no calls between the server and client are supported at all (i.e. they are not visible in uses, renaming, etc.).</span></span></td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>In general, two different specialized IDEs are used (one for the client and one for the database server), so no calls between the server and client are supported at all (i.e. they are not visible in uses, renaming, etc.).</span></span></td>
                 <td><span class="plus">+</span></td>
                 <td><span class="minusplus">-/+</span></td>
                 <td><span class="minus">-</span></td>
@@ -415,8 +415,8 @@
                 <td><span class="plus">+</span></td>
                 <td><span class="plus">+</span></td>
                 <td><span class="plus">+</span></td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Technically, the third tier (application server) is implemented by either the Web client or the database server.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Technically, the third tier (application server) is implemented by either the Web client or the database server.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Technically, the third tier (application server) is implemented by either the Web client or the database server.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Technically, the third tier (application server) is implemented by either the Web client or the database server.</span></span></td>
                 <td><span class="plus">+</span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
@@ -426,9 +426,9 @@
                 <td>Clustering
                     <span class="info"><span>Since the application servers don't have any shared data, you can easily add as many of them as you need. In addition, the platform can transfer user data between database servers asynchronously, which, in turn, allows you to dynamically distribute the workload among them (e.g. when you add data to the database and need to use ACID, you can switch this processing to the master server or [in other cases] to the least busy slave servers).</span></span>
                 </td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>In addition to the database, yet another bottleneck and a potential point of failure is the lock manager, which also makes clustering harder.</td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>In addition to the database, yet another bottleneck and a potential point of failure is the lock manager, which also makes clustering harder.</td>
-                <td><span class="plusminus">+/-</span><span class="info"><span>In addition to the database, yet another bottleneck and a potential point of failure is the lock manager, which also makes clustering harder.</td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>In addition to the database, yet another bottleneck and a potential point of failure is the lock manager, which also makes clustering harder.</span></span></td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>In addition to the database, yet another bottleneck and a potential point of failure is the lock manager, which also makes clustering harder.</span></span></td>
+                <td><span class="plusminus">+/-</span><span class="info"><span>In addition to the database, yet another bottleneck and a potential point of failure is the lock manager, which also makes clustering harder.</span></span></td>
                 <td><span class="plus">+</span></td>
                 <td><span class="minusplus">-/+</span></td>
                 <td><span class="plus">+</span></td>
@@ -442,7 +442,7 @@
                 </td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Only procedures and forms are expandable. The mechanism itself is all about customization rather than modularity (i.e. the mechanism is based on a solution and one of its extensions, but not on the graph of modules).</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Only procedures and forms are expandable. The mechanism itself is all about customization rather than modularity (i.e. the mechanism is based on a solution and one of its extensions, but not on the graph of modules).</span></span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
@@ -468,11 +468,11 @@
                 <td>Polymorphism and aggregations
                     <span class="info"><span>The platform supports inheritance (including multiple inheritance) and polymorphism (including multiple polymorphism). And, if inheritance isn't enough for you for whatever reason, the platform also provides an aggregation mechanism that, together with inheritance, allows you to implement almost any polymorphic logic.</span></span>
                 </td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</span></span></td>
                 <td><span class="minus">-</span></td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</span></span></td>
                 <td><span class="minusplus">-/+</span><span class="info"><span>Only single inheritance of tables (object classes) and single polymorphism are supported.</span></span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
@@ -512,7 +512,7 @@
                 </td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>You have to re-post the whole document, which is inefficient and can violate multiple contracts/constraints. This approach is therefore not used in the latest solutions (it is implemented manually). For example, there is no simultaneous input of documents either.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>You have to re-post the whole document, which is inefficient and can violate multiple contracts/constraints. This approach is therefore not used in the latest solutions (it is implemented manually). For example, there is no simultaneous input of documents either.</span></span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
@@ -521,8 +521,8 @@
                 <td><span class="plus">+</span></td>
             </tr>
             <tr data-row-type="supportability" data-id="29">
-                <td>Advanced tools for administrators
-                    <span class="info"><span>The platform provides a complete set of administration tools for systems that are already running: interpreter (executes lsFusion code), process monitor (receives detailed information about processes that are running, e.g. call start time, stack, user, etc.), scheduler (executes periodic or scheduled actions), profiler (measures the performance of all actions executed for all/given users, e.g. builds a graph of calls, sharing time between the application server and the database server, etc.), messenger (for internal notifications/communication with users in the system), and numerous logs (connections, errors, etc.).</span></span>
+                <td>Развитые средства администрирования
+                    <span class="info"><span>Платформа предоставляет целый набор инструментов администрирования уже работающей системы : интерпретатор - выполняет код на языке lsFusion, монитор процессов - получает информацию о текущих процессах с различной информацией о них (например, время начала вызова, стек, пользователь и т.п.), планировщик - выполняет действия в заданные моменты времени (в том числе периодически), профайлер - замеряет производительность всех выполняемых действий для всех / заданных пользователей (строит граф вызовов, разделение времени между сервером приложений и сервером БД и т.п.), чат - для оповещения / общения с пользователями внутри системы, а также многочисленные журналы и логи (подключений, ошибок и т.п.).</span></span>
                 </td>
                 <td><span class="plus">+</span></td>
                 <td><span class="plus">+</span></td>
@@ -535,13 +535,13 @@
                 <td><span class="plus">+</span></td>
             </tr>
             <tr data-row-type="usability productivity" data-id="30">
-                <td>Advanced interactive UIs
-                    <span class="info"><span>When interacting with a user, the platform can display any data not only as individual objects and lists, but also as trees, both flat ("nested") and recursive (e.g. classifiers). In addition, the platform allows you to group various form blocks into folders (tabs) for structuring large quantities of data. When the data is not visible to the user, it is not read/calculated (e.g. all lists are dynamic by default, i.e. only a limited number of objects are read initially, while the rest of them are read as  the current object in the table is changed).</span></span>
+                <td>Продвинутые интерактивные интерфейсы
+                    <span class="info"><span>При интерактивном взаимодействии с пользователем платформа позволяет организовывать отображение любых данных не только в виде одиночных объектов и списков, но и в виде деревьев, как плоских ("вложенных" друг в друга списков), так и рекурсивных (например, классификаторов). Кроме того, если информации слишком много, платформа позволяет объединять различные блоки формы в папки (вкладки). При этом, если данные не видны пользователю, они не читаются / вычисляются (так, к примеру, любые списки являются по умолчанию динамическими, то есть читается только ограниченное число объектов, а остальные дочитываются по мере изменения текущего объекта в таблице).</span></span>
                 </td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Trees are only recursive and only for explicit (not computed)  hierarchies. Dynamic lists are implemented manually by writing special queries.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Trees are only recursive and only for explicit (not computed)  hierarchies. Dynamic lists are implemented manually by writing special queries.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Trees are only recursive and only for explicit (not computed)  hierarchies. Dynamic lists are implemented manually by writing special queries.</td>
-                <td><span class="minusplus">-/+</span><span class="info"><span>Trees are only recursive and only for explicit (not computed)  hierarchies. Dynamic lists are implemented manually by writing special queries.</td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Деревья только рекурсивные и только для первичных (не вычисляемых) явно задаваемых иерархий. Динамические списки реализуются вручную, написанием специальных запросов.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Деревья только рекурсивные и только для первичных (не вычисляемых) явно задаваемых иерархий. Динамические списки реализуются вручную, написанием специальных запросов.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Деревья только рекурсивные и только для первичных (не вычисляемых) явно задаваемых иерархий. Динамические списки реализуются вручную, написанием специальных запросов.</span></span></td>
+                <td><span class="minusplus">-/+</span><span class="info"><span>Деревья только рекурсивные и только для первичных (не вычисляемых) явно задаваемых иерархий. Динамические списки реализуются вручную, написанием специальных запросов.</span></span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
                 <td><span class="minus">-</span></td>
