@@ -56,5 +56,20 @@ ul.solutions {
       }
     }
 
+    $solutions:
+            mite,
+            barsettings,
+            mybalance;
+
+    @each $solution in $solutions {
+      &#solution-#{$solution} {
+        .inner{
+          background: url(../imgs/solutions/#{$solution}.png) no-repeat 20px 20px;
+          background-size: 32px;
+        }
+      }
+    }
+
+
   }
 }
