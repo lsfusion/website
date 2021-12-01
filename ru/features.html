@@ -47,353 +47,364 @@
 <div class="inner">
     <h1>
         <em>What</em> will you get with lsFusion?
-        <a href="/compare">Compare by Features</a>
+        <a href="/compare#start">Compare by Features</a>
     </h1>
     <ul class="features">
-        <li id="feature-single-language">
+        <li id="feature-single-language" class="develop_rapidly develop_simply">
             <div class="inner">
-                <h2>Single language for data</h2>
-                <p>The platform doesn't split the user interface into interactive forms and reports. Any form can contain both primary and calculated data and can be displayed in a print (like a classic report) or interactive (editable) view. Accordingly, users can not only see the data they need to make a decision, but also immediately enter the decision they've made through the same UI.</p>
+                <h2>Один язык работы с данными</h2>
+                <p>В платформе отсутствует <a href="https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch" target="_blank">объектно-реляционный семантический</a> разрыв - когда разработчику приходится постоянно выбирать между "быстрыми" SQL-запросами и кодом на "удобном" императивном языке. И тот и другой подход абстрагированы и объединены настолько, что грань между ними практически отсутствует. Разработчик всегда работает с данными в одной парадигме, а за то, как и где вся эта работа будет выполняться, полностью отвечает сама платформа.</p>
                 <nav>
-                    <a href="#">Documentation</a>
+                    <a href="compare?id=1">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-single-paradigm">
+        <li id="feature-single-paradigm" class="develop_rapidly develop_simply extend_the_system">
             <div class="inner">
-                <h2>Single paradigm for UI</h2>
-                <p>The platform doesn't split the user interface into interactive forms and reports. Any form can contain both primary and calculated data and can be displayed in a print (like a classic report) or interactive (editable) view. Accordingly, users can not only see the data they need to make a decision, but also immediately enter the decision they've made through the same UI.</p>
+                <h2>Одна парадигма работы с UI</h2>
+                <p>В платформе отсутствует разделение пользовательского интерфейса на интерактивные формы и отчеты. Любая форма может содержать как первичные, так и вычисляемые данные, и ее можно открыть как в печатном представлении (в виде классического отчета) так и в интерактивном (с возможностью ввода). Соответственно, пользователь может в одном интерфейсе не только видеть данные, необходимые для принятия решения, но и сразу вводить принятое решение непосредственно в систему.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=29884425" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/display/LSFUS/How-to%3A+GUI" target="_blank">How to</a>
+                    <a href="compare?id=2">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-server-to-client-access">
+        <li id="feature-server-to-client-access" class="develop_rapidly develop_simply">
             <div class="inner">
-                <h2>Server-to-client access</h2>
-                <p>The platform doesn't split business logic into server and client sides, which allows developers to request modal interaction with the user at any time. When this happens, the platform automatically pauses the current action, sends a request to the user, and resumes the action as soon as a response is received.</p>
+                <h2>Обращение сервера к клиенту</h2>
+                <p>В платформе отсутствует разделение логики на сервер и клиент, и, соответственно, разработчик в любой момент может запросить модальное взаимодействие с пользователем. В этом случае платформа автоматически останавливает процесс выполнения действия, отправляет запрос пользователю, и, сразу после получения ответа от него, продолжает выполнение остановленного действия.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=35520941" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=36307461" target="_blank">How to</a>
+                    <a href="compare?id=3">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-no-orm-yes-sql">
+        <li id="feature-no-orm-yes-sql" class="any_amount_of_data">
             <div class="inner">
                 <h2>No ORM, Yes SQL</h2>
-                <p>When a certain action requires data processing for many objects at once, the platform tries, whenever possible, to perform this processing on the database server through a single request (i.e. for all objects at once). In this case, all of the queries generated are optimized as much as possible depending on the features of the database server.</p>
+                <p>Если некоторое действие предполагает обработку данных сразу для множества объектов, платформа пытается по возможности выполнить эту обработку на сервере БД одним запросом (то есть сразу для всех объектов). Все формируемые запросы при этом максимально оптимизируются с учетом особенностей используемого сервера БД.</p>
                 <nav>
-                    <a href="#">Documentation</a>
+                    <a href="compare?id=4">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-data-change-events">
+        <li id="feature-data-change-events" class="develop_rapidly develop_simply any_complexity">
             <div class="inner">
-                <h2>Data change events</h2>
-                <p>The platform allows you to create event handlers for any changes in any data (even computed data). This mechanism can significantly increase the modularity of the solutions created.</p>
+                <h2>События изменения данных</h2>
+                <p>Платформа позволяет создавать обработки событий изменения любых (в том числе вычисляемых) данных. Использование этого механизма позволяет значительно повысить модульность создаваемых решений.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=688155" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=46367179" target="_blank">How to</a>
+                    <a href="compare?id=5">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-dynamic-physical-model">
+        <li id="feature-dynamic-physical-model" class="any_amount_of_data">
             <div class="inner">
-                <h2>Dynamic physical model</h2>
-                <p>The platform allows you to materialize any existing indicators in the system at any time, add new tables or delete existing ones, or change the location of materialized indicators in these tables.</p>
+                <h2>Динамическая физическая модель</h2>
+                <p>Платформа позволяет в любой момент материализовать любой из существующих показателей в системе, добавить новые или удалить существующие таблицы, а также изменить расположение материализованных показателей в этих таблицах.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=688190" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=52429887" target="_blank">How to</a>
+                    <a href="compare?id=6">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-constraints-on-any-data">
+        <li id="feature-constraints-on-any-data" class="develop_rapidly develop_simply trust_the_system">
             <div class="inner">
-                <h2>Constraints on any data</h2>
-                <p>The platform allows you to create constraints for the values of any data (even computed data), and all such constraints (as with events) are global, so inexperienced users or developers cannot bypass them with an invalid transaction.</p>
+                <h2>Ограничения любых данных</h2>
+                <p>В платформе существует возможность создавать ограничения значений любых (в том числе вычисляемых) данных. При этом, все созданные ограничения (как и события) глобальны, а значит неопытный пользователь или разработчик не сможет обойти их неправильно проведенной транзакцией.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=3538950" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=46367200" target="_blank">How to</a>
+                    <a href="compare?id=7">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-absolute-reactivity">
+        <li id="feature-absolute-reactivity" class="develop_rapidly develop_simply extend_the_system">
             <div class="inner">
-                <h2>Absolute reactivity</h2>
-                <p>All computed data is automatically updated once the data it uses is changed. This rule applies always and everywhere, whether you're displaying interactive forms or simply accessing data inside the action being executed.</p>
+                <h2>Абсолютная реактивность</h2>
+                <p>Все вычисляемые данные автоматически обновляются при изменении данных, которые они используют. Это правило действует всегда и везде - как при отображении интерактивных форм, так и просто при обращении к данным внутри выполняемого действия.</p>
                 <nav>
-                    <a href="#">Documentation</a>
+                    <a href="compare?id=8">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-cross-platform-server">
+        <li id="feature-cross-platform-server" class="any_infrastructure manage_the_system">
             <div class="inner">
-                <h2>Cross-platform server</h2>
-                <p>Supports any OS for which JVM is implemented, as well as the most popular relational databases.</p>
+                <h2>Кроссплатформенность сервера</h2>
+                <p>Поддерживаются любые ОС, для которых существуют реализации JVM, а также наиболее распространенные реляционные СУБД.</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=9">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-open-database-structure">
+        <li id="feature-open-database-structure" class="communicate_with_the_system">
             <div class="inner">
-                <h2>Open database structure</h2>
-                <p>The mapping of logic to the database is absolutely transparent, and developers can manage this process on their own. Forget about auto generated names and surrogate tables.</p>
+                <h2>Открытая структура БД</h2>
+                <p>Отображение логики в базу данных абсолютно прозрачно, при этом разработчик сам может управлять этим процессом. Никаких сгенерированных имен или суррогатных таблиц.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=688190" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=52429887" target="_blank">How to</a>
+                    <a href="compare?id=10">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-cross-platform-client">
+        <li id="feature-cross-platform-client" class="any_infrastructure manage_the_system">
             <div class="inner">
-                <h2>Cross-platform client</h2>
-                <p>The platform supports both desktop and Web clients with any OS for which JVM implementations are available. And since relative (rather than absolute) positioning is used for the components, they are rendered in the Web client natively using CSS (without JavaScript), which significantly increases UI responsiveness in the Web client. In addition, neither the desktop nor the Web client contain any application logic, which greatly simplifies their deployment (i.e. you can use the same client for any logic).</p>
+                <h2>Кроссплатформенность клиента</h2>
+                <p>В платформе поддерживаются одновременно и десктоп и веб клиенты. Для десктоп-клиента, как и для сервера, поддерживаются любые ОС для которых существуют реализации JVM. Также, благодаря тому что для расположения компонент используется относительное (а не абсолютное) позиционирование, их отрисовка в веб-клиенте осуществляется нативно средствами CSS (без использования JavaScript), что значительно повышает отзывчивость интерфейсов при работе в веб-клиенте. Кроме того, ни десктоп, ни веб-клиент не содержат никакой прикладной логики, что значительно упрощает их развертывание (то есть можно использовать один и тот же клиент сразу для всех логик).</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=11">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-declarative-handling-of-external-formats">
+        <li id="feature-declarative-handling-of-external-formats" class="develop_rapidly develop_simply communicate_with_the_system">
             <div class="inner">
-                <h2>Declarative handling of external formats</h2>
-                <p>Any form can be shown to the user interactively or printed out or exported in most popular data formats (JSON, XML, CSV, XLS, DBF, etc.). This operation is symmetrical - you can also import data from a file to a form in any of these formats. Both processes are absolutely declarative and use the same concepts as the UI, which greatly simplifies interaction with external systems.</p>
+                <h2>Декларативная работа с внешними форматами</h2>
+                <p>Любую форму в платформе можно не только показать пользователю в интерактивном режиме или распечатать, но и экспортировать в файл любого из наиболее распространенных форматов данных (JSON, XML, CSV, XLS, DBF и т.п.). Причем эта операция симметрична, и, соответственно, можно, наоборот, импортировать информацию из файла любого из перечисленных форматов обратно в форму. Оба процесса при этом абсолютно декларативны и работают с теми же понятиями, которые используются при работе с UI, тем самым значительно упрощая взаимодействие с внешними системами.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=29884537" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=60555456" target="_blank">How to</a>
+                    <a href="compare?id=12">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-efficient-client-server-communication">
+        <li id="feature-efficient-client-server-communication" class="any_number_of_users scale_the_system">
             <div class="inner">
-                <h2>Efficient client-server communication</h2>
-                <p>Client-server communication at the physical level minimizes synchronous round-trip calls (i.e. each user action leads to a single - usually asynchronous - request/response pair). The desktop client also archives and encrypts all transferred data (when necessary). During client-server communication (via TCP/IP for the desktop client or HTTP for the Web client), the platform provides guarantee of delivery - it resends any lost requests and ensures that they are processed in the correct order. All these features help the platform run efficiently even on low-bandwidth, unstable, or high-latency communication channels.</p>
+                <h2>Эффективное общение клиента с сервером</h2>
+                <p>Общение клиента с сервером на физическом уровне построено таким образом чтобы минимизировать количество синхронных round-trip обращений (то есть одно действие пользователя - один запрос-ответ, по возможности асинхронный). Помимо этого в десктоп-клиенте все передаваемые данные архивируются и, при необходимости, шифруются. Также, при общении клиента с сервером (как десктоп-клиента через TCP/IP протокол, так и веб-клиента через HTTP протокол), в платформе обеспечивается гарантия доставки, то есть в случае если какие-то запросы теряются, платформа посылает их повторно, причем с гарантией того, что они будут обработаны в правильном порядке. Все вышеперечисленное позволяет платформе эффективно функционировать даже на узких и ненадежных каналах связи, а также каналах связи с большим временем отклика.</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=13">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-transparent-integration">
+        <li id="feature-transparent-integration" class="communicate_with_the_system">
             <div class="inner">
-                <h2>Transparent integration</h2>
-                <p>The platform supports access to the system through the most common general-purpose application protocol (HTTP), while the access interface can execute not only certain actions (with automatic parsing of arguments), but also lsFusion code (as when accessing SQL servers). In addition, the platform supports access to any external systems at the language level via HTTP, as well as SQL servers, other lsFusion systems, etc. And, since the server itself is implemented as a Spring bean, you can manage its life cycle using a standard Spring IoC container. All these features allow you to use lsFusion not only as a full-fledged development platform, but also as a database or even a Java library.</p>
+                <h2>Прозрачная интеграция</h2>
+                <p>Платформа поддерживает обращение к системе через самый распространенный прикладный протокол общего назначения (HTTP), при этом интерфейс обращения включает в себя не только выполнения некоторого действия (с автоматическим разбором параметров), но и выполнение кода на языке lsFusion (по аналогии с обращением к SQL серверам). Также платформа, на уровне языка, поддерживает обращение к любым внешним системам по протоколу HTTP, а также к SQL-серверам, другим lsFusion системам и т.д. Кроме того сам сервер реализован в виде Spring bean, что позволяет управлять его циклом жизни при помощи обычного Spring IoC контейнера. Все вышеперечисленное позволяет использовать lsFusion не только в качестве полноценной платформы разработки, но и, при необходимости, в качестве СУБД или даже в качестве Java-библиотеки.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=29884429" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=55935068" target="_blank">How to</a>
+                    <a href="compare?id=14">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-ci-in-acid-right-out-of-the-box">
+        <li id="feature-ci-in-acid-right-out-of-the-box" class="any_number_of_users trust_the_system">
             <div class="inner">
-                <h2>CI in <em>ACID</em> right out of the box</h2>
-                <p>The platform can properly roll back the application server to the state it was in before any data transaction had begun. This allows you to use the native integrity tools of modern SQL servers, which not only significantly reduces labor costs and human error when developing a system for a highly concurrent environment, but also makes such a system much more scalable (provided that versioning databases are used).</p>
+                <h2>CI в <em>ACID</em> из коробки</h2>
+                <p>В платформе реализован корректный откат состояния сервера приложения на момент начала транзакции из любой операции, где идет обращение к данным. Это позволяет использовать родные средства обеспечения целостности реализованные в современных SQL-серверах, что, с одной стороны, значительно уменьшает трудозатраты / вероятность ошибок при разработке системы, работающей в высококонкурентной среде, а, с другой стороны, значительно увеличивает масштабируемость такой системы (при условии использования версионных СУБД).</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=15">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-seamless-linking-of-java-libraries-sql-functions">
+        <li id="feature-seamless-linking-of-java-libraries-sql-functions" class="communicate_with_the_system">
             <div class="inner">
-                <h2>Seamless linking of Java libraries / SQL functions</h2>
-                <p>The application server runs on a Java virtual machine (JVM) and can thus be integrated with countless Java libraries. To do this, just create your own action in Java, register it in the platform, and then use it just like any action built into the platform or written on the platform's built-in language. Accordingly, you can seamlessly connect custom SQL functions of the database server you're using.</p>
+                <h2>Бесшовное подключение Java-библиотек / SQL-функций</h2>
+                <p>Сервер приложений выполняется в виртуальной Java машине (JVM), что позволяет подключить к нему любую из многочисленных существующих Java-библиотек. Для этого достаточно создать свое действие на Java, зарегистрировать его в платформе и использовать, как если бы оно было встроенным или реализованным на языке платформы. Аналогичным образом можно бесшовно подключать пользовательские SQL-функции используемого сервера БД.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=51216543" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=65241544" target="_blank">How to</a>
+                    <a href="compare?id=16">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-everything-as-code">
+        <li id="feature-everything-as-code" class="develop_rapidly any_complexity manage_the_system">
             <div class="inner">
                 <h2>Everything as code</h2>
-                <p>All elements of the system, from events to form design, are written in the lsFusion language and stored in ordinary text files (without any shared repositories with an unknown structure). This allows you to use popular version control systems (Git, Subversion) and project-building tools (Maven in IDEs) when working with projects. In addition, this approach simplifies the support and deployment of the system you develop - you can use an ordinary text editor to view and quickly modify the logic when necessary and also easily identify any element in the system by file name and line number in this file.</p>
+                <p>Все элементы системы, от событий до дизайна форм, задаются в виде кода на языке lsFusion, хранящегося в обычных текстовых файлах (без каких-либо общих репозитариев с неизвестной структурой). Это позволяет использовать при работе с проектами популярные системы контроля версий (Git, Subversion) и сборки проектов (Maven, встроенные в IDE). Кроме того, такой подход упрощает процесс поддержки / развертывания разработанной системы, так как позволяет, во-первых, при помощи обычного текстового редактора просматривать, и, при необходимости, оперативно изменять логику, а, во-вторых, легко идентифицировать любой элемент в системе, по его файлу и номеру строки в этом файле.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=1573050" target="_blank">Документация</a>
+                    <a href="compare?id=17">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-easy-to-use-language">
+        <li id="feature-easy-to-use-language" class="develop_rapidly">
             <div class="inner">
-                <h2>Easy-to-use language</h2>
-                <p>The platform allows you to group element names into namespaces and consider names in the same namespace as having higher priority when searching for elements. In most cases, you only need to enter the "short" name of the element you're searching for and eventually write more concise and readable code. In addition, you can specify a class for each parameter in the code, and this class will also be taken into account during a search (i.e. explicit types are supported). This also makes your code shorter and simpler and ensures early error detection, smart auto-completion, and lots of other useful features.</p>
+                <h2>Эргономичный язык</h2>
+                <p>В платформе существует возможность объединять имена элементов в пространства имен, и при поиске элементов считать имена в одном и том же пространстве имен более приоритетными. Таким образом в большинстве случаев достаточно указывать только "короткое" имя искомого элемента, а значит код получается более компактным и читабельным. Кроме того, для каждого параметра в коде можно задавать его класс и при поиске элементов эти классы также будут учитываться (то есть поддерживается явная типизация). Последнее, кроме короткого кода, позволяет в том числе получить раннюю диагностику ошибок, умное автодополнение и ряд других похожих возможностей.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=2720036" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=65241522" target="_blank">How to</a>
+                    <a href="compare?id=18">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-easy-to-use-ide">
+        <li id="feature-easy-to-use-ide" class="develop_rapidly">
             <div class="inner">
-                <h2>Easy-to-use IDE</h2>
-                <p>Intellij IDEA-based IDE with everything developers could ever need: search for uses, code/error highlighting, smart auto-completion, quick jump to declarations, class structure, renaming of elements, usage tree, data change breakpoints, debuggers, and more.</p>
+                <h2>Эргономичная IDE</h2>
+                <p>IDE на базе Intellij IDEA с полным арсеналом разработчика - поиск использований, подсветка кода / ошибок, умное автодополнение, переход к объявлению, структура класса, переименование элементов, дерево использований, брейкпоинты изменения данных, отладчик и множество других возможностей.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/display/LSFUS/IDE" target="_blank">Документация</a>
+                    <a href="compare?id=19">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-metaprogramming">
+        <li id="feature-metaprogramming" class="develop_rapidly any_complexity">
             <div class="inner">
-                <h2>Metaprogramming</h2>
-                <p>Do you want to create your own high-level operator, or maybe you just don't know how to generalize the logic, but want to reuse it? The platform provides full support for automatic code generation, from both the server side and IDE.</p>
+                <h2>Метапрограммирование</h2>
+                <p>Хотите создать свой высокоуровневый оператор или просто не знаете как обобщить логику, но хотите использовать ее повторно? В платформе реализована полная поддержка автоматической генерации кода, причем как со стороны сервера, так и со стороны IDE.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=1310740" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=46367754" target="_blank">How to</a>
+                    <a href="compare?id=20">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-three-tier-architecture">
+        <li id="feature-three-tier-architecture" class="any_number_of_users">
             <div class="inner">
-                <h2>Three-tier architecture</h2>
-                <p>The platform executes the imperative part of the system logic (i.e. everything related to data changes) on application servers and the declarative part (i.e. everything related to data calculations) on database servers. This separation simplifies the scaling of the system you develop and strengthens its fault tolerance due to the different nature of workload on these servers (e.g. using swap on an application server is much more dangerous than on a database server).</p>
+                <h2>Трехзвенная архитектура</h2>
+                <p>Платформа построена таким образом, что императивная часть логики системы (все что связано с изменением данных) выполняется на серверах приложений, а декларативная (все что связано с вычислением данных) - на серверах БД. Такое разделение упрощает масштабирование разрабатываемой системы, а также в силу разного характера нагрузки на эти сервера повышает ее отказоустойчивость (к примеру, использование swap на сервере приложений гораздо опасней, чем его же использование на сервере БД).</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=21">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-clustering">
+        <li id="feature-clustering" class="any_number_of_users">
             <div class="inner">
-                <h2>Clustering</h2>
-                <p>Since the application servers don't have any shared data, you can easily add as many of them as you need. In addition, the platform can transfer user data between database servers asynchronously, which, in turn, allows you to dynamically distribute the workload among them (e.g. when you add data to the database and need to use ACID, you can switch this processing to the master server or [in other cases] to the least busy slave servers).</p>
+                <h2>Кластеризация</h2>
+                <p>Сервера приложений не имеют никаких разделяемых данных, поэтому их количество при необходимости можно легко наращивать. Кроме того, платформа умеет асинхронно переносить пользовательские данные с одного сервера БД на другой, что, в свою очередь, позволяет динамически распределять нагрузку между серверами БД (к примеру, если данные записываются в базу и нужен ACID, выполняя обработку на мастерах, а в остальных случаях - на наименее нагруженных слейвах).</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=22">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-extensions">
+        <li id="feature-extensions" class="any_complexity">
             <div class="inner">
-                <h2>Extensions</h2>
-                <p>The extension technique allows developers to extend the functionality of one module in another (e.g. they can modify forms or classes created in another module). This mechanism makes the solutions you create much more modular.</p>
+                <h2>Расширения</h2>
+                <p>Техника расширений позволяет разработчику расширять в одном модуле функционал другого модуля (например, изменять формы или классы созданные в другом модуле). Использование этого механизма позволяет значительно повысить модульность создаваемых решений.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=1146886" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=46367169" target="_blank">How to</a>
+                    <a href="compare?id=23">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-asynchrony">
+        <li id="feature-asynchrony" class="any_amount_of_data extend_the_system">
             <div class="inner">
-                <h2>Asynchrony</h2>
-                <p>The platform tries, whenever possible, to perform all operations asynchronously (i.e. return control to the user before the operation completes), including most input operations and handling of local events.</p>
+                <h2>Асинхронность</h2>
+                <p>Платформа пытается по возможности выполнять все операции асинхронно (то есть возвращать управление пользователю не дожидаясь завершения операции). К примеру, к таким операциям относится большинство операций ввода и обработок локальных событий.</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=24">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-polymorphism-and-aggregations">
+        <li id="feature-polymorphism-and-aggregations" class="any_complexity">
             <div class="inner">
-                <h2>Polymorphism and aggregations</h2>
-                <p>The platform supports inheritance (including multiple inheritance) and polymorphism (including multiple polymorphism). And, if inheritance isn't enough for you for whatever reason, the platform also provides an aggregation mechanism that, together with inheritance, allows you to implement almost any polymorphic logic.</p>
+                <h2>Полиморфизм и агрегации</h2>
+                <p>В платформе поддерживаются механизмы наследования (в том числе множественного) и полиморфизма (опять-таки, в том числе множественного). Если механизма наследования по каким либо причинам недостаточно, в платформе также существует механизм агрегаций, который вместе с наследованием позволяет реализовать практически любую полиморфную логику.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=2031628" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=65241436" target="_blank">How to</a>
+                    <a href="compare?id=25">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-wysiwyg">
+        <li id="feature-wysiwyg" class=extend_the_system">
             <div class="inner">
                 <h2>WYSIWYG</h2>
-                <p>In almost all cases, the user gets lots of features right out of the box, including quick editing of any visible data and any visible objects (bulk editing), copy and paste (e.g. to/from Excel), merging/canceling/saving changes, and other WYSIWYG features.</p>
+                <p>В абсолютном большинстве случаев пользователь из коробки получает возможность редактировать любые данные, которые он видит, делать это сразу для всех видимых объектов (групповая корректировка), выполнять copy-paste (в том числе, к примеру, из Excel), объединять / отменять / сохранять сделанные изменения и другие WYSIWYG возможности.</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=26">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-internationalization">
+        <li id="feature-internationalization" class="scale_the_system">
             <div class="inner">
-                <h2>Internationalization</h2>
-                <p>Within any string literal (e.g. an element title or string constant) the platform allows the use of IDs (in brackets) to which you can then assign different texts for different languages. Accordingly, when accessing this literal, the platform automatically localizes it depending on the language settings of the target user.</p>
+                <h2>Интернационализация</h2>
+                <p>Внутри любого строкового литерала (например заголовка элементов или строковой константы) платформа позволяет использовать идентификаторы (в фигурных скобках), для которых, в свою очередь, можно задавать разные тексты для разных языков. Соответственно, в момент обращения к этому литералу, платформа автоматически локализует его в зависимости от языковых настроек пользователя, действия которого приводят к этом обращению.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=34996245" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=60555378" target="_blank">How to</a>
+                    <a href="compare?id=27">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-retroactive-changes">
+        <li id="feature-retroactive-changes" class="any_amount_of_data extend_the_system">
             <div class="inner">
-                <h2>Retroactive changes</h2>
-                <p>The platform allows users to change any previously-entered data (e.g. to fix input errors) and only updates the data that is actually needed without thousands of related reversal operations, long reposting, or global database locks. In addition, the platform allows the simultaneous editing of the same data (e.g. the same document), which is useful for teamwork and rapidly inputting large amounts of data.</p>
+                <h2>Изменения задним числом</h2>
+                <p>Платформа позволяет пользователю изменять любые введенные ранее данные (например, если была ошибка при вводе), при этом платформа обновит только те данные которые нужно - без тысяч смежных сторнирующих операций, долгого перепроведения и глобальных блокировок БД. Помимо этого, платформа позволяет редактировать одни и те же данные (например один и тот же документ) нескольким пользователям одновременно, что может быть критично, если этих данных много, или их нужно вводить очень быстро.</p>
                 <nav>
-                    <a href="#">Compare</a>
+                    <a href="compare?id=28">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-advances-tools-for-administrators">
+        <li id="feature-advances-tools-for-administrators" class="any_amount_of_data manage_the_system">
             <div class="inner">
-                <h2>Advanced tools for administrators</h2>
-                <p>The platform provides a complete set of administration tools for systems that are already running: interpreter (executes lsFusion code), process monitor (receives detailed information about processes that are running, e.g. call start time, stack, user, etc.), scheduler (executes periodic or scheduled actions), profiler (measures the performance of all actions executed for all/given users, e.g. builds a graph of calls, sharing time between the application server and the database server, etc.), messenger (for internal notifications/communication with users in the system), and numerous logs (connections, errors, etc.).</p>
+                <h2>Развитые средства администрирования</h2>
+                <p>Платформа предоставляет целый набор инструментов администрирования уже работающей системы : интерпретатор - выполняет код на языке lsFusion, монитор процессов - получает информацию о текущих процессах с различной информацией о них (например, время начала вызова, стек, пользователь и т.п.), планировщик - выполняет действия в заданные моменты времени (в том числе периодически), профайлер - замеряет производительность всех выполняемых действий для всех / заданных пользователей (строит граф вызовов, разделение времени между сервером приложений и сервером БД и т.п.), чат - для оповещения / общения с пользователями внутри системы, а также многочисленные журналы и логи (подключений, ошибок и т.п.).</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=60555466" target="_blank">Документация</a>
+                    <a href="compare?id=29">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-advanced-interactive-uis">
+        <li id="feature-advanced-interactive-uis" class="extend_the_system">
             <div class="inner">
-                <h2>Advanced interactive UIs</h2>
-                <p>When interacting with a user, the platform can display any data not only as individual objects and lists, but also as trees, both flat ("nested") and recursive (e.g. classifiers). In addition, the platform allows you to group various form blocks into folders (tabs) for structuring large quantities of data. When the data is not visible to the user, it is not read/calculated (e.g. all lists are dynamic by default, i.e. only a limited number of objects are read initially, while the rest of them are read as the current object in the table is changed).</p>
+                <h2>Продвинутые интерактивные интерфейсы</h2>
+                <p>При интерактивном взаимодействии с пользователем платформа позволяет организовывать отображение любых данных не только в виде одиночных объектов и списков, но и в виде деревьев, как плоских ("вложенных" друг в друга списков), так и рекурсивных (например, классификаторов). Кроме того, если информации слишком много, платформа позволяет объединять различные блоки формы в папки (вкладки). При этом, если данные не видны пользователю, они не читаются / вычисляются (так, к примеру, любые списки являются по умолчанию динамическими, то есть читается только ограниченное число объектов, а остальные дочитываются по мере изменения текущего объекта в таблице).</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">How to</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=1573071#id-%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-tree" target="_blank">Документация</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=46367457" target="_blank">How to</a>
+                    <a href="compare?id=30">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-security-policy">
+        <li id="feature-security-policy" class="scale_the_system">
             <div class="inner">
-                <h2>Security policy</h2>
-                <p>A flexible security policy allows you to define data access restrictions for both individual forms and specific actions/indicators. Then users won't be able to see this data or even know that it exists.</p>
+                <h2>Политика безопасности</h2>
+                <p>Гибкая политика безопасности позволяет определять ограничения доступа к данным как на уровне форм, так и на уровне конкретных действий / показателей. При этом пользователь не только не увидит эти данные, но и даже не узнает об их существовании.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=60555484&src=sidebar" target="_blank">Документация</a>
+                    <a href="compare?id=31">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-open-source-code">
+        <li id="feature-open-source-code" class="communicate_with_the_system">
             <div class="inner">
-                <h2>Open source code</h2>
-                <p>The open source code of the platform and IDE allows developers to study the internal mechanisms of the platform independently, create pull requests or custom builds, and license their own solutions for use in case of strict security requirements.</p>
+                <h2>Открытые исходники</h2>
+                <p>Открытые исходники платформы и IDE позволяют разработчику самостоятельно изучать поведение платформы изнутри, создавать pull request'ы, свои сборки, а также лицензировать разрабатываемые решения для использования в случае жестких требований к безопасности.</p>
                 <nav>
-                    <a href="#">Github</a>
-                    <a href="#">Compare</a>
+                    <a href="https://github.com/lsFusion" target="_blank">Github</a>
+                    <a href="compare?id=32">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-deep-user-customization">
+        <li id="feature-deep-user-customization" class="extend_the_system">
             <div class="inner">
-                <h2>Deep user customization</h2>
-                <p>Users can customize any form, e.g. add custom selections and sorting rules or add/remove/reorder columns, and also perform basic analysis such as grouping visible data or calculating sums/maximums and other aggregated indicators. In addition to the UI settings, users can also add logging, fill-in control, or notifications about any data changes (including calculated data).</p>
+                <h2>Настройка системы пользователем</h2>
+                <p>Пользователь может настраивать любые формы, например добавлять пользовательские отборы и сортировки, добавлять / удалять колонки, изменять их порядок. Также, на любой форме, пользователь может осуществлять базовую аналитику - группировать данные, которые он видит, вычислять суммы / максимумы и другие агрегированные показатели. Помимо настроек пользовательского интерфейса, пользователь также может самостоятельно добавлять логирование, требование заполненности, уведомление об изменениях любых (в том числе вычисляемых) данных.</p>
                 <nav>
-                    <a href="#">Documentation</a>
-                    <a href="#">Compare</a>
+                    <a href="https://ru-documentation.lsfusion.org/pages/viewpage.action?pageId=60555470" target="_blank">Документация</a>
+                    <a href="compare?id=33">Сравнить</a>
                 </nav>
             </div>
         </li>
-        <li id="feature-free-license">
+        <li id="feature-free-license" class="own_the_system">
             <div class="inner">
-                <h2>Free license</h2>
-                <p>The platform is licensed under LGPL v3, which allows you to freely use, distribute, and modify the platform as you wish.</p>
+                <h2>Свободная лицензия</h2>
+                <p>Платформа выпускается под лицензией LGPL v3, позволяющей свободно использовать, распространять, а также модифицировать платформу под свои нужды.</p>
                 <nav>
-                    <a href="#">Text</a>
-                    <a href="#">Compare</a>
+                    <a href="https://opensource.org/licenses/lgpl-3.0.html" target="_blank">Text</a>
+                    <a href="compare?id=34">Сравнить</a>
                 </nav>
             </div>
         </li>
     </ul>
+
+    <nav id="features-nav" style="display: none;">
+        <strong>Any complexity</strong>
+        <span class="close" title="Click to reset filter">Close</span>
+        <a href="/" onclick="return window.history.back();" class="back" title="Click to return">Return</a><br /><br />
+
+        <span class="prev disabled" title="View previous feature">&lt;</span>
+        <em><span>1</span>/4</em>
+        <span class="next" title="View next feature">&gt;</span>
+    </nav>
+
 </div>
 
 <footer>
