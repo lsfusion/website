@@ -1,9 +1,41 @@
 if(document.location.href.indexOf("/ru/") > 0){
     text__Restart = "Перезапустить";
     text__Start = "Старт"
+
+    var featuresFilters = {
+        "develop_rapidly":              "Разрабатывайте быстро",
+        "develop_simply":               "Разрабатывайте просто",
+        "any_complexity":               "Любая сложность",
+        "any_amount_of_data":           "Любой объем данных",
+        "any_number_of_users":          "Любое количество пользователей",
+        "any_infrastructure":           "Любая инфраструктура",
+        "trust_the_system":             "Доверяйте системе",
+        "manage_the_system":            "Управляйте системой",
+        "communicate_with_the_system":  "Общайтесь с системой",
+        "own_the_system":               "Владейте системой",
+        "extend_the_system":            "Расширяйте систему",
+        "scale_the_system":             "Масштабируйте систему",
+    }
+
 }else {
     text__Restart = "Restart";
     text__Start = "Start"
+
+    var featuresFilters = {
+        "develop_rapidly":              "Develop rapidly",
+        "develop_simply":               "Develop simply",
+        "any_complexity":               "Any complexity",
+        "any_amount_of_data":           "Any amount of data",
+        "any_number_of_users":          "Any number of users",
+        "any_infrastructure":           "Any infrastructure",
+        "trust_the_system":             "Trust the system",
+        "manage_the_system":            "Manage the system",
+        "communicate_with_the_system":  "Communicate with the system",
+        "own_the_system":               "Own the system",
+        "extend_the_system":            "Extend the system",
+        "scale_the_system":             "Scale the system",
+    }
+
 }
 
 $(document).ready(function() {
@@ -40,20 +72,6 @@ $(document).ready(function() {
     }
 //end home page text switcher
 //setting filter for the features
-let featuresFilters = {
-    "develop_rapidly":              "Develop rapidly",
-    "develop_simply":               "Develop simply",
-    "any_complexity":               "Any complexity",
-    "any_amount_of_data":           "Any amount of data",
-    "any_number_of_users":          "Any number of users",
-    "any_infrastructure":           "Any infrastructure",
-    "trust_the_system":             "Trust the system",
-    "manage_the_system":            "Manage the system",
-    "communicate_with_the_system":  "Communicate with the system",
-    "own_the_system":               "Own the system",
-    "extend_the_system":            "Extend the system",
-    "scale_the_system":             "Scale the system",
-}
     let featureClass = document.location.hash.substring(1);
     if(featureClass) {
         $("#features-nav .close").click(function(){
