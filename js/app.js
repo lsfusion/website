@@ -338,8 +338,8 @@ let featuresFilters = {
         stopLogServerScheduler();
         //getResultArea().value = '';
 
-        start_server = false;
-        rmiStarted = false;
+        window.start_server = false;
+        window.rmiStarted = false;
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
