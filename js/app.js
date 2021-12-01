@@ -1,3 +1,11 @@
+if(document.location.href.indexOf("/ru/") > 0){
+    text__Restart = "Перезапустить";
+    text__Start = "Старт"
+}else {
+    text__Restart = "Restart";
+    text__Start = "Start"
+}
+
 $(document).ready(function() {
 //home page text switcher
     let variants = [
@@ -168,11 +176,12 @@ let featuresFilters = {
     $(".dropdown ul li").click(function(){
         $(this).closest(".dropdown").find("li.active").removeClass("active")
         $(this).addClass("active");
-        let text = $(this).text();
+        let value = $(this).attr("val") || $(this).text();
+        let text = $(this).text()
         $(this).closest(".dropdown").find("em").text( text )
 
         let _id = $(this).closest(".dropdown").attr("data-apply-to")
-        $("#" + _id).attr("class", _id + " " + text.replace(/ /, ""))
+        $("#" + _id).attr("class", _id + " " + value.replace(/ /, ""))
 
         fixTryHeight();
     })
@@ -301,14 +310,14 @@ let featuresFilters = {
         }else {
             window.start_server = true;
             $(this).closest(".buttons").find(".stop").removeClass("disabled");
-            $(this).addClass("restart").text("Restart").attr("title", "Restart")
+            $(this).addClass("restart").text(text__Restart).attr("title", text__Restart)
 
             startServer()
         }
 
     })
     $(".stop").click(function(){
-        $(this).closest(".buttons").find(".start").removeClass("restart").attr("title", "Start").text("Start");
+        $(this).closest(".buttons").find(".start").removeClass("restart").attr("title", text__Start).text(text__Start);
         $(this).closest(".buttons").find(".stop").addClass("disabled");
         $(this).closest(".buttons").find(".open").hide();
         stopServer();
