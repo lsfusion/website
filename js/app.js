@@ -15,7 +15,17 @@ if(document.location.href.indexOf("/ru/") > 0){
         "own_the_system":               "Владейте системой",
         "extend_the_system":            "Расширяйте систему",
         "scale_the_system":             "Масштабируйте систему",
-    }
+    };
+    
+    var variants = [
+        [0, 0, 0],
+        [1, 0, 0],
+        [1, 1, 0],
+        [0, 1, 0],
+        [0, 1, 1],
+        [0, 0, 1],
+    ];
+
 
 }else {
     text__Restart = "Restart";
@@ -34,13 +44,9 @@ if(document.location.href.indexOf("/ru/") > 0){
         "own_the_system":               "Own the system",
         "extend_the_system":            "Extend the system",
         "scale_the_system":             "Scale the system",
-    }
+    };
 
-}
-
-$(document).ready(function() {
-//home page text switcher
-    let variants = [
+    var variants = [
         [0, 0, 0],
         [1, 0, 0],
         [1, 1, 0],
@@ -48,6 +54,11 @@ $(document).ready(function() {
         [0, 1, 1],
         [0, 0, 1],
     ];
+
+}
+
+$(document).ready(function() {
+//home page text switcher
     let currentInterval = 0;
     setInterval(textSwitcher, 5000);
     function textSwitcher() {
