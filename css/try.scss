@@ -204,7 +204,9 @@
         text-decoration: none;
         &.open,
         &.stop{
-          border: 1px solid #FFFFFF;
+          @media (max-width: $mobileWidth - 1){
+            border: 1px solid #FFFFFF;
+          }
           transition: color 0.3s;
           &:hover{
             color: #26C4F7;
