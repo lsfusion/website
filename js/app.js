@@ -16,7 +16,7 @@ if(document.location.href.indexOf("/ru/") > 0){
         "extend_the_system":            "Расширяйте систему",
         "scale_the_system":             "Масштабируйте систему",
     };
-    
+
     var variants = [
         [0, 0, 0],
         [1, 0, 0],
@@ -415,7 +415,7 @@ $(document).ready(function() {
         }
     }
 
-    let rmiStarted = false;
+    var rmiStarted = false;
     function showOpenTabButton() {
         document.getElementById("open").style.display="block";
         document.getElementById("open").href = server + "/?port=" + rmiPort;
@@ -435,12 +435,12 @@ $(document).ready(function() {
                 if(response != null && response.text != null && response.text != undefined) {
                     resultArea.value = oldTextareaValue + response.text;
 
-                    if(!rmiStarted) {
+                    if(!window.rmiStarted) {
                         let match = /.*Exporting\sRMI\sLogics\sobject\s\(port:\s(\d+)\).*/g.exec( resultArea.value );
                         if (match) {
                             window.open(server + '/?port=' + rmiPort, '_blank');
                             showOpenTabButton();
-                            rmiStarted = true;
+                            window.rmiStarted = true;
                         }
                     }
 
