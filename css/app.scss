@@ -104,7 +104,7 @@ body > nav{
   background: #fff;
   opacity: 0.95;
 
-  @media (min-width: $mobileWidth) {
+  @media (min-width: 950px) {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     padding: 20px 0;
     height: 40px;
@@ -114,10 +114,10 @@ body > nav{
       width: $siteWidth;
       margin: 0 auto;
     }
-    @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
+    @media (min-width: 950px) and (max-width: $siteWidth - 1){
       padding: 0 20px;
     }
-    @media (max-width: $mobileWidth - 1){
+    @media (max-width: 949px){
       padding: 20px 0;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
@@ -137,12 +137,15 @@ body > nav{
     font-size: 14px;
     line-height: 40px;
     .menu-link{
-      @media (min-width: $mobileWidth){
+      //@media (min-width: $mobileWidth){
+      @media (min-width: 950px){
         display: none;
       }
-      @media (max-width: $mobileWidth - 1){
+      //@media (max-width: $mobileWidth - 1){
+      @media (max-width: 949px){
         float: right;
       }
+
       margin: 0 20px 0 0;
       border: 1px solid #F1F8FA;
       border-radius: 4px;
@@ -161,24 +164,24 @@ body > nav{
       overflow: hidden;
     }
     & > ul.nav{
-      @media (min-width: $mobileWidth){
+      @media (min-width: 950px){
         float: right;
       }
-      @media (max-width: $mobileWidth - 1){
+      @media (max-width: 949px){
         display: none;
         clear: both;
         padding: 20px 0 0 0;
         //box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
       }
       list-style: none;
-      @media (min-width: $mobileWidth) {
+      @media (min-width: 950px) {
         #languages {
           margin-left: 100px;
           position: relative;
           z-index: 1;
         }
       }
-      @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
+      @media (min-width: 950px) and (max-width: $siteWidth - 1){
         #languages {
           margin-left: 20px;
           position: relative;
@@ -186,14 +189,14 @@ body > nav{
         }
       }
       & > li{
-        @media (min-width: $mobileWidth) {
+        @media (min-width: 950px) {
           display: inline;
           padding: 0 23px 0 22px;
         }
-        @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
+        @media (min-width: 950px) and (max-width: $siteWidth - 1){
           padding: 0 10px;
         }
-        @media (max-width: $mobileWidth - 1){
+        @media (max-width: 949px){
           display: block;
           text-align: center;
         }
@@ -201,14 +204,14 @@ body > nav{
           color: #848484;
           text-decoration: none;
           transition: color 0.3s, background-color 0.3s;
-          @media (max-width: $mobileWidth - 1){
+          @media (max-width: 949px){
             line-height: 65px;
             font-size: 16px;
             display: block;
           }
           &:hover{
             color: #26C4F7;
-            @media (max-width: $mobileWidth - 1){
+            @media (max-width: 949px){
               background: #E1F7FE;
             }
           }
@@ -224,21 +227,17 @@ body > nav{
     }
     div.language{
       @extend .noselect;
-      @media (min-width: $mobileWidth) {
+      @media (min-width: 950px) {
         float: right;
         position: relative;
       }
-      @media (max-width: $mobileWidth - 1){
-        //display: inline-block;
-      }
-
       cursor: pointer;
       strong{
         padding: 0 20px 0 0;
         background: url(../imgs/icons/more.svg) no-repeat right 50%;
         font-weight: 600;
         color: #596062;
-        @media (min-width: $mobileWidth) {
+        @media (min-width: 950px) {
           display: block;
         }
       }
@@ -252,7 +251,7 @@ body > nav{
       ul{
         display: none;
         list-style: none;
-        @media (min-width: $mobileWidth) {
+        @media (min-width: 950px) {
           position: absolute;
           line-height: 30px;
           left: -8px;
@@ -265,7 +264,7 @@ body > nav{
         li{
           display: block;
           text-align: left;
-          @media (max-width: $mobileWidth - 1){
+          @media (max-width: 949px){
             text-align: center;
           }
           text-transform: uppercase;
@@ -277,18 +276,18 @@ body > nav{
             text-decoration: none;
             color: #596062;
             display: block;
-            @media (min-width: $mobileWidth) {
+            @media (min-width: 950px) {
               font-weight: 600;
               padding: 0 0 0 8px;
             }
             &.current{
-              @media (min-width: $mobileWidth) {
+              @media (min-width: 950px) {
                 background: #d8f7ff;
               }
             }
             transition: background 0.3s;
             &:hover{
-              @media (min-width: $mobileWidth) {
+              @media (min-width: 950px) {
                 background: #d8f7ff;
               }
             }
