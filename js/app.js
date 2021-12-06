@@ -185,7 +185,7 @@ $(document).ready(function() {
 //sticky headers for mobile layouts
     function fixStickyHeaders(){
         if( $(".menu-link:visible").size() == 0 ){//do nothing for desktop
-            return;
+            //return;
         }
         let currentTab = $("#compare > div:visible");
         let stickyTrIndex = 2;
