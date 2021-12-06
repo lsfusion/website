@@ -1,3 +1,21 @@
+@mixin customScroll{
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: #EFF5F7;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #EFF5F7;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #d6d6d6;
+  }
+  &::-webkit-scrollbar-corner {
+    visibility: hidden;
+  }
+}
 em.sp{
   color: #7de2ff;
   font-style: normal;
@@ -76,6 +94,7 @@ em.sp{
     z-index: 50;
     span{
       display: block;
+      z-index: 50;
     }
   }
 }

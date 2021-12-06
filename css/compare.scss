@@ -2,9 +2,13 @@
   & > div{
     display: none;
     @media (max-width: $mobileWidth - 1){
-      max-width: 100%;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       overflow-x: scroll;
-      position: relative;
+      padding-bottom: 20px;
+      //position: relative;
     }
   }
   &.features{
@@ -135,43 +139,16 @@ nav.external-links{
 }
 @media (max-width: $mobileWidth - 1) {
   #features{
-    max-height: 600px;
-
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
-    &::-webkit-scrollbar-track {
-      border-radius:4px;
-      background: #EFF5F7;
-    }
-    &::-webkit-scrollbar {
-      width:8px;
-      height:8px;
-      background: #EFF5F7;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius:4px;
-      background-color:#d6d6d6;
-    }
-    &::-webkit-scrollbar-corner {
-      visibility:hidden;
-    }
-
-
+    @include customScroll;
   }
 }
+
 #comparetbl{
   thead{
     @media (min-width: $mobileWidth) {
       tr:nth-child(3) {
         position: sticky;
         top: 80px;
-        z-index: 22;
-      }
-    }
-    @media (max-width: $mobileWidth - 1) {
-      tr:nth-child(3) {
-        position: sticky;
-        top: 0px;
         z-index: 22;
       }
     }
