@@ -142,14 +142,15 @@
     .buttons{
       position: absolute;
       z-index: 1;
-      padding: 0 20px 0 0;
       @media (min-width: $mobileWidth) {
+        padding: 0 20px 0 0;
         right: 41.5%;
         bottom: 20px;
       }
       @media (max-width: $mobileWidth - 1){
         top: 420px;
-        right: 0px;
+        left: 50%;
+        transform: translateX(-50%);
       }
       span, a{
         &.disabled{
