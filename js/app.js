@@ -184,26 +184,49 @@ $(document).ready(function() {
 
 //sticky headers for mobile layouts
     function fixStickyHeaders(){
-        let el = $("#comparetbl thead tr:nth-child(3)");
+        if( $(".menu-link:visible").size() == 0 ){//do nothing for desktop
+            return;
+        }
+        let currentTab = $("#compare > div:visible");
+        let stickyTrIndex = 2;
+        if(currentTab.index() == 0){
+            stickyTrIndex = 3;
+        }
+        if( currentTab.find(".mobile-header").size() == 0 ){
+            currentTab.prepend('<div class="mobile-header"><span>' + currentTab.find("table thead tr:nth-child(" + stickyTrIndex + ") td:nth-child(1)").text() + '</span><table><tbody>' + currentTab.find("table thead tr:nth-child(" + stickyTrIndex + ")").html() + '</tbody></table></div>')
+
+
+            currentTab.find(".mobile-header table").css("width", currentTab.children("table").css("width"));
+
+            currentTab.find(".mobile-header table td").each(function(){
+                let width = currentTab.find("table thead tr:nth-child(" + stickyTrIndex + ") td").eq( $(this).index() ).width();
+                $(this).css("width", width + "px")
+
+                if( $(this).index() == 0 ){
+                    let height = currentTab.find("table thead tr:nth-child(" + stickyTrIndex + ") td").eq( $(this).index() ).height()
+                    currentTab.find(".mobile-header > span").css("width", width + "px").css("height", height + "px")
+                }
+
+            })
+        }
+
+        let el = currentTab.find("table thead tr:nth-child(" + stickyTrIndex + ")");
         let offset = el.offset()
         if(offset.top - $(document).scrollTop() < 80){
 
-            let offset = $("#features").scrollLeft();
-            $("#compare .mobile-header table").css("left", -offset + "px");
-            $("#comparetbl-header").css("width", $("#comparetbl").css("width"));
-            $("#comparetbl-header td").each(function(){
-                let width = $("#comparetbl thead tr:nth-child(3) td").eq( $(this).index() ).width();
-                $(this).css("width", width + "px")
-            })
+            let offset = currentTab.scrollLeft();
+            currentTab.find(".mobile-header table").css("left", -offset + "px");
 
             $("#compare").addClass("with-mobile-headers")
         }else{
             $("#compare").removeClass("with-mobile-headers")
         }
     }
-    $("#features").on("scroll", fixStickyHeaders);
-    $(window).on("resize scroll swipe", fixStickyHeaders);
-    window.setTimeout(fixStickyHeaders, 0)
+    if( $("#compare").size() > 0 ) {
+        $("#compare > div").on("scroll", fixStickyHeaders);
+        $(window).on("resize scroll swipe", fixStickyHeaders);
+        window.setTimeout(fixStickyHeaders, 0)
+    }
 //end compare page
 
     $(document).click(function(e){

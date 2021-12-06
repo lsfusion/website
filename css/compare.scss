@@ -368,6 +368,15 @@ div.mobile-header{
   left: 20px;
   right: 20px;
   overflow: hidden;
+  & > span{
+    font-size: 12px;
+    line-height: 16px;
+    padding: 16px 16px;
+    font-weight: 400;
+    position: absolute;
+    z-index: 21;
+    background: #E1F7FE;
+  }
   table{
     position: relative;
     tbody{
