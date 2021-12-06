@@ -181,6 +181,29 @@ $(document).ready(function() {
             $("#comparetbl tr[data-id='" + id + "']").removeClass("active");
         }, 5000)
     }
+
+//sticky headers for mobile layouts
+    function fixStickyHeaders(){
+        let el = $("#comparetbl thead tr:nth-child(3)");
+        let offset = el.offset()
+        if(offset.top - $(document).scrollTop() < 80){
+
+            let offset = $("#features").scrollLeft();
+            $("#compare .mobile-header table").css("left", -offset + "px");
+            $("#comparetbl-header").css("width", $("#comparetbl").css("width"));
+            $("#comparetbl-header td").each(function(){
+                let width = $("#comparetbl thead tr:nth-child(3) td").eq( $(this).index() ).width();
+                $(this).css("width", width + "px")
+            })
+
+            $("#compare").addClass("with-mobile-headers")
+        }else{
+            $("#compare").removeClass("with-mobile-headers")
+        }
+    }
+    $("#features").on("scroll", fixStickyHeaders);
+    $(window).on("resize scroll swipe", fixStickyHeaders);
+    window.setTimeout(fixStickyHeaders, 0)
 //end compare page
 
     $(document).click(function(e){
