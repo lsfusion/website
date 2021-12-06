@@ -89,19 +89,15 @@
       em{
         font-style: normal;
         font-size: 14px;
-        border-radius: 4px;
         line-height: 40px;
         padding: 0 20px;
         display: block;
         cursor: pointer;
         color: #2C2A28;
         font-weight: 600;
-        background: #fff url(../imgs/dd.svg) no-repeat right 10px top 50%;
-        @media (min-width: $mobileWidth){
-          background: transparent url(../imgs/dd.svg) no-repeat right 10px top 50%;
-          border: 1px solid #C1C1C1;
-          border-radius: 4px;
-        }
+        background: transparent url(../imgs/dd.svg) no-repeat right 10px top 50%;
+        border: 1px solid #C1C1C1;
+        border-radius: 4px;
       }
       ul{
         display: none;
@@ -206,6 +202,9 @@
         &.start{
           background-color: #26C4F7;
           background-image: url(../imgs/play-big.svg);
+          @media (max-width: $mobileWidth - 1){
+            transform: rotate(90deg);
+          }
           background-position: 16px 50%;
           &.disabled {
             background-color: grayscale(#efefef) !important;
