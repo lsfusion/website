@@ -232,13 +232,13 @@ ul.home-links2{
   }
 }
 ul.home-links3{
-
   &.developer,
   &.administrator,
   &.user,
   &.business{
     li{
-      .inner {
+      .inner {//disabling style
+
         strong {
           color: #b7c0c4;
         }
@@ -249,44 +249,17 @@ ul.home-links3{
         & > a{
           color: #b7c0c4;
         }
+
+
       }
     }
   }
-  &.developer{
-    li{
-      .inner{
-        & > span span.developer{
-          color: #596062;
-        }
-      }
-    }
-  }
-  &.administrator{
-    li{
-      .inner{
-        & > span span.administrator{
-          color: #596062;
-        }
-      }
-    }
-  }
-  &.user {
-    li {
-      .inner {
-        & > span span.user {
-          color: #596062;
-        }
-      }
-    }
-  }
-  &.business{
-    li{
-      .inner{
-        & > span span.business{
-          color: #596062;
-        }
-      }
-    }
+  &.developer li .inner > span span.developer,
+  &.administrator li .inner > span span.administrator,
+  &.user li .inner > span span.user,
+  &.business li .inner > span span.business {
+    color: #596062;
+    color: #0E84BC;
   }
 
   @extend .home-links;
