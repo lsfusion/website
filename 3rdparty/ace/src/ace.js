@@ -9673,7 +9673,11 @@ EditSession.$uid = 0;
         return this.doc.getNewLineMode();
     };
     this.setUseWorker = function(useWorker) { this.setOption("useWorker", useWorker); };
+
+    this.setLsfWorkerType = function(value) { this.doc.setOption("lsfWorkerType", value); };
     this.getUseWorker = function() { return this.$useWorker; };
+
+    this.getLsfWorkerType = function() { return this.$lsfWorkerType; };
     this.onReloadTokenizer = function(e) {
         var rows = e.data;
         this.bgTokenizer.start(rows.first);
@@ -10936,6 +10940,13 @@ config.defineOptions(EditSession.prototype, "session", {
     firstLineNumber: {
         set: function() {this._signal("changeBreakpoint");},
         initialValue: 1
+    },
+    lsfWorkerType: {
+        set: function(value) {
+            this.$lsfWorkerType = value;
+        },
+        get: function() {return this.$lsfWorkerType;},
+        initialValue: ''
     },
     useWorker: {
         set: function(useWorker) {
@@ -14630,6 +14641,7 @@ config.defineOptions(Editor.prototype, "editor", {
     tooltipFollowsMouse: "$mouseHandler",
 
     firstLineNumber: "session",
+    lsfWorkerType: "session",
     overwrite: "session",
     newLineMode: "session",
     useWorker: "session",

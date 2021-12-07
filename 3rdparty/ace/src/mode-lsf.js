@@ -1,9 +1,9 @@
-define("ace/mode/lsf",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/text_highlight_rules","ace/worker/worker_client"], function(require, exports, module) {
+define("ace/mode/lsf",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/text_highlight_rules","ace/worker/worker_client"], function (require, exports, module) {
 
     var oop = require("../lib/oop");
     var TextMode = require("./text").Mode;
     var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
-    var LSFHighlightRules = function() {
+    var LSFHighlightRules = function () {
         var keywordMapper = this.createKeywordMapper({
             "keyword.module": "MODULE|REQUIRE|PRIORITY|NAMESPACE",
             "keyword.class": "CLASS|ABSTRACT|NATIVE|COMPLEX|EXTEND",
@@ -152,42 +152,56 @@ define("ace/mode/lsf",["require","exports","module","ace/lib/oop","ace/mode/text
                 "PDFFILE|DBFFILE|RAWFILE|FILE|EXCELFILE|TEXTFILE|CSVFILE|HTMLFILE|JSONFILE|XMLFILE|TABLEFILE|WORDLINK|IMAGELINK|" +
                 "PDFLINK|DBFLINK|RAWLINK|LINK|EXCELLINK|TEXTLINK|CSVLINK|HTMLLINK|JSONLINK|XMLLINK|TABLELINK|BPSTRING" +
                 "|BPISTRING|STRING|ISTRING|NUMERIC|COLOR|INTERVAL",
-            "keyword.logical.literal" : "TRUE|FALSE",
-            "keyword.t.logical.literal" : "TTRUE|TFALSE",
-            "keyword.null.literal" : "NULL",
+            "keyword.logical.literal": "TRUE|FALSE",
+            "keyword.t.logical.literal": "TTRUE|TFALSE",
+            "keyword.null.literal": "NULL",
 
         }, "identifier");
         this.$rules = {
             "start": [
-                {token: keywordMapper, regex: "[a-zA-Z_$][a-zA-Z0-9_$]*\\b"}
+                {
+                    token: "comment",
+                    regex: "\\/\\/.*$"
+                },
+                {
+                    token: keywordMapper,
+                    regex: "[a-zA-Z_$][a-zA-Z0-9_$]*\\b"
+                }
+            ],
+            "comment": [
+                {
+                    defaultToken: "comment"
+                }
             ]
         };
     };
     oop.inherits(LSFHighlightRules, TextHighlightRules);
 
-    var Mode = function() {
+    var Mode = function () {
         this.HighlightRules = LSFHighlightRules;
     };
     oop.inherits(Mode, TextMode);
 
-    (function() {
+    (function () {
         this.$id = "ace/mode/lsf";
 
         var WorkerClient = require("../worker/worker_client").WorkerClient;
-        this.createWorker = function(session) {
+        this.createWorker = function (session) {
 
             var worker = new WorkerClient(["ace"], "ace/mode/lsf_worker", "LSFWorker");
+            worker.call("setOptions", [{lsfWorkerType: session.getOption('lsfWorkerType')}]);
+
             worker.attachToDocument(session.getDocument());
 
-            worker.on("errors", function(e) {
+            worker.on("errors", function (e) {
                 session.setAnnotations(e.data);
             });
 
-            worker.on("annotate", function(e) {
+            worker.on("annotate", function (e) {
                 session.setAnnotations(e.data);
             });
 
-            worker.on("terminate", function() {
+            worker.on("terminate", function () {
                 session.clearAnnotations();
             });
 

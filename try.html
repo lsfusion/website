@@ -174,14 +174,16 @@
 
 <script>
     var code1Editor = ace.edit("code1", {
-        mode: 'ace/mode/lsf',
+        lsfWorkerType: 'script',
         enableLiveAutocompletion: true,
-        showPrintMargin: false
+        showPrintMargin: false,
+        showLineNumbers: false,
     });
     var code2Editor = ace.edit("code2", {
-        mode: 'ace/mode/lsf',
+        lsfWorkerType: 'script',
         enableLiveAutocompletion: true,
-        showPrintMargin: false
+        showPrintMargin: false,
+        showLineNumbers: false,
     });
 </script>
 
