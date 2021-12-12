@@ -96,6 +96,14 @@ nav.external-links{
   width: 100%;
   thead{
     tr{
+      td:first-child,
+      th:first-child{
+        @media (max-width: $mobileWidth - 1) {
+          position: sticky;
+          left: 0;
+          z-index: 21;
+        }
+      }
       th{
         background: #7DE2FF;
         padding: 16px 16px;
@@ -178,7 +186,6 @@ nav.external-links{
   }
   .plusminus{
     background: #e6fbe4 url(../imgs/compare/plusminus.svg) no-repeat 50% 50%;
-
   }
   .minusplus{
     background: #FFF7F1 url(../imgs/compare/minusplus.svg) no-repeat 50% 50%;
@@ -314,7 +321,6 @@ nav.external-links{
       }
     }
   }
-
   tbody{
     tr{
       td{
