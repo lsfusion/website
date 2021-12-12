@@ -111,8 +111,12 @@ $(document).ready(function() {
         })
         function scrollToFeature(index){
             if($("ul.features li." + featureClass).eq( index )) {
+                let additionalScroll = 0;
+                if( $(".menu-link:visible").size() > 0 ){
+                    additionalScroll = -60;
+                }
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("ul.features li." + featureClass).eq(index).offset().top - 140
+                    scrollTop: $("ul.features li." + featureClass).eq(index).offset().top - 140 + additionalScroll
                 }, 300);
                 //updating nav
                 $("#features-nav em").html("<span>" + (index + 1) + "</span>/" + numberOfActiveFeatures)
@@ -159,7 +163,7 @@ $(document).ready(function() {
 
             $("ul.features").addClass("filterApplied").addClass(featureClass)
 
-            scrollToFeature(0);
+            window.setTimeout(function(){scrollToFeature(0)}, 0)
         }
     }
 //end setting filter for the features;
