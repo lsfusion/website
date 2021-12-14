@@ -10,9 +10,8 @@
     }
   }
   & > div > p{
-    background: #F7FBFC;
-
     @media (min-width: $mobileWidth){
+      background: #F7FBFC;
       margin: 0 0 20px 0;
       float: right;
       width: 38.5%;
@@ -26,9 +25,6 @@
       z-index: 10;
     }
     @media (max-width: $mobileWidth - 1){
-      margin: 0 -30px 30px;
-      padding-left: 30px;
-      padding-right: 30px;
     }
 
     &.active{
