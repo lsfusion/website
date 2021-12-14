@@ -533,7 +533,6 @@ $(document).ready(function() {
         let minHeight = 200;
         let maxHeight = 500;
         if( $(".try-database:visible").length > 0 ){
-            console.log(123)
             let h = $("body > div.inner").height() - $(".try-database > p").height() - $("body > div.inner > h1").height() - 40;
             h = Math.min(h, maxHeight);
             h = Math.max(h, minHeight);
