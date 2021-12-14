@@ -296,6 +296,11 @@ $(document).ready(function() {
         }
     })
 
+    $("#try > div p strong").click(function(){
+        $(this).closest("p").toggleClass("active");
+        fixTryHeight();
+    })
+
     let server = 'https://tryonline.lsfusion.org';
     if( $(".ace_text-input").size() > 0) {
         for (let t = 0; t < 2; t++) {
@@ -528,7 +533,8 @@ $(document).ready(function() {
         let minHeight = 200;
         let maxHeight = 500;
         if( $(".try-database:visible").length > 0 ){
-            let h = $("body > div.inner").height() - $(".try-database > p").height() - $("body > div.inner > h1").height() - 90;
+            console.log(123)
+            let h = $("body > div.inner").height() - $(".try-database > p").height() - $("body > div.inner > h1").height() - 40;
             h = Math.min(h, maxHeight);
             h = Math.max(h, minHeight);
 

@@ -19,12 +19,37 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       background: #F7FBFC;
-      padding: 24px 20px;
+      padding: 0 20px;
       font-size: 12px;
       line-height: 16px;
       position: relative;
       z-index: 10;
     }
+
+    &.active{
+      & > strong{
+        background-image: url(../imgs/less.svg);
+      }
+      & > span{
+        display: block;
+        padding-bottom: 14px;
+
+      }
+    }
+    & > strong{
+      display: block;
+      background: #F7FBFC;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      background: url(../imgs/more.svg) no-repeat right 0 top 50%;
+      padding: 14px 0;
+    }
+    & > span{
+      display: none;
+    }
+
   }
 }
 .tryfeature{
