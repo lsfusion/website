@@ -36,6 +36,7 @@
         background-image: url(../imgs/less.svg);
       }
       & > span{
+        max-height: 500px;
         display: block;
         padding-bottom: 14px;
 
@@ -51,7 +52,11 @@
       padding: 14px 0;
     }
     & > span{
-      display: none;
+      display: block;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      max-height: 0;
+
     }
 
   }

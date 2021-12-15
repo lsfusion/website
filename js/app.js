@@ -298,7 +298,6 @@ $(document).ready(function() {
 
     $("#try > div p strong").click(function(){
         $(this).closest("p").toggleClass("active");
-        fixTryHeight();
     })
 
     let server = 'https://tryonline.lsfusion.org';
