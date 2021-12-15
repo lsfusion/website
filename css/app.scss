@@ -380,19 +380,18 @@ body > footer{
       list-style: none;
       float: left;
       @media (min-width: $mobileWidth) {
-        width: 20%;
+        width: 16.66666%;
       }
       @media (max-width: $mobileWidth - 1){
-
         width: 33.33%;
         margin: 0 0 30px 0;
         &:nth-child(4){
-          width: 50%;
+          //width: 50%;
           clear: both;
           margin: 0;
         }
         &:nth-child(5){
-          width: 50%;
+          //  width: 50%;
           margin: 0;
         }
       }
