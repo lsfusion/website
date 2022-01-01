@@ -80,6 +80,14 @@
       a:last-child {
         @extend .btn-empty;
       }
+      @media (max-width: 479px){
+        a {
+          display: block;
+          margin-bottom: 20px;
+          text-align: center;
+          min-width: 50%;
+        }
+      }
     }
   }
 
