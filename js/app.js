@@ -58,7 +58,7 @@ if(document.location.href.indexOf("/ru/") > 0){
 $(document).ready(function() {
 //home page text switcher
     let currentInterval = 0;
-    setInterval(textSwitcher, 3000);
+    setInterval(textSwitcher, 5000);
     function textSwitcher() {
 
         $("*[data-textswitcher]").each(function(index){
