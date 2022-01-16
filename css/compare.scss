@@ -29,7 +29,13 @@
 h1#start{
   scroll-margin-top: 100px;
 }
-
+body.ru{
+  #compare-banner{
+    p{
+      padding-top: 90px;
+    }
+  }
+}
 #compare-banner{
   @media (min-width: $siteWidth) {
     background: url(../imgs/compare-bg.svg) repeat-x 50% 0;
