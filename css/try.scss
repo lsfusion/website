@@ -63,8 +63,9 @@
 }
 .tryfeature{
   @include clearfix;
-  @media (max-width: $mobileWidth - 1){
-    //background: #F1F8FA url(../imgs/try-vertical.svg) no-repeat 50% 54.5%;
+  @media (min-width: $mobileWidth){
+    min-height: 405px;
+    
   }
   position: relative;
 
