@@ -29,13 +29,6 @@
 h1#start{
   scroll-margin-top: 100px;
 }
-body.ru{
-  #compare-banner{
-    p{
-      padding-top: 90px;
-    }
-  }
-}
 #compare-banner{
   @media (min-width: $siteWidth) {
     background: url(../imgs/compare-bg.svg) repeat-x 50% 0;
@@ -54,7 +47,7 @@ body.ru{
       margin: 0 auto;
       background: url(../imgs/compare-bg-inner.svg) no-repeat 0 0;
       min-height: 420px;
-      padding: 200px 0 0 700px;
+      padding: 90px 0 0 700px;
       width: $siteWidth;
     }
     @media (max-width: $siteWidth - 1){
