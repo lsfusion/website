@@ -70,7 +70,7 @@
     <div id="try" class="database">
         <div class="try-database">
             <p>
-                <strong>Ограничения</strong>
+                <strong>Ограничения режима</strong>
                 <span>
                     В режиме СУБД введенный код выполняется на <a href="https://docs.lsfusion.org/ru/Online_demo/#mm" target="_blank">демо-сервере УМП</a> при помощи <a href="https://docs.lsfusion.org/ru/Access_from_an_external_system/#http" target="_blank">HTTP запроса</a>. В нижнее окно выводится <a href="https://docs.lsfusion.org/ru/Access_from_an_external_system/#httpresult" target="_blank">результат</a> этого запроса. В этом режиме запрещено выполнять инструкции изменяющие глобальную логику системы - запрещено создавать <a href="https://docs.lsfusion.org/ru/Events/" target="_blank">события</a>, и все элементы, которые их используют (<a href="https://docs.lsfusion.org/ru/Constraints/" target="_blank">ограничения</a>, <a href="https://docs.lsfusion.org/ru/Classes/" target="_blank">классы</a> и <a href="https://docs.lsfusion.org/ru/Aggregations/" target="_blank">агрегации</a>), а также элементы физической модели (в частности <a href="https://docs.lsfusion.org/ru/Tables/" target="_blank">таблицы</a>, <a href="https://docs.lsfusion.org/ru/Indexes/" target="_blank">индексы</a> и <a href="https://docs.lsfusion.org/ru/Materializations/" target="_blank">материализации</a>). Все первичные свойства в этом режиме считаются <a href="https://docs.lsfusion.org/ru/Data_properties_DATA/#local" target="_blank">локальными</a>. Также в этом режиме не поддерживаются <a href="https://docs.lsfusion.org/ru/Interactive_view/" target="_blank">интерактивные представления</a>.
                 </span>
@@ -98,7 +98,7 @@
         </div>
         <div class="try-platform">
             <p>
-                <strong>Ограничения</strong>
+                <strong>Ограничения режима</strong>
                 <span>
                     В режиме платформы введенный код считается единственным прикладным <a href="https://docs.lsfusion.org/ru/Modules/" target="_blank">модулем</a> запускаемого сервера. Сервер приложений стартует на первом свободном <a href="https://docs.lsfusion.org/ru/Launch_parameters/#applsfusion" target="_blank">порту</a> в некотором диапазоне. В нижнее окно выводится лог стандартного вывода (<a href="https://docs.lsfusion.org/ru/Journals_and_logs/#logs" target="_blank">stdout</a>) этого сервера. После первого запуска сервера автоматически открывается новая вкладка браузера с пользовательским интерфейсом этого сервера. Все перезапуски считаются изменением логики с момента предыдущего запуска. В отличии от режима СУБД, в этом режиме нет никаких ограничений, однако он требует дополнительное время на запуск сервера. Для уменьшения этого времени сервер запускается в <a href="https://docs.lsfusion.org/ru/Launch_parameters/#appjava" target="_blank">облегченном</a> режиме.
                 </span>
