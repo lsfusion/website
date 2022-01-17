@@ -530,14 +530,14 @@ $(document).ready(function() {
         let minHeight = 200;
         let maxHeight = 500;
         if( $(".try-database:visible").length > 0 ){
-            let h = $("body > div.inner").height() - $(".try-database > p").height() - $("body > div.inner > h1").height() - 40;
+            let h = $("body > div.inner").height() - $(".try-database > p").height() - $("body > div.inner > h1").height() - 35;
             h = Math.min(h, maxHeight);
             h = Math.max(h, minHeight);
 
             $("#results1").css("height", h + "px")
         }
         if( $(".try-platform:visible").length > 0 ){
-            let h = $("body > div.inner").height() - $(".try-platform > p").height() - $("body > div.inner > h1").height() - 90;
+            let h = $("body > div.inner").height() - $(".try-platform > p").height() - $("body > div.inner > h1").height() - 35;
             h = Math.min(h, maxHeight);
             h = Math.max(h, minHeight);
 
