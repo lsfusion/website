@@ -297,13 +297,18 @@ $(document).ready(function() {
     $("#try > div p strong").click(function(){
         $(this).closest("p").toggleClass("active");
     })
-
+    function getLocale(){
+        if(document.location.href.indexOf("/ru") > 0){
+            return "ru";
+        }
+        return "en";
+    }
     let server = 'https://tryonline.lsfusion.org';
     if( $(".ace_text-input").size() > 0) {
         for (let t = 0; t < 2; t++) {
             let currentTab = $(".tryfeature").eq( t );
             $.ajax(server + "/exec?action=Main.getExamples", {
-                    data: btoa(unescape(encodeURIComponent(JSON.stringify({'mode': t, 'locale': 'en'})))),
+                    data: btoa(unescape(encodeURIComponent(JSON.stringify({'mode': t, 'locale': getLocale()})))),
                     contentType: "text/plain",
                     method: "POST",
 
