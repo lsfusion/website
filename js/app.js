@@ -296,6 +296,11 @@ $(document).ready(function() {
 
     $("#try > div p strong").click(function(){
         $(this).closest("p").toggleClass("active");
+        setTimeout(function(){
+            code1Editor.resize( true );
+            code2Editor.resize( true );
+        }, 300);
+
     })
     function getLocale(){
         if(document.location.href.indexOf("/ru") > 0){
