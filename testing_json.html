@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Testing JSON</title>
+</head>
+<body>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+<script>
+
+
+
+
+    $.ajax("https://tryonline.lsfusion.org/exec?action=Main.getExamples", {
+            data: btoa(unescape(encodeURIComponent(JSON.stringify({'mode': 0, 'locale': "ru"})))),
+            contentType: "text/plain",
+            method: "POST",
+
+            success: function (response) {
+
+                alert(response)
+            }
+        }
+    );
+
+
+
+
+</script>
+
+</body>
+</html>
