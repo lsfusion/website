@@ -313,7 +313,7 @@ $(document).ready(function() {
         for (let t = 0; t < 2; t++) {
             let currentTab = $(".tryfeature").eq( t );
             $.ajax(server + "/exec?action=Main.getExamples", {
-                    data: btoa(unescape(encodeURIComponent(JSON.stringify({'mode': t, 'locale': getLocale()})))),
+                    data: JSON.stringify({'mode': t, 'locale': getLocale()}),
                     contentType: "text/plain",
                     method: "POST",
 
