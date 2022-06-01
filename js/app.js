@@ -429,7 +429,7 @@ $(document).ready(function() {
     }
 
     function sendEscapedRequest(url, request) {
-        return sendRequest(url, btoa(unescape(encodeURIComponent(JSON.stringify(request)))));
+        return sendRequest(url, JSON.stringify(request));
     }
 
     function stopServer(){
