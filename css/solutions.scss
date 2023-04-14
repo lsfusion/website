@@ -45,7 +45,7 @@ ul.solutions {
     }
 
     $solutions:
-            lsfusion-erp,
+            lsfusion_erp,
             mycompany;
 
     @each $solution in $solutions {
@@ -59,7 +59,8 @@ ul.solutions {
     $solutions:
             mite,
             barsettings,
-            mybalance;
+            mybalance,
+            wms;
 
     @each $solution in $solutions {
       &#solution-#{$solution} {
