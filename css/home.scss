@@ -73,15 +73,23 @@
       margin: 0 0 40px 0;
     }
     nav {
-      a:first-child {
+      @media (min-width: 481px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      a{
+        margin-bottom: 15px;
+      }
+      a:nth-child(1),
+      a:nth-child(2){
         @extend .btn;
         margin-right: 20px;
       }
-      a:next-child  {
-        @extend .btn-empty;
-      }
       a:last-child  {
         @extend .btn-empty;
+        margin-right: 0;
       }
       @media (max-width: 479px){
         a {
@@ -89,6 +97,9 @@
           margin-bottom: 20px;
           text-align: center;
           min-width: 50%;
+          width: 100%;
+          margin-right: 0 !important;
+          box-sizing: content-box;
         }
       }
     }
