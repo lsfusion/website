@@ -77,7 +77,7 @@
         @extend .btn;
         margin-right: 20px;
       }
-       a:second-child {
+       a:only-child {
         @extend .btn-empty;
       }
       a:last-child  {
