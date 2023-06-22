@@ -77,6 +77,9 @@
         @extend .btn;
         margin-right: 20px;
       }
+      a:next-child  {
+        @extend .btn-empty;
+      }
       a:last-child  {
         @extend .btn-empty;
       }
