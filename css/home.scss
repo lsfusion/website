@@ -73,6 +73,14 @@
       margin: 0 0 40px 0;
     }
     nav {
+      &.ru{
+        a{
+          @media (min-width: 480px) {
+            padding-right: 30px;
+            padding-left: 30px;
+          }
+        }
+      }
       @media (min-width: 481px) {
         display: flex;
         flex-direction: row;
