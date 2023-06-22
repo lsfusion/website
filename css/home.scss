@@ -77,7 +77,10 @@
         @extend .btn;
         margin-right: 20px;
       }
-      a:last-child {
+       a:second-child {
+        @extend .btn-empty;
+      }
+      a:last-child  {
         @extend .btn-empty;
       }
       @media (max-width: 479px){
