@@ -60,8 +60,8 @@
         <span class="dropdown" data-apply-to="try">
             <em>platform</em>
             <ul>
-                <li class="active" val="platform">platform</li>
-                <li val="database">database</li>
+                <li class="active">platform</li>
+                <li>database</li>
             </ul>
         </span>
         mode
@@ -69,6 +69,34 @@
 
     <div id="try" class="platform">
         <div class="try-database">
+            <p>
+                <strong>Mode restrictions</strong>
+                <span>
+                    In database mode the code you enter is executed on <a href="https://docs.lsfusion.org/Online_demo/#mm" target="_blank">the MM demo server</a> via an <a href="https://docs.lsfusion.org/Access_from_an_external_system/#http" target="_blank">HTTP request</a>. <a href="https://docs.lsfusion.org/Access_from_an_external_system/#httpresult" target="_blank">The result</a> of this request is displayed in the bottom window. In this mode you cannot execute instructions that change the global system logic. You also cannot create <a href="https://docs.lsfusion.org/Events/" target="_blank">events</a> or any elements that use them (<a href="https://docs.lsfusion.org/Constraints/" target="_blank">constraints</a>, <a href="https://docs.lsfusion.org/Classes/" target="_blank">classes</a> and <a href="https://docs.lsfusion.org/Aggregations/" target="_blank">aggregations</a>), or elements of the physical model (such as <a href="https://docs.lsfusion.org/Tables/" target="_blank">tables</a>, <a href="https://docs.lsfusion.org/Indexes/" target="_blank">indexes</a> and <a href="https://docs.lsfusion.org/Materializations/" target="_blank">materializations</a>). All data properties in this mode are considered <a href="https://docs.lsfusion.org/Data_properties_DATA/#local" target="_blank">local</a>. <a href="https://docs.lsfusion.org/Interactive_view/" target="_blank">Interactive views</a> are also not supported in this mode.
+                </span>
+            </p>
+
+            <div class="tryfeature">
+                <nav>
+
+                    <span class="dd">
+                        <em>Loading...</em>
+                        <ul>
+                            <!--li class="active">Set operations</li-->
+                        </ul>
+                    </span>
+
+                    <div class="buttons">
+                        <span class="start disabled" title="Start">Start</span>
+                    </div>
+
+                </nav>
+                <div class="code loading" id="code1"></div>
+                <textarea readonly class="results loading" id="results1"></textarea>
+            </div>
+
+        </div>
+        <div class="try-platform">
             <p>
                 <strong>Mode restrictions</strong>
                 <span>
@@ -96,34 +124,6 @@
                 <div class="code loading" id="code2"></div>
                 <textarea readonly class="results loading" id="results2"></textarea>
             </div>
-        </div>
-        <div class="try-platform">
-            <p>
-                <strong>Mode restrictions</strong>
-                <span>
-                    In database mode the code you enter is executed on <a href="https://docs.lsfusion.org/Online_demo/#mm" target="_blank">the MM demo server</a> via an <a href="https://docs.lsfusion.org/Access_from_an_external_system/#http" target="_blank">HTTP request</a>. <a href="https://docs.lsfusion.org/Access_from_an_external_system/#httpresult" target="_blank">The result</a> of this request is displayed in the bottom window. In this mode you cannot execute instructions that change the global system logic. You also cannot create <a href="https://docs.lsfusion.org/Events/" target="_blank">events</a> or any elements that use them (<a href="https://docs.lsfusion.org/Constraints/" target="_blank">constraints</a>, <a href="https://docs.lsfusion.org/Classes/" target="_blank">classes</a> and <a href="https://docs.lsfusion.org/Aggregations/" target="_blank">aggregations</a>), or elements of the physical model (such as <a href="https://docs.lsfusion.org/Tables/" target="_blank">tables</a>, <a href="https://docs.lsfusion.org/Indexes/" target="_blank">indexes</a> and <a href="https://docs.lsfusion.org/Materializations/" target="_blank">materializations</a>). All data properties in this mode are considered <a href="https://docs.lsfusion.org/Data_properties_DATA/#local" target="_blank">local</a>. <a href="https://docs.lsfusion.org/Interactive_view/" target="_blank">Interactive views</a> are also not supported in this mode.
-                </span>
-            </p>
-
-            <div class="tryfeature">
-                <nav>
-
-                    <span class="dd">
-                        <em>Loading...</em>
-                        <ul>
-                            <!--li class="active">Set operations</li-->
-                        </ul>
-                    </span>
-
-                    <div class="buttons">
-                        <span class="start disabled" title="Start">Start</span>
-                    </div>
-
-                </nav>
-                <div class="code loading" id="code1"></div>
-                <textarea readonly class="results loading" id="results1"></textarea>
-            </div>
-
         </div>
     </div>
 
