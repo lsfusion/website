@@ -9,7 +9,7 @@ ul.support{
       flex: 0 0 100%;
     }
 
-    $supports: chat,qa, task, blog, news, code, system, email;
+    $supports: telegram, chat, qa, task, blog, news, code, system, email;
 
     @each $support in $supports {
       &.support-#{$support}{
