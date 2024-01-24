@@ -498,7 +498,7 @@ $(document).ready(function() {
                     resultArea.value = oldTextareaValue + response.text;
 
                     if(!window.rmiStarted) {
-                        let match = /.*Exporting\sRMI\sLogics\sobject\s\(port:\s(\d+)\).*/g.exec( resultArea.value );
+                        let match = /.*Exporting\sRMI\slogics\sobject\s\(port:\s(\d+)\).*/g.exec( resultArea.value );
                         if (match) {
                             window.open(server + '/?port=' + rmiPort, '_blank');
                             showOpenTabButton();
