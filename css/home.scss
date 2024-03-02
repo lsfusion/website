@@ -6,7 +6,6 @@
   @media (max-width: $mobileWidth - 1){
     background: #0062BD url(../imgs/home/header_mainbg_m.svg) no-repeat left bottom;
     background-size: cover;
-
   }
   @media (min-width: $mobileWidth) {
     min-height: 420px;
@@ -38,15 +37,30 @@
   }
 
   div.inner {
+    margin: 0 auto;
+    #video{
+      max-width: 100%;
+      margin: 0 auto 20px;
+    }
+
     @media (min-width: $siteWidth) {
       width: $siteWidth;
       min-height: 420px;
+      padding: 62px 520px 30px 20px;
+
+      position: relative;
+
+      #video{
+        position: absolute;
+        top: 95px;
+        right: 20px;
+        margin: 0 auto 30px auto;
+        display: block;
+        max-width: 450px;
+      }
+
     }
 
-    margin: 0 auto;
-    @media (min-width: $siteWidth){
-      padding: 62px 520px 30px 20px;
-    }
     @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
       padding: 62px 50% 30px 20px;
     }

@@ -309,11 +309,6 @@ body > nav{
   }
 }
 body > .inner  {
-  #video{
-    margin: 0 auto 30px auto;
-    display: block;
-    max-width: 100%;
-  }
   @media (min-width: $siteWidth) {
     width: $siteWidth;
     margin: 0 auto;
