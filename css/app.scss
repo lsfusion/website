@@ -493,13 +493,18 @@ body > footer{
 
 #popup{
   z-index: 100001;
+  box-sizing: border-box;
+
   @media (min-width: $siteWidth){
     width: $siteWidth;
   }
+  position: fixed;
   @media (max-width: $siteWidth - 1){
     width: 90%;
+    @media (orientation: landscape) {
+      width: 60%;
+    }
   }
-  position: absolute;
   background: #fff;
   top: 50%;
   left: 50%;
