@@ -490,3 +490,60 @@ body > footer{
 }
 
 @import "pages.scss";
+
+#popup{
+  z-index: 100001;
+  @media (min-width: $siteWidth){
+    width: $siteWidth;
+  }
+  @media (max-width: $siteWidth - 1){
+    width: 90%;
+  }
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px 16px 20px;
+  border-radius: 8px;
+  & > span.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    opacity: 0.5;
+    transition:  opacity 0.3s;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .inner{
+    position: relative;
+    height: 0;
+    padding: 66% 0 0 0;
+    iframe{
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+#popup-overlay{
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}

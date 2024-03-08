@@ -1,13 +1,13 @@
 #homeheader{
-  @media (min-width: $mobileWidth) {
+  @media (min-width: $siteWidth) {
     background: #0062BD url(../imgs/home/header_mainbg.svg) no-repeat 50% top;
     background-size: cover;
   }
-  @media (max-width: $mobileWidth - 1){
+  @media (max-width: $siteWidth - 1){
     background: #0062BD url(../imgs/home/header_mainbg_m.svg) no-repeat left bottom;
     background-size: cover;
   }
-  @media (min-width: $mobileWidth) {
+  @media (min-width: $siteWidth) {
     min-height: 420px;
     position: relative;
     &:before {
@@ -18,21 +18,6 @@
       left: 50%;
       right: 0;
       background: transparent url(../imgs/home/header_bg.svg) no-repeat left top;
-    }
-  }
-  @media (max-width: $mobileWidth - 1){
-    padding-bottom: 20px;
-    &:after {
-      content: "";
-      display: block;
-      width: auto;
-      height: 0;
-      padding: 63% 0 0 0;
-      margin: 0 20px;
-
-      background: transparent url(../imgs/home/header_bg_m.svg) no-repeat left top;
-
-      background-size: 100% 100%;
     }
   }
 
@@ -58,11 +43,11 @@
         display: block;
         max-width: 450px;
       }
-
     }
 
     @media (min-width: $mobileWidth) and (max-width: $siteWidth - 1){
-      padding: 62px 50% 30px 20px;
+      //padding: 62px 50% 30px 20px;
+      padding: 62px 20px 30px 20px;
     }
 
     @media (max-width: $mobileWidth - 1){
@@ -129,6 +114,48 @@
     }
   }
 
+  #home-videos{
+    position: relative;
+    @media (min-width: $siteWidth){
+      position: absolute;
+      top: 55px;
+      right: 12px;
+      width: 458px;
+      height: 311px;
+    }
+    @media (max-width: $siteWidth - 1) {
+      display: block;
+      width: auto;
+      height: 0;
+      padding: 68% 0 0 0;
+      margin: 20px -20px 0;
+      background: transparent url(../imgs/home/header_bg_m.svg) no-repeat left top;
+
+      background-size: 100% 100%;
+    }
+
+    ul{
+      list-style: none;
+      li{
+        a{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-indent: -30000px;
+          overflow: hidden;
+          background: url(../imgs/play-big.svg) no-repeat 50% 50%;
+          background-size: 50px;
+          opacity: 0.5;
+          transition: opacity 0.3s;
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }
 
 ul.home-links{

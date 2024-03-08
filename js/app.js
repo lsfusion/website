@@ -55,7 +55,37 @@ if(document.location.href.indexOf("/ru/") > 0){
 
 }
 
+
+/*
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cBjTklA1G3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ */
 $(document).ready(function() {
+    function showPopup( html ){
+        if( $("#popup").length == 0 ){
+            $("body").append('<div id="popup"><span class="close">&#x2715;</span><div class="inner"></div></div>')
+            $("body").append('<div id="popup-overlay"></div>')
+            $("#popup .close").click(function(){
+                $("#popup .inner").html( "" )
+                $("#popup,#popup-overlay").hide();
+            })
+            $("#popup-overlay").click(function(){
+                $("#popup .inner").html( "" )
+                $("#popup,#popup-overlay").hide();
+            })
+        }
+
+        $("#popup .inner").html( html )
+        $("#popup, #popup-overlay").show();
+    }
+
+    $("a.video").click(function(){
+
+        showPopup('<iframe width="560" height="315" src="https://www.youtube.com/embed/cBjTklA1G3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+        return false;
+    })
+
+
 //home page text switcher
     let currentInterval = 0;
     setInterval(textSwitcher, 5000);
