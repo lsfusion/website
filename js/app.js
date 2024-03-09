@@ -58,7 +58,7 @@ if(document.location.href.indexOf("/ru/") > 0){
 
 /*
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cBjTklA1G3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cBjTklA1G3Q&" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  */
 $(document).ready(function() {
     function showPopup( html ){
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
     $("a.video").click(function(){
 
-        showPopup('<iframe width="560" height="315" src="https://www.youtube.com/embed/cBjTklA1G3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+        showPopup('<iframe width="560" height="315" src="https://www.youtube.com/embed/cBjTklA1G3Q?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
         return false;
     })
 
